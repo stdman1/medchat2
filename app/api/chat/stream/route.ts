@@ -1,0 +1,250 @@
+// app/api/chat/stream/route.ts
+export const dynamic = 'force-dynamic';
+
+import { NextRequest } from 'next/server';
+import OpenAI from 'openai';
+import { retrieveContext } from '../../../../lib/qdrant-service';
+
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+// FIX 1: Define interface cho context item
+interface ContextItem {
+  id: string;
+  content: string;
+  score: number;
+  source: string;
+  topic: string;
+  risk_level: string;
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    // Parse request body
+    const { message } = await request.json();
+
+    // Validate input
+    if (!message || typeof message !== 'string') {
+      return new Response('Message is required', { status: 400 });
+    }
+
+    const trimmedMessage = message.trim();
+    if (!trimmedMessage) {
+      return new Response('Empty message', { status: 400 });
+    }
+
+    // Validate message length
+    if (trimmedMessage.length > 1000) {
+      return new Response('Tin nhắn quá dài (tối đa 1000 ký tự)!', { status: 400 });
+    }
+
+    // Tạo ReadableStream để gửi text từng phần
+    const stream = new ReadableStream({
+      async start(controller) {
+        try {
+          // Biến để đếm token
+          let totalInputTokens = 0;
+          let totalOutputTokens = 0;
+          let streamedContent = '';
+
+          // ✅ DIRECT CALL: Không qua HTTP fetch
+          console.log('🔍 Direct Qdrant search...');
+          const ragResult = await retrieveContext(trimmedMessage);
+
+          console.log('📊 Qdrant search result:', {
+            success: ragResult.success,
+            context_count: ragResult.context.length,
+            fallback_needed: ragResult.fallback_needed
+          });
+
+          // ✅ Extract và filter results như retriever
+          const searchResults: ContextItem[] = ragResult.context.map(item => ({
+            id: item.id.toString(),
+            content: item.content,
+            score: item.score,
+            source: 'qdrant-medical-database',
+            topic: 'medical',
+            risk_level: 'medium'
+          }));
+
+          // ✅ Filter by threshold
+          const threshold = parseFloat(process.env.RAG_SIMILARITY_THRESHOLD || '0.5');
+          const validResults = searchResults.filter(result => result.score >= threshold);
+
+          console.log('📈 Results after threshold filter:', {
+            total_results: searchResults.length,
+            valid_results: validResults.length,
+            threshold_used: threshold,
+            highest_score: searchResults.length > 0 ? searchResults[0].score : 0
+          });
+
+          // ✅ Determine fallback properly
+          const fallbackNeeded = ragResult.fallback_needed || validResults.length === 0;
+          
+          // ✅ Use filtered results (top 2)
+          const ragContext = validResults.slice(0, 2).map(result => ({
+            id: result.id,
+            content: result.content,
+            score: result.score,
+            source: result.source,
+            topic: result.topic,
+            risk_level: result.risk_level
+          }));
+
+          // Step 2: Build prompt based on RAG results
+          let systemPrompt = '';
+
+          if (!fallbackNeeded && ragContext.length > 0) {
+            // Normal chat with RAG context
+            const contextText = ragContext
+              .map((context: ContextItem) => `- ${context.content}`)
+              .join('\n');
+
+            const ragPromptTemplate = process.env.RAG_SYSTEM_PROMPT || 
+              `Bạn là MedChat AI chuyên nghiệp.
+
+Chỉ trả lời dựa trên thông tin sau từ cơ sở dữ liệu chính thức: 
+
+{CONTEXT}
+
+Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.`;
+
+            systemPrompt = ragPromptTemplate.replace('{CONTEXT}', contextText);
+          } else {
+            // Fallback chat without RAG context
+            systemPrompt = process.env.FALLBACK_SYSTEM_PROMPT || 
+              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này. Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
+
+**Ghi chú rõ: đây chỉ là thông tin tham khảo.**`;
+          }
+
+          // Step 3: Call OpenAI Chat API với streaming
+          const chatResponse = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
+            messages: [
+              {
+                role: 'system',
+                content: systemPrompt
+              },
+              {
+                role: 'user',
+                content: trimmedMessage
+              }
+            ],
+            max_tokens: 400,
+            temperature: 0.5,
+            stream: true,
+            stream_options: {
+              include_usage: true // Quan trọng: bật usage tracking
+            }
+          });
+
+          // Đọc từng chunk từ OpenAI
+          for await (const chunk of chatResponse) {
+            // Nếu có content, gửi cho client
+            const content = chunk.choices[0]?.delta?.content;
+            if (content) {
+              streamedContent += content;
+              
+              // Gửi content như JSON để client dễ parse
+              const data = JSON.stringify({
+                type: 'content',
+                data: content
+              }) + '\n';
+              
+              const encoder = new TextEncoder();
+              controller.enqueue(encoder.encode(data));
+            }
+            
+            // Nếu có usage info (cuối stream)
+            if (chunk.usage) {
+              totalInputTokens = chunk.usage.prompt_tokens || 0;
+              totalOutputTokens = chunk.usage.completion_tokens || 0;
+            }
+            
+            // Kiểm tra nếu stream kết thúc
+            if (chunk.choices[0]?.finish_reason === 'stop') {
+              break;
+            }
+          }
+
+          // Tính token dự đoán nếu API không trả về
+          if (totalInputTokens === 0) {
+            // Ước tính: 1 token ≈ 4 ký tự cho tiếng Việt
+            totalInputTokens = Math.ceil((systemPrompt.length + trimmedMessage.length) / 4);
+            totalOutputTokens = Math.ceil(streamedContent.length / 4);
+          }
+
+          // Gửi thông tin token cuối cùng
+          const tokenInfo = JSON.stringify({
+            type: 'token_info',
+            data: {
+              input_tokens: totalInputTokens,
+              output_tokens: totalOutputTokens,
+              total_tokens: totalInputTokens + totalOutputTokens,
+              estimated: true
+            }
+          }) + '\n';
+          
+          const encoder = new TextEncoder();
+          controller.enqueue(encoder.encode(tokenInfo));
+          
+          // Đóng stream
+          controller.close();
+
+        } catch (error) {
+          console.error('Stream API error:', error);
+          
+          // Gửi thông báo lỗi
+          const encoder = new TextEncoder();
+          let errorMessage = 'Xin lỗi, đã có lỗi xảy ra. Vui lòng thử lại.';
+
+          // Handle specific errors
+          if (error instanceof Error) {
+            if (error.message.includes('API key')) {
+              errorMessage = 'API key chưa được cấu hình!';
+            } else if (error.message.includes('rate limit')) {
+              errorMessage = 'Quá nhiều yêu cầu, vui lòng thử lại sau!';
+            } else if (error.message.includes('Retriever')) {
+              errorMessage = 'Lỗi tìm kiếm dữ liệu, sử dụng chế độ dự phòng!';
+            }
+          }
+
+          const errorData = JSON.stringify({
+            type: 'error',
+            data: errorMessage
+          }) + '\n';
+          
+          controller.enqueue(encoder.encode(errorData));
+          controller.close();
+        }
+      },
+
+      cancel() {
+        // Xử lý khi client hủy (nút pause)
+        console.log('Stream was cancelled by client');
+      }
+    });
+
+    // Trả về response dạng stream
+    return new Response(stream, {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Transfer-Encoding': 'chunked',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+      }
+    });
+
+  } catch (error) {
+    console.error('Stream API error:', error);
+    return new Response('Internal server error', { status: 500 });
+  }
+}
+
+// Handle unsupported methods
+export async function GET() {
+  return new Response('Method not allowed', { status: 405 });
+}

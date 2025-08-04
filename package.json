@@ -1,0 +1,44 @@
+{
+  "name": "medchat-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "migrate-qdrant": "npx ts-node scripts/migrate-to-qdrant.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.10",
+    "@prisma/client": "^6.12.0",
+    "@qdrant/js-client-rest": "^1.15.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "geist": "^1.4.2",
+    "lucide-react": "^0.525.0",
+    "next": "^15.4.3",
+    "openai": "^5.10.2",
+    "otplib": "^12.0.1",
+    "pako": "^2.1.0",
+    "prisma": "^6.12.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.1.0",
+    "@types/pako": "^2.0.3",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.3",
+    "typescript": "^5"
+  }
+}

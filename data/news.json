@@ -1,0 +1,48 @@
+{
+  "articles": [
+    {
+      "title": "heloo hivvvv",
+      "content": "Theo thời gian, bệnh HIV lan rộng toàn thế giới với hai chủng đã được y học ghi nhận là HIV-1 và HIV-2. Virus HIV-1 là chủng phổ biến nhất trên toàn cầu với khả năng lây nhiễm cao, thường được nhắc đến khi nói về bệnh HIV. Trong khi đó, HIV-2 tập trung chủ yếu ở Tây Phi, châu Âu, Hoa Kỳ và Ấn Độ.",
+      "summary": "HIV là bệnh nhiễm trùng do virus HIV gây ra. Loại virus này có khả năng tấn công mạnh mẽ vào hệ miễn dịch (đặc biệt là tế bào miễn dịch Lympho TCD4+) khiến cơ thể suy yếu dần trong việc chống lại các tác nhân gây bệnh",
+      "category": "medical",
+      "tags": [
+        "hiv"
+      ],
+      "source_chunk_id": 0,
+      "image_url": "/images/articles/edit_news_1754029271922_47myfxjy0_1754031012283_1754031013098.png",
+      "id": "news_1754029271922_47myfxjy0",
+      "created_at": "2025-08-01T06:21:11.922Z"
+    },
+    {
+      "title": "Khám Phá Liệu Pháp Kháng Virut HIV: Từ Chẩn Đoán Đến Điều Trị Hiệu Quả",
+      "content": "HIV (Virus gây suy giảm miễn dịch ở người) đã trở thành một vấn đề sức khỏe toàn cầu lớn, nhưng nhờ vào sự phát triển của liệu pháp kháng virut (ART), virus này giờ đây có thể được quản lý như một bệnh mãn tính, thay vì là một căn bệnh chết người. Theo các hướng dẫn điều trị hiện tại, việc bắt đầu ART ngay lập tức là cần thiết cho tất cả những người dương tính với HIV, bất kể mức CD4+ hay tải lượng virus.\n\nMức CD4+ là chỉ số quan trọng trong việc đánh giá sức khỏe miễn dịch của bệnh nhân. Mức bình thường nằm trong khoảng từ 500-1200 tế bào/mm³, trong khi mức dưới 350 tế bào/mm³ cho thấy tình trạng suy giảm miễn dịch nghiêm trọng. Do đó, việc kiểm tra CD4+ là điều kiện tiên quyết để quyết định phương pháp điều trị phù hợp.\n\nTrước khi bắt đầu liệu pháp, việc kiểm tra kháng thuốc cũng rất quan trọng và nên được thực hiện khi có dấu hiệu thất bại điều trị. Kiểm tra kháng gen giúp xác định các đột biến có khả năng kháng lại các loại thuốc kháng retrovirus cụ thể, từ đó giúp bác sĩ đưa ra phương pháp điều trị tối ưu nhất.\n\nLiệu pháp ART thường bao gồm sự kết hợp của ba hoặc nhiều loại thuốc từ các nhóm khác nhau để ngăn ngừa sự phát triển của kháng thuốc. Các nhóm thuốc chính bao gồm các chất ức chế men sao chép ngược nucleoside (NRTIs), các chất ức chế men sao chép ngược không nucleoside (NNRTIs), và các chất ức chế protease (PIs).\n\nMặc dù các quy trình thử nghiệm có rủi ro tối thiểu, nhưng chúng đóng vai trò quyết định trong việc chẩn đoán và theo dõi tình trạng của bệnh nhân. Đánh giá rủi ro là thấp, nhưng sự cần thiết phải thực hiện các xét nghiệm này không thể bị coi nhẹ.\n\nViệc nâng cao nhận thức về HIV và các phương pháp điều trị hiện đại không chỉ giúp giảm thiểu tỷ lệ lây nhiễm mà còn cải thiện chất lượng cuộc sống của những người sống chung với virus này. Sự phát triển của ART đã mang lại hy vọng mới cho hàng triệu người trên toàn thế giới.",
+      "summary": "Liệu pháp kháng virut (ART) đã biến HIV thành một bệnh mãn tính có thể quản lý. Theo hướng dẫn hiện tại, tất cả bệnh nhân dương tính với HIV nên bắt đầu ART ngay lập tức. Việc kiểm tra CD4+ và kháng thuốc là cần thiết để quyết định phương pháp điều trị hợp lý. Sự kết hợp của nhiều loại thuốc giúp ngăn ngừa kháng thuốc, mang lại hy vọng cho hàng triệu người trên thế giới.",
+      "image_url": "/images/articles/news_1754023578372_1754023578377.png",
+      "source_chunk_id": 1753948552871,
+      "tags": [
+        "HIV",
+        "liệu pháp kháng virut",
+        "suy giảm miễn dịch",
+        "chẩn đoán",
+        "điều trị"
+      ],
+      "category": "medical",
+      "id": "news_1754023581046_2l1337ec9",
+      "created_at": "2025-08-01T04:46:21.046Z"
+    }
+  ],
+  "used_chunk_ids": [
+    338,
+    120,
+    1753948552871
+  ],
+  "stats": {
+    "total_generated": 2,
+    "last_generated": "2025-08-01T06:21:11.923Z",
+    "cycle_count": 0
+  },
+  "settings": {
+    "max_articles": 50,
+    "auto_reset_cycle": true
+  }
+}

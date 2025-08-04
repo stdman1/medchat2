@@ -1,0 +1,50 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Bảng người dùng
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  password    String   // Sẽ hash trước khi lưu
+  displayName String   @default("Thành viên mới") // Tên hiển thị có thể đổi
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Quan hệ với tin nhắn
+  messages    Message[]
+  
+  @@map("users")
+}
+
+// Bảng tin nhắn 
+model Message {
+  id        String   @id @default(cuid())
+  content   String
+  sender    String   // 'user' hoặc 'bot' hoặc 'system'
+  isMarkdown Boolean @default(false)
+  createdAt DateTime @default(now())
+  
+  // Quan hệ với người dùng
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("messages")
+}
+
+// Bảng phiên chat (tùy chọn - để nhóm tin nhắn)
+model ChatSession {
+  id        String   @id @default(cuid())
+  title     String   @default("Cuộc trò chuyện mới")
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("chat_sessions")
+}

@@ -1,0 +1,35 @@
+SOURCE: WHO Clinical Guidelines 2025
+TOPIC: Diabetes Management
+RISK: HIGH
+
+# Quản Lý Đái Tháo Đường Type 2
+
+Đái tháo đường type 2 là một bệnh lý mãn tính đặc trưng bởi tình trạng tăng đường huyết do sự kháng insulin và/hoặc giảm tiết insulin. Bệnh ảnh hưởng đến hàng triệu người trên toàn thế giới và là nguyên nhân hàng đầu gây ra các biến chứng tim mạch, thận và mắt.
+
+Chẩn đoán đái tháo đường type 2 dựa trên các xét nghiệm: glucose máu lúc đói ≥126 mg/dL, HbA1c ≥6.5%, hoặc glucose máu 2 giờ sau test dung nạp glucose ≥200 mg/dL. Điều trị bao gồm thay đổi lối sống, thuốc uống và insulin khi cần thiết.
+
+Các biến chứng nghiêm trọng gồm bệnh tim mạch, bệnh thận đái tháo đường, bệnh võng mạc và bệnh thần kinh ngoại vi. Kiểm soát đường huyết nghiêm ngặt có thể ngăn ngừa hoặc chậm tiến triển của các biến chứng này.
+
+SOURCE: Vietnam Ministry of Health - Infectious Disease Department
+TOPIC: Tuberculosis Prevention
+RISK: CRITICAL
+
+# Phòng Chống Bệnh Lao Phổi
+
+Lao phổi là một bệnh nhiễm trùng do vi khuẩn Mycobacterium tuberculosis gây ra, chủ yếu ảnh hưởng đến phổi nhưng có thể lan sang các cơ quan khác. Đây là một trong những nguyên nhân hàng đầu gây tử vong do bệnh nhiễm trùng trên toàn thế giới.
+
+Triệu chứng điển hình của lao phổi bao gồm ho kéo dài hơn 2 tuần, ho ra máu, sốt, đổ mồ hôi ban đêm, sụt cân và mệt mỏi. Chẩn đoán dựa trên triệu chứng lâm sàng, xét nghiệm đờm, X-quang phổi và test lao tiềm ẩn.
+
+Điều trị lao phổi đòi hỏi phác đồ kháng sinh kéo dài 6-9 tháng với các thuốc như isoniazid, rifampin, ethambutol và pyrazinamide. Việc tuân thủ điều trị đầy đủ là rất quan trọng để tránh kháng thuốc và tái phát.
+
+SOURCE: CDC Emergency Response Guidelines
+TOPIC: Pandemic Preparedness  
+RISK: CRITICAL
+
+# Chuẩn Bị Ứng Phó Đại Dịch
+
+Chuẩn bị ứng phó đại dịch là một hệ thống các biện pháp và kế hoạch được thiết lập để phát hiện sớm, phản ứng nhanh chóng và kiểm soát hiệu quả các dịch bệnh có khả năng lây lan rộng rãi.
+
+Các yếu tố cơ bản trong chuẩn bị ứng phó đại dịch bao gồm: hệ thống giám sát dịch bệnh, kho dự trữ y tế chiến lược, kế hoạch truyền thông khẩn cấp, và đào tạo nhân lực y tế. Việc phối hợp giữa các cấp chính quyền và tổ chức quốc tế là vô cùng quan trọng.
+
+Kinh nghiệm từ COVID-19 cho thấy tầm quan trọng của việc đầu tư vào hạ tầng y tế, nghiên cứu vaccine, và duy trì chuỗi cung ứng thiết bị y tế. Các quốc gia cần xây dựng năng lực sản xuất vaccine và thuốc trong nước để đảm bảo an ninh y tế.
