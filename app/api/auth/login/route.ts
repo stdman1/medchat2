@@ -3,12 +3,21 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../../lib/prisma'; // ✅ Singleton
 import { verifyPassword } from '../../../../lib/auth';
 
-// ❌ XÓA: const prisma = new PrismaClient();
-
 export async function POST(request: NextRequest) {
   try {
-    const { email, password } = await request.json();
+    // Kiểm tra nếu prisma client chưa được khởi tạo
+    if (!prisma) {
+      console.error('Prisma client not initialized');
+      return NextResponse.json(
+        { error: 'Database connection error' },
+        { status: 500 }
+      );
+    }
 
+    const body = await request.json();
+    const { email, password } = body;
+
+    // Validation
     if (!email || !password) {
       return NextResponse.json(
         { error: 'Email và mật khẩu là bắt buộc' },
@@ -16,8 +25,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Tìm user
     const user = await prisma.user.findUnique({
-      where: { email }
+      where: { email },
+      select: {
+        id: true,
+        email: true,
+        displayName: true,
+        password: true
+      }
     });
 
     if (!user) {
@@ -27,7 +43,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const isPasswordValid = verifyPassword(password, user.password);
+    // Verify password
+    const isPasswordValid = await verifyPassword(password, user.password);
 
     if (!isPasswordValid) {
       return NextResponse.json(
@@ -36,6 +53,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Success response
     return NextResponse.json({
       success: true,
       user: {
@@ -47,10 +65,16 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Login error:', error);
+    
+    // Xử lý các loại lỗi khác nhau
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
+    
     return NextResponse.json(
       { error: 'Lỗi server' },
       { status: 500 }
     );
   }
-  // ❌ XÓA finally block hoàn toàn
 }
