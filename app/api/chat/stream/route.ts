@@ -121,8 +121,9 @@ Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin 
           }
 
           // Step 3: Call OpenAI Chat API với streaming
+          // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL
           const chatResponse = await openai.chat.completions.create({
-            model: 'gpt-4o-mini',
+            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4.1-mini-2025-04-14', // ✅ Giữ model gốc làm mặc định
             messages: [
               {
                 role: 'system',
@@ -133,8 +134,8 @@ Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin 
                 content: trimmedMessage
               }
             ],
-            max_tokens: 400,
-            temperature: 0.5,
+            max_tokens: parseInt(process.env.MAX_TOKENS || '400'), // ✅ Biến môi trường cho max_tokens
+            temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
             stream: true,
             stream_options: {
               include_usage: true // Quan trọng: bật usage tracking
