@@ -178,8 +178,14 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
   }
 }
 
-// CÁC FUNCTIONS KHÁC GIỮ NGUYÊN (generateNewsFromChunk, generateArticleImage, etc...)
-async function generateNewsFromChunk(chunk: SelectedChunk): Promise<any> {
+// ✅ FIX: Proper return type instead of 'any'
+async function generateNewsFromChunk(chunk: SelectedChunk): Promise<{
+  title: string;
+  content: string;
+  summary: string;
+  tags: string[];
+  category: string;
+} | null> {
   try {
     if (!process.env.OPENAI_API_KEY) {
       console.log('⚠️ OpenAI API key not found, skipping news generation');
