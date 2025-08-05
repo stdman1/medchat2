@@ -502,17 +502,35 @@ function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: (
 // Profile Form Component
 function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUser: (userData: User) => void }) {
   const [formData, setFormData] = useState({
-    displayName: user?.displayName || '',
-    gender: user?.gender || '',
-    height: user?.height || '',
-    weight: user?.weight || '',
-    age: user?.age || '',
-    allergies: user?.allergies || '',
-    hasHypertension: user?.hasHypertension || false,
-    hasDiabetes: user?.hasDiabetes || false,
-    isSmoker: user?.isSmoker || false,
-    currentMedications: user?.currentMedications || ''
+    displayName: '',
+    gender: '',
+    height: '',
+    weight: '',
+    age: '',
+    allergies: '',
+    hasHypertension: false,
+    hasDiabetes: false,
+    isSmoker: false,
+    currentMedications: ''
   });
+
+  // Load user data khi component mount hoặc user thay đổi
+  useEffect(() => {
+    if (user) {
+      setFormData({
+        displayName: user.displayName || '',
+        gender: user.gender || '',
+        height: user.height?.toString() || '',
+        weight: user.weight?.toString() || '',
+        age: user.age?.toString() || '',
+        allergies: user.allergies || '',
+        hasHypertension: user.hasHypertension || false,
+        hasDiabetes: user.hasDiabetes || false,
+        isSmoker: user.isSmoker || false,
+        currentMedications: user.currentMedications || ''
+      });
+    }
+  }, [user]);
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -575,6 +593,13 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           <i className="fas fa-user-circle"></i>
           <h3>Đăng nhập để quản lý hồ sơ</h3>
           <p>Đăng nhập để lưu và quản lý thông tin y tế cá nhân của bạn</p>
+          <button 
+            className="login-btn"
+            onClick={() => window.dispatchEvent(new CustomEvent('openAuth'))}
+          >
+            <i className="fas fa-sign-in-alt"></i>
+            Đăng nhập ngay
+          </button>
         </div>
       </div>
     );
@@ -588,6 +613,8 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           max-width: 800px;
           margin: 0 auto;
           padding: 20px;
+          height: 100%;
+          overflow-y: auto;
         }
 
         .profile-card {
@@ -596,6 +623,7 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
           overflow: hidden;
           animation: slideUp 0.5s ease-out;
+          margin-bottom: 20px;
         }
 
         @keyframes slideUp {
@@ -850,6 +878,12 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           align-items: center;
           justify-content: center;
           min-height: 400px;
+          animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
 
         .profile-no-user-content {
@@ -858,12 +892,31 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           background: white;
           border-radius: 20px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          animation: scaleIn 0.6s ease-out;
+        }
+
+        @keyframes scaleIn {
+          from { 
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to { 
+            opacity: 1;
+            transform: scale(1);
+          }
         }
 
         .profile-no-user-content i {
           font-size: 4rem;
           color: #0ea5e9;
           margin-bottom: 20px;
+          animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+          40% { transform: translateY(-10px); }
+          60% { transform: translateY(-5px); }
         }
 
         .profile-no-user-content h3 {
@@ -875,6 +928,27 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
         .profile-no-user-content p {
           color: #6b7280;
           font-size: 1.1rem;
+          margin-bottom: 25px;
+        }
+
+        .login-btn {
+          background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+          color: white;
+          padding: 12px 30px;
+          border: none;
+          border-radius: 25px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+        }
+
+        .login-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -1178,15 +1252,22 @@ export default function OceanChatPage() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Listen for news detail events
+  // Listen for news detail events và auth modal events
   useEffect(() => {
     const handleViewNewsDetail = (event: CustomEvent) => {
       setSelectedNewsId(event.detail.articleId);
     };
 
+    const handleOpenAuth = () => {
+      setShowAuthModal(true);
+    };
+
     window.addEventListener('viewNewsDetail', handleViewNewsDetail as EventListener);
+    window.addEventListener('openAuth', handleOpenAuth as EventListener);
+    
     return () => {
       window.removeEventListener('viewNewsDetail', handleViewNewsDetail as EventListener);
+      window.removeEventListener('openAuth', handleOpenAuth as EventListener);
     };
   }, []);
 
@@ -1685,8 +1766,8 @@ export default function OceanChatPage() {
             </div>
           </div>
 
-          {/* Profile Section */}
-          <div className={`ocean-content-section ${currentContent === 'profile' ? 'active' : ''}`}>
+          {/* Profile Section - Thêm thanh cuộn */}
+          <div className={`ocean-content-section ${currentContent === 'profile' ? 'active' : ''}`} style={{ overflowY: 'auto', height: '100%' }}>
             <ProfileSection user={user} onUpdateUser={handleUpdateUser} />
           </div>
 
