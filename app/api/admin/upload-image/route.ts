@@ -1,27 +1,14 @@
 // app/api/admin/upload-image/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { uploadFileToBlob, deleteImageFromBlob, isBlobUrl } from '@/lib/blob-storage';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-// Image configuration
-const IMAGES_DIR = path.join(process.cwd(), 'public', 'images', 'articles');
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
-const ALLOWED_TYPES = [
-  'image/jpeg',
-  'image/jpg', 
-  'image/png',
-  'image/webp'
-];
-
 interface ImageUploadResult {
   success: boolean;
   image_url?: string;
-  image_path?: string;
+  image_path?: string; // Keep for compatibility but will be blob URL
   file_info?: {
     name: string;
     size: number;
@@ -30,16 +17,10 @@ interface ImageUploadResult {
   error?: string;
 }
 
-// POST - Upload image for articles
+// POST - Upload image for articles using Vercel Blob
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
-    console.log('🖼️ IMAGE UPLOAD API: Processing image upload...');
-
-    // Create images directory if it doesn't exist
-    if (!existsSync(IMAGES_DIR)) {
-      await mkdir(IMAGES_DIR, { recursive: true });
-      console.log('📁 Created images/articles directory');
-    }
+    console.log('🖼️ IMAGE UPLOAD API: Processing image upload to Vercel Blob...');
 
     // Parse form data
     const formData = await request.formData();
@@ -54,6 +35,13 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     // Validate file type
+    const ALLOWED_TYPES = [
+      'image/jpeg',
+      'image/jpg', 
+      'image/png',
+      'image/webp'
+    ];
+
     if (!ALLOWED_TYPES.includes(file.type)) {
       return NextResponse.json({
         success: false,
@@ -62,6 +50,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     // Validate file size
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
     if (file.size > MAX_FILE_SIZE) {
       const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
       return NextResponse.json({
@@ -78,19 +67,10 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       }, { status: 400 });
     }
 
-    // Generate unique filename
-    const timestamp = Date.now();
-    const fileExtension = getFileExtension(file.name, file.type);
-    const sanitizedArticleId = articleId ? sanitizeFilename(articleId) : `upload_${timestamp}`;
-    const filename = `${sanitizedArticleId}_${timestamp}.${fileExtension}`;
-    const filePath = path.join(IMAGES_DIR, filename);
-    const publicUrl = `/images/articles/${filename}`;
-
-    // Read and save file
+    // Additional validation: Check if it's actually an image
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
     
-    // Additional validation: Check if it's actually an image
     if (!isValidImageBuffer(buffer)) {
       return NextResponse.json({
         success: false,
@@ -98,18 +78,30 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       }, { status: 400 });
     }
 
-    await writeFile(filePath, buffer);
+    // Generate article ID if not provided
+    const sanitizedArticleId = articleId ? sanitizeFilename(articleId) : `upload_${Date.now()}`;
 
-    console.log(`✅ Image uploaded successfully: ${filename}`);
-    console.log(`📁 Local path: ${filePath}`);
-    console.log(`🌐 Public URL: ${publicUrl}`);
+    // Upload to Vercel Blob
+    const uploadResult = await uploadFileToBlob(
+      file, 
+      sanitizedArticleId
+    );
+
+    if (!uploadResult.success) {
+      return NextResponse.json({
+        success: false,
+        error: uploadResult.error || 'Failed to upload image'
+      }, { status: 500 });
+    }
+
+    console.log(`✅ Image uploaded successfully to Blob: ${uploadResult.url}`);
 
     const result: ImageUploadResult = {
       success: true,
-      image_url: publicUrl,
-      image_path: filePath,
+      image_url: uploadResult.url,
+      image_path: uploadResult.url, // For compatibility - same as image_url
       file_info: {
-        name: filename,
+        name: file.name,
         size: file.size,
         type: file.type
       }
@@ -127,77 +119,49 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 }
 
-// GET - Get image info or list images
+// GET - Get image info or list images (adapted for blob storage)
 export async function GET(request: NextRequest) {
   try {
     console.log('📊 IMAGE API: Getting image info...');
     
     const { searchParams } = new URL(request.url);
-    const filename = searchParams.get('filename');
+    const imageUrl = searchParams.get('url') || searchParams.get('filename'); // Support both params
     const list = searchParams.get('list') === 'true';
     
-    if (filename) {
+    if (imageUrl) {
       // Get specific image info
-      const filePath = path.join(IMAGES_DIR, filename);
-      const publicUrl = `/images/articles/${filename}`;
-      
-      if (!existsSync(filePath)) {
-        return NextResponse.json({
-          success: false,
-          error: 'Image not found'
-        }, { status: 404 });
-      }
-
-      const stats = await fs.stat(filePath);
-      
-      return NextResponse.json({
-        success: true,
-        image: {
-          filename: filename,
-          url: publicUrl,
-          size: stats.size,
-          created: stats.birthtime,
-          modified: stats.mtime
-        }
-      });
-    } else if (list) {
-      // List all images
-      if (!existsSync(IMAGES_DIR)) {
+      if (isBlobUrl(imageUrl)) {
+        // For blob URLs, we can't easily get detailed file stats
+        // This is a simplified version
         return NextResponse.json({
           success: true,
-          images: [],
-          total: 0
+          image: {
+            filename: imageUrl.split('/').pop() || 'unknown',
+            url: imageUrl,
+            storage: 'vercel-blob',
+            accessible: true,
+            created: new Date().toISOString() // We don't have this info for blob
+          }
         });
+      } else {
+        return NextResponse.json({
+          success: false,
+          error: 'Not a valid blob URL'
+        }, { status: 400 });
       }
-
-      const files = await fs.readdir(IMAGES_DIR);
-      const imageFiles = files.filter((file: string) => {
-        const ext = path.extname(file).toLowerCase();
-        return ['.jpg', '.jpeg', '.png', '.webp'].includes(ext);
-      });
-
-      const images = await Promise.all(
-        imageFiles.map(async (file: string) => {
-          const filePath = path.join(IMAGES_DIR, file);
-          const stats = await fs.stat(filePath);
-          return {
-            filename: file,
-            url: `/images/articles/${file}`,
-            size: stats.size,
-            created: stats.birthtime
-          };
-        })
-      );
-
+    } else if (list) {
+      // List all images - not easily possible with blob storage
+      // Would need to maintain a separate index/database
       return NextResponse.json({
         success: true,
-        images: images.sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()),
-        total: images.length
+        images: [],
+        total: 0,
+        message: 'Image listing not available with blob storage. Use database to track uploaded images.'
       });
     } else {
       return NextResponse.json({
         success: false,
-        error: 'Missing filename parameter or list=true'
+        error: 'Missing url parameter or list=true'
       }, { status: 400 });
     }
 
@@ -211,46 +175,44 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// DELETE - Delete image
+// DELETE - Delete image from Vercel Blob
 export async function DELETE(request: NextRequest) {
   try {
-    console.log('🗑️ IMAGE API: Deleting image...');
+    console.log('🗑️ IMAGE API: Deleting image from Vercel Blob...');
     
     const { searchParams } = new URL(request.url);
-    const filename = searchParams.get('filename');
+    const imageUrl = searchParams.get('url') || searchParams.get('filename'); // Support both params
     
-    if (!filename) {
+    if (!imageUrl) {
       return NextResponse.json({
         success: false,
-        error: 'Filename is required'
+        error: 'Image URL is required'
       }, { status: 400 });
     }
 
-    // Security check: prevent path traversal
-    if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+    // Security check: ensure it's a blob URL
+    if (!isBlobUrl(imageUrl)) {
       return NextResponse.json({
         success: false,
-        error: 'Invalid filename'
+        error: 'Invalid blob URL'
       }, { status: 400 });
     }
 
-    const filePath = path.join(IMAGES_DIR, filename);
-    
-    if (!existsSync(filePath)) {
+    // Delete from Vercel Blob
+    const deleteSuccess = await deleteImageFromBlob(imageUrl);
+
+    if (!deleteSuccess) {
       return NextResponse.json({
         success: false,
-        error: 'Image not found'
-      }, { status: 404 });
+        error: 'Failed to delete image from blob storage'
+      }, { status: 500 });
     }
 
-    // Delete file
-    await fs.unlink(filePath);
-
-    console.log(`✅ Image deleted: ${filename}`);
+    console.log(`✅ Image deleted from blob: ${imageUrl}`);
 
     return NextResponse.json({
       success: true,
-      message: `Image ${filename} deleted successfully`,
+      message: 'Image deleted successfully from blob storage',
       timestamp: new Date().toISOString()
     });
 
@@ -264,16 +226,16 @@ export async function DELETE(request: NextRequest) {
   }
 }
 
-// Helper functions
+// Helper functions (keep from original)
 
 /**
  * Get file extension from filename or mime type
  */
 function getFileExtension(filename: string, mimeType: string): string {
   // Try to get extension from filename first
-  const filenameExt = path.extname(filename).toLowerCase();
-  if (filenameExt && ['.jpg', '.jpeg', '.png', '.webp'].includes(filenameExt)) {
-    return filenameExt.substring(1); // Remove the dot
+  const filenameExt = filename.split('.').pop()?.toLowerCase();
+  if (filenameExt && ['jpg', 'jpeg', 'png', 'webp'].includes(filenameExt)) {
+    return filenameExt;
   }
   
   // Fall back to mime type

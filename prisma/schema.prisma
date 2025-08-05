@@ -4,8 +4,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
 }
 
 // Bảng người dùng
@@ -47,4 +47,42 @@ model ChatSession {
   updatedAt DateTime @updatedAt
   
   @@map("chat_sessions")
+}
+
+// THÊM MỚI - Bảng bài viết
+model Article {
+  id              String   @id @default(cuid())
+  title           String
+  content         String   @db.Text
+  summary         String   @db.Text
+  image_url       String?
+  tags            String[]
+  category        String
+  source_chunk_id Int?
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+  
+  @@map("articles")
+}
+
+// THÊM MỚI - Bảng tracking chunks đã sử dụng
+model UsedChunk {
+  id         String   @id @default(cuid())
+  chunk_id   Int      @unique
+  created_at DateTime @default(now())
+  
+  @@map("used_chunks")
+}
+
+// THÊM MỚI - Bảng thống kê
+model GenerationStats {
+  id              String   @id @default(cuid())
+  total_generated Int      @default(0)
+  last_generated  DateTime?
+  cycle_count     Int      @default(0)
+  max_articles    Int      @default(50)
+  auto_reset_cycle Boolean @default(true)
+  updated_at      DateTime @updatedAt
+  
+  @@map("generation_stats")
 }

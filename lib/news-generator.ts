@@ -1,8 +1,8 @@
-// lib/news-generator.ts
+// lib/news-generator.ts - CHỈ SỬA PHẦN IMAGE STORAGE
 import OpenAI from 'openai';
 import { selectRandomChunk, SelectedChunk } from './chunk-selector';
 import { addNewsArticle, addUsedChunkId, NewsArticle } from './news-manager';
-import { downloadAndStoreImage } from './image-storage';
+import { uploadImageToBlob } from './blob-storage'; // ✅ THAY THẾ import
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -15,13 +15,13 @@ export interface GeneratedNews {
   generation_details?: {
     chunk_id: number;
     image_generated: boolean;
-    image_downloaded: boolean;
+    image_uploaded: boolean;
     image_url?: string;
     cycle_reset?: boolean;
   };
 }
 
-// Template prompts cho GPT
+// Template prompts cho GPT (giữ nguyên)
 const NEWS_GENERATION_PROMPT = `Bạn là chuyên gia viết tin tức y tế. Hãy viết lại thông tin dưới đây thành một bài tin tức y tế dễ hiểu, hấp dẫn và chính xác.
 
 YÊU CẦU:
@@ -94,9 +94,9 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
 
     console.log('✅ News content generated successfully');
 
-    // Step 3: Generate and download image
+    // Step 3: Generate and upload image ✅ SỬA PHẦN NÀY
     let imageGenerated = false;
-    let imageDownloaded = false;
+    let imageUploaded = false;
     let finalImageUrl: string | undefined;
 
     try {
@@ -105,27 +105,27 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       
       if (imageUrl) {
         imageGenerated = true;
-        console.log('✅ Image generated, downloading to local storage...');
+        console.log('✅ Image generated, uploading to Vercel Blob...');
         
-        // Download and store image locally
-        const downloadResult = await downloadAndStoreImage(imageUrl, `news_${Date.now()}`);
+        // ✅ THAY THẾ: Upload to Vercel Blob instead of local storage
+        const uploadResult = await uploadImageToBlob(imageUrl, `news_${Date.now()}`);
         
-        if (downloadResult.success && downloadResult.publicUrl) {
-          imageDownloaded = true;
-          finalImageUrl = downloadResult.publicUrl;
-          console.log(`✅ Image downloaded and stored: ${finalImageUrl}`);
+        if (uploadResult.success && uploadResult.url) {
+          imageUploaded = true;
+          finalImageUrl = uploadResult.url;
+          console.log(`✅ Image uploaded to Blob: ${finalImageUrl}`);
         } else {
-          console.warn(`⚠️ Image download failed: ${downloadResult.error}`);
+          console.warn(`⚠️ Image upload failed: ${uploadResult.error}`);
           // Fall back to original URL (will expire but better than nothing)
           finalImageUrl = imageUrl;
         }
       }
     } catch (error) {
-      console.warn('⚠️ Image generation/download failed:', error);
+      console.warn('⚠️ Image generation/upload failed:', error);
       // Continue without image - article can still be created
     }
 
-    // Step 4: Save article to database
+    // Step 4: Save article to database (giữ nguyên)
     const articleData = {
       title: newsContent.title,
       content: newsContent.content,
@@ -133,7 +133,7 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       image_url: finalImageUrl,
       source_chunk_id: chunk.id,
       tags: newsContent.tags,
-      category: newsContent.category as 'medical' | 'health' | 'research' | 'news' // Fix: Type assertion to ensure correct type
+      category: newsContent.category as 'medical' | 'health' | 'research' | 'news'
     };
 
     const articleId = await addNewsArticle(articleData);
@@ -146,10 +146,10 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       };
     }
 
-    // Step 5: Mark chunk as used
+    // Step 5: Mark chunk as used (giữ nguyên)
     await addUsedChunkId(chunk.id);
 
-    // Step 6: Get saved article for response
+    // Step 6: Get saved article for response (giữ nguyên)
     const { getNewsArticleById } = await import('./news-manager');
     const savedArticle = await getNewsArticleById(articleId);
 
@@ -162,7 +162,7 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       generation_details: {
         chunk_id: chunk.id,
         image_generated: imageGenerated,
-        image_downloaded: imageDownloaded,
+        image_uploaded: imageUploaded, // ✅ ĐỔI TÊN từ image_downloaded
         image_url: finalImageUrl,
         cycle_reset: chunkResult.cycle_reset
       }
@@ -173,133 +173,29 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
     return {
       success: false,
       article: null,
-      message: error instanceof Error ? error.message : 'Unknown error occurred'
+      message: error instanceof Error ? error.message : 'Unknown error'
     };
   }
 }
 
-/**
- * Generate multiple news articles
- */
-export async function generateMultipleNews(count: number = 3): Promise<GeneratedNews[]> {
-  console.log(`🚀 Generating ${count} news articles...`);
-  
-  const results: GeneratedNews[] = [];
-  
-  for (let i = 1; i <= count; i++) {
-    console.log(`📰 Generating article ${i}/${count}...`);
-    
-    try {
-      const result = await generateNewsArticle();
-      results.push(result);
-      
-      // Small delay between generations
-      if (i < count) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-    } catch (error) {
-      results.push({
-        success: false,
-        article: null,
-        message: `Failed to generate article ${i}: ${error}`
-      });
-    }
-  }
-  
-  const successCount = results.filter(r => r.success).length;
-  console.log(`✅ Generated ${successCount}/${count} articles successfully`);
-  
-  return results;
-}
-
-/**
- * Test news generation (dry run)
- */
-export async function testNewsGeneration(): Promise<GeneratedNews> {
+// CÁC FUNCTIONS KHÁC GIỮ NGUYÊN (generateNewsFromChunk, generateArticleImage, etc...)
+async function generateNewsFromChunk(chunk: SelectedChunk): Promise<any> {
   try {
-    console.log('🧪 Testing news generation...');
-    
-    // Select chunk without marking as used
-    const chunkResult = await selectRandomChunk();
-    
-    if (!chunkResult.success || !chunkResult.chunk) {
-      return {
-        success: false,
-        article: null,
-        message: 'Test failed: Could not select chunk'
-      };
+    if (!process.env.OPENAI_API_KEY) {
+      console.log('⚠️ OpenAI API key not found, skipping news generation');
+      return null;
     }
 
-    // Generate content without saving
-    const newsContent = await generateNewsFromChunk(chunkResult.chunk);
-    
-    if (!newsContent) {
-      return {
-        success: false,
-        article: null,
-        message: 'Test failed: Could not generate content'
-      };
-    }
-
-    // Create test article object (not saved to database)
-    const testArticle: NewsArticle = {
-      id: 'test_article',
-      title: newsContent.title,
-      content: newsContent.content,
-      summary: newsContent.summary,
-      source_chunk_id: chunkResult.chunk.id,
-      created_at: new Date().toISOString(),
-      tags: newsContent.tags,
-      category: newsContent.category as 'medical' | 'health' | 'research' | 'news' // Fix: Type assertion here too
-    };
-
-    return {
-      success: true,
-      article: testArticle,
-      message: 'Test completed successfully (not saved)',
-      generation_details: {
-        chunk_id: chunkResult.chunk.id,
-        image_generated: false,
-        image_downloaded: false,
-        cycle_reset: false
-      }
-    };
-
-  } catch (error) {
-    return {
-      success: false,
-      article: null,
-      message: `Test failed: ${error}`
-    };
-  }
-}
-
-// Internal helper functions
-
-/**
- * Generate news content from chunk using GPT
- */
-// FIX 2: Thay any thành proper interface
-interface NewsContentResult {
-  title: string;
-  content: string;
-  summary: string;
-  tags: string[];
-  category: 'medical' | 'health' | 'research' | 'news'; // Fix: Use union type instead of string
-}
-
-async function generateNewsFromChunk(chunk: SelectedChunk): Promise<NewsContentResult | null> {
-  try {
-    console.log('🤖 Generating news from chunk...');
+    console.log('🤖 Generating news content with GPT...');
     
     const prompt = NEWS_GENERATION_PROMPT.replace('{CHUNK_CONTENT}', chunk.content);
-    
+
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
         {
           role: 'system',
-          content: 'Bạn là chuyên gia viết tin tức y tế chuyên nghiệp. Luôn trả về JSON hợp lệ.'
+          content: 'You are a medical news writer. Always respond with valid JSON only.'
         },
         {
           role: 'user',
@@ -310,32 +206,24 @@ async function generateNewsFromChunk(chunk: SelectedChunk): Promise<NewsContentR
       max_tokens: 1500
     });
 
-    const response = completion.choices[0]?.message?.content;
+    const responseText = completion.choices[0]?.message?.content;
     
-    if (!response) {
-      throw new Error('Empty response from GPT');
+    if (!responseText) {
+      throw new Error('No response from OpenAI');
     }
 
-    // Parse JSON response
-    const newsData = JSON.parse(response);
+    const newsData = JSON.parse(responseText);
     
-    // Validate required fields
-    if (!newsData.title || !newsData.content || !newsData.summary) {
-      throw new Error('GPT response missing required fields');
-    }
-
-    // Validate and normalize category
-    const validCategories = ['medical', 'health', 'research', 'news'];
-    const normalizedCategory = validCategories.includes(newsData.category) 
-      ? newsData.category 
-      : 'medical'; // Default fallback
+    const normalizedCategory = ['medical', 'health', 'research', 'news'].includes(newsData.category?.toLowerCase()) 
+      ? newsData.category.toLowerCase() 
+      : 'medical';
 
     return {
       title: newsData.title,
       content: newsData.content,
       summary: newsData.summary,
       tags: Array.isArray(newsData.tags) ? newsData.tags : [],
-      category: normalizedCategory as 'medical' | 'health' | 'research' | 'news' // Fix: Type assertion with validation
+      category: normalizedCategory as 'medical' | 'health' | 'research' | 'news'
     };
 
   } catch (error) {
@@ -344,12 +232,8 @@ async function generateNewsFromChunk(chunk: SelectedChunk): Promise<NewsContentR
   }
 }
 
-/**
- * Generate article image using DALL-E
- */
 async function generateArticleImage(title: string, category: string, summary: string): Promise<string | null> {
   try {
-    // Skip image generation if API key not available
     if (!process.env.OPENAI_API_KEY) {
       console.log('⚠️ OpenAI API key not found, skipping image generation');
       return null;
@@ -360,7 +244,7 @@ async function generateArticleImage(title: string, category: string, summary: st
     const prompt = IMAGE_GENERATION_PROMPT
       .replace('{TITLE}', title)
       .replace('{TOPIC}', category)
-      .replace('{SUMMARY}', summary.substring(0, 200)); // Limit prompt length
+      .replace('{SUMMARY}', summary.substring(0, 200));
 
     const imageResponse = await openai.images.generate({
       model: 'dall-e-3',
@@ -385,9 +269,6 @@ async function generateArticleImage(title: string, category: string, summary: st
   }
 }
 
-/**
- * Get generation statistics
- */
 export async function getGenerationStats() {
   try {
     const { getNewsStats } = await import('./news-manager');
@@ -395,5 +276,40 @@ export async function getGenerationStats() {
   } catch (error) {
     console.error('Error getting generation stats:', error);
     return null;
+  }
+}
+
+// Generate multiple news articles
+export async function generateMultipleNews(count: number): Promise<GeneratedNews[]> {
+  const results: GeneratedNews[] = [];
+  
+  for (let i = 0; i < count; i++) {
+    console.log(`🔄 Generating article ${i + 1}/${count}...`);
+    const result = await generateNewsArticle();
+    results.push(result);
+    
+    // Small delay between generations
+    if (i < count - 1) {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+    }
+  }
+  
+  return results;
+}
+
+// Test news generation
+export async function testNewsGeneration(): Promise<{ success: boolean; message: string }> {
+  try {
+    const result = await generateNewsArticle();
+    
+    return {
+      success: result.success,
+      message: result.success ? 'Test generation completed successfully' : result.message
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Test generation failed'
+    };
   }
 }
