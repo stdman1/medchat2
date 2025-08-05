@@ -28,6 +28,23 @@ export interface NewsDatabase {
   };
 }
 
+// Define types for Prisma returns
+interface PrismaArticle {
+  id: string;
+  title: string;
+  content: string;
+  summary: string;
+  image_url: string | null;
+  source_chunk_id: number | null;
+  created_at: Date;
+  tags: string[];
+  category: string;
+}
+
+interface PrismaUsedChunk {
+  chunk_id: number;
+}
+
 // Helper function để khởi tạo stats nếu chưa có
 async function ensureStatsExists() {
   try {
@@ -61,7 +78,7 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
     ]);
 
     // Transform database data to match original interface
-    const transformedArticles: NewsArticle[] = articles.map((article: any) => ({
+    const transformedArticles: NewsArticle[] = articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
@@ -75,7 +92,7 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
 
     return {
       articles: transformedArticles,
-      used_chunk_ids: usedChunks.map((chunk: { chunk_id: number }) => chunk.chunk_id),
+      used_chunk_ids: usedChunks.map((chunk: PrismaUsedChunk) => chunk.chunk_id),
       stats: {
         total_generated: stats?.total_generated || 0,
         last_generated: stats?.last_generated?.toISOString() || null,
@@ -99,8 +116,8 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
 }
 
 // Ghi news database (deprecated - chỉ để compatibility)
-export async function writeNewsDatabase(_data: NewsDatabase): Promise<boolean> {
-  console.warn('writeNewsDatabase is deprecated when using Postgres');
+export async function writeNewsDatabase(data: NewsDatabase): Promise<boolean> {
+  console.warn('writeNewsDatabase is deprecated when using Postgres. Data articles count:', data?.articles?.length || 0);
   return true;
 }
 
@@ -220,7 +237,7 @@ export async function getNewsArticles(limit?: number): Promise<NewsArticle[]> {
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: any) => ({
+    return articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
@@ -286,7 +303,7 @@ export async function getUsedChunkIds(): Promise<number[]> {
       select: { chunk_id: true }
     });
 
-    return usedChunks.map((chunk: { chunk_id: number }) => chunk.chunk_id);
+    return usedChunks.map((chunk: PrismaUsedChunk) => chunk.chunk_id);
   } catch (error) {
     console.error('Error getting used chunk IDs:', error);
     return [];
@@ -351,7 +368,7 @@ export async function searchNewsArticles(query: string, limit?: number): Promise
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: any) => ({
+    return articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
@@ -377,7 +394,7 @@ export async function getNewsArticlesByCategory(category: string, limit?: number
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: any) => ({
+    return articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
@@ -405,7 +422,7 @@ export async function getNewsArticlesByTag(tag: string, limit?: number): Promise
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: any) => ({
+    return articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
@@ -430,7 +447,7 @@ export async function getLatestNewsArticles(limit: number = 5): Promise<NewsArti
       take: limit
     });
 
-    return articles.map((article: any) => ({
+    return articles.map((article: PrismaArticle) => ({
       id: article.id,
       title: article.title,
       content: article.content,
