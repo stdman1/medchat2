@@ -590,9 +590,9 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
     return (
       <div className="profile-no-user">
         <div className="profile-no-user-content">
-          <i className="fas fa-user-circle"></i>
-          <h3>Đăng nhập để quản lý hồ sơ</h3>
-          <p>Đăng nhập để lưu và quản lý thông tin y tế cá nhân của bạn</p>
+          <i className="fas fa-user-circle profile-icon"></i>
+          <h3 className="profile-title">Đăng nhập để quản lý hồ sơ</h3>
+          <p className="profile-description">Đăng nhập để lưu và quản lý thông tin y tế cá nhân của bạn một cách an toàn và tiện lợi</p>
           <button 
             className="login-btn"
             onClick={() => window.dispatchEvent(new CustomEvent('openAuth'))}
@@ -878,77 +878,194 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           align-items: center;
           justify-content: center;
           min-height: 400px;
-          animation: fadeIn 0.5s ease-out;
+          padding: 20px;
+          background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 50%, #f0f9ff 100%);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .profile-no-user::before {
+          content: '';
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(14, 165, 233, 0.03) 0%, transparent 70%);
+          animation: rotate 20s linear infinite;
+          top: -50%;
+          left: -50%;
+        }
+
+        @keyframes rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
 
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from { 
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to { 
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .profile-no-user-content {
           text-align: center;
-          padding: 40px;
-          background: white;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          animation: scaleIn 0.6s ease-out;
+          padding: 50px 40px;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(20px);
+          border-radius: 24px;
+          box-shadow: 
+            0 20px 40px rgba(14, 165, 233, 0.1),
+            0 8px 32px rgba(0, 0, 0, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          position: relative;
+          z-index: 1;
+          animation: floatUp 0.8s ease-out;
+          max-width: 420px;
+          width: 100%;
         }
 
-        @keyframes scaleIn {
+        @keyframes floatUp {
           from { 
             opacity: 0;
-            transform: scale(0.9);
+            transform: translateY(30px) scale(0.95);
           }
           to { 
             opacity: 1;
-            transform: scale(1);
+            transform: translateY(0) scale(1);
           }
         }
 
-        .profile-no-user-content i {
-          font-size: 4rem;
-          color: #0ea5e9;
-          margin-bottom: 20px;
-          animation: bounce 2s infinite;
+        .profile-no-user-content::before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(135deg, #0ea5e9, #06b6d4, #0ea5e9);
+          border-radius: 26px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
 
-        @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-          40% { transform: translateY(-10px); }
-          60% { transform: translateY(-5px); }
+        .profile-no-user-content:hover::before {
+          opacity: 0.1;
         }
 
-        .profile-no-user-content h3 {
-          font-size: 1.5rem;
-          color: #1f2937;
-          margin-bottom: 10px;
+        .profile-icon {
+          font-size: 5rem;
+          background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 25px;
+          animation: iconPulse 3s ease-in-out infinite;
+          display: inline-block;
+          position: relative;
         }
 
-        .profile-no-user-content p {
+        @keyframes iconPulse {
+          0%, 100% { 
+            transform: scale(1);
+            filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.3));
+          }
+          50% { 
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.5));
+          }
+        }
+
+        .profile-title {
+          font-size: 1.8rem;
+          font-weight: 700;
+          background: linear-gradient(135deg, #1f2937, #374151);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 15px;
+          animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .profile-description {
           color: #6b7280;
           font-size: 1.1rem;
-          margin-bottom: 25px;
+          line-height: 1.6;
+          margin-bottom: 35px;
+          animation: fadeIn 0.8s ease-out 0.4s both;
         }
 
         .login-btn {
           background: linear-gradient(135deg, #0ea5e9, #06b6d4);
           color: white;
-          padding: 12px 30px;
+          padding: 16px 32px;
           border: none;
-          border-radius: 25px;
+          border-radius: 50px;
           font-weight: 600;
+          font-size: 1.1rem;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           display: inline-flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
           text-decoration: none;
+          position: relative;
+          overflow: hidden;
+          animation: fadeIn 0.8s ease-out 0.6s both;
+          box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+        }
+
+        .login-btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+          transition: left 0.6s ease;
+        }
+
+        .login-btn:hover::before {
+          left: 100%;
         }
 
         .login-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 15px 40px rgba(14, 165, 233, 0.4);
+        }
+
+        .login-btn:active {
+          transform: translateY(-1px) scale(0.98);
+        }
+
+        .login-btn i {
+          transition: transform 0.3s ease;
+        }
+
+        .login-btn:hover i {
+          transform: translateX(3px);
+        }
+
+        /* Particles effect */
+        .profile-no-user-content::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-image: 
+            radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+          pointer-events: none;
+          border-radius: 24px;
         }
 
         @media (max-width: 768px) {
@@ -984,6 +1101,29 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
           .btn {
             width: 100%;
             max-width: 300px;
+          }
+
+          .profile-no-user-content {
+            margin: 10px;
+            padding: 40px 30px;
+            border-radius: 20px;
+          }
+
+          .profile-icon {
+            font-size: 4rem;
+          }
+
+          .profile-title {
+            font-size: 1.5rem;
+          }
+
+          .profile-description {
+            font-size: 1rem;
+          }
+
+          .login-btn {
+            padding: 14px 28px;
+            font-size: 1rem;
           }
         }
       `}</style>

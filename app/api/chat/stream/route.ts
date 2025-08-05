@@ -4,6 +4,7 @@ export const dynamic = 'force-dynamic';
 import { NextRequest } from 'next/server';
 import OpenAI from 'openai';
 import { retrieveContext } from '../../../../lib/qdrant-service';
+import { prisma } from '../../../../lib/prisma';
 
 // Initialize OpenAI client
 const openai = new OpenAI({
@@ -20,10 +21,78 @@ interface ContextItem {
   risk_level: string;
 }
 
+// Interface cho user medical data
+interface UserMedicalData {
+  displayName: string;
+  gender?: string;
+  age?: number;
+  height?: number;
+  weight?: number;
+  allergies?: string;
+  hasHypertension: boolean;
+  hasDiabetes: boolean;
+  isSmoker: boolean;
+  currentMedications?: string;
+}
+
+// Function để lấy thông tin y tế của user - OPTIMIZED
+async function getUserMedicalContext(userId: string): Promise<string> {
+  try {
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: {
+        displayName: true,
+        gender: true,
+        age: true,
+        height: true,
+        weight: true,
+        allergies: true,
+        hasHypertension: true,
+        hasDiabetes: true,
+        isSmoker: true,
+        currentMedications: true,
+      }
+    });
+
+    if (!user) return '';
+
+    // ✅ COMPACT FORMAT - tiết kiệm tokens
+    let context = `\n[BỆNH NHÂN: ${user.displayName}`;
+    
+    // Basic info - một dòng
+    const basics = [
+      user.gender,
+      user.age ? `${user.age}t` : null,
+      user.height && user.weight ? `BMI${((user.weight / ((user.height/100) ** 2))).toFixed(1)}` : null
+    ].filter(Boolean).join(', ');
+    
+    if (basics) context += ` | ${basics}`;
+    
+    // Medical conditions - compact
+    const conditions = [];
+    if (user.hasHypertension) conditions.push('THA');
+    if (user.hasDiabetes) conditions.push('ĐTĐ');
+    if (user.isSmoker) conditions.push('HT');
+    if (conditions.length) context += ` | Tiền sử: ${conditions.join(',')}`;
+    
+    // Critical info only
+    if (user.allergies) context += ` | Dị ứng: ${user.allergies.substring(0, 50)}`;
+    if (user.currentMedications) context += ` | Thuốc: ${user.currentMedications.substring(0, 50)}`;
+    
+    context += `]\n`;
+    
+    return context;
+    
+  } catch (error) {
+    console.error('Error fetching user medical data:', error);
+    return '';
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
-    // Parse request body
-    const { message } = await request.json();
+    // Parse request body - THÊM userId
+    const { message, userId } = await request.json();
 
     // Validate input
     if (!message || typeof message !== 'string') {
@@ -48,6 +117,14 @@ export async function POST(request: NextRequest) {
           let totalInputTokens = 0;
           let totalOutputTokens = 0;
           let streamedContent = '';
+
+          // ✅ LẤY THÔNG TIN Y TẾ CÁ NHÂN (nếu có userId)
+          let userMedicalContext = '';
+          if (userId && userId !== 'anonymous') {
+            console.log('🏥 Fetching user medical context for:', userId);
+            userMedicalContext = await getUserMedicalContext(userId);
+            console.log('📋 Medical context loaded:', userMedicalContext ? 'Yes' : 'No');
+          }
 
           // ✅ DIRECT CALL: Không qua HTTP fetch
           console.log('🔍 Direct Qdrant search...');
@@ -93,7 +170,7 @@ export async function POST(request: NextRequest) {
             risk_level: result.risk_level
           }));
 
-          // Step 2: Build prompt based on RAG results
+          // Step 2: Build prompt based on RAG results + USER MEDICAL CONTEXT
           let systemPrompt = '';
 
           if (!fallbackNeeded && ragContext.length > 0) {
@@ -105,25 +182,40 @@ export async function POST(request: NextRequest) {
             const ragPromptTemplate = process.env.RAG_SYSTEM_PROMPT || 
               `Bạn là MedChat AI chuyên nghiệp.
 
+{MEDICAL_CONTEXT}
+
 Chỉ trả lời dựa trên thông tin sau từ cơ sở dữ liệu chính thức: 
 
 {CONTEXT}
 
-Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.`;
+Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.
 
-            systemPrompt = ragPromptTemplate.replace('{CONTEXT}', contextText);
+${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}`;
+
+            systemPrompt = ragPromptTemplate
+              .replace('{CONTEXT}', contextText)
+              .replace('{MEDICAL_CONTEXT}', userMedicalContext);
+              
           } else {
             // Fallback chat without RAG context
-            systemPrompt = process.env.FALLBACK_SYSTEM_PROMPT || 
-              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này. Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
+            const fallbackTemplate = process.env.FALLBACK_SYSTEM_PROMPT || 
+              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
+
+{MEDICAL_CONTEXT}
+
+Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
+
+${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}
 
 **Ghi chú rõ: đây chỉ là thông tin tham khảo.**`;
+
+            systemPrompt = fallbackTemplate.replace('{MEDICAL_CONTEXT}', userMedicalContext);
           }
 
           // Step 3: Call OpenAI Chat API với streaming
           // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL
           const chatResponse = await openai.chat.completions.create({
-            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4.1-mini-2025-04-14', // ✅ Giữ model gốc làm mặc định
+            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini', // ✅ Sửa model name
             messages: [
               {
                 role: 'system',
@@ -134,7 +226,7 @@ Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin 
                 content: trimmedMessage
               }
             ],
-            max_tokens: parseInt(process.env.MAX_TOKENS || '400'), // ✅ Biến môi trường cho max_tokens
+            max_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ Tăng lên 600
             temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
             stream: true,
             stream_options: {
