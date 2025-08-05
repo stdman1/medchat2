@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("POSTGRES_URL")
+  url      = env("DATABASE_URL")
 }
 
 // Bảng người dùng
@@ -14,6 +14,21 @@ model User {
   email       String   @unique
   password    String   // Sẽ hash trước khi lưu
   displayName String   @default("Thành viên mới") // Tên hiển thị có thể đổi
+  
+  // ✅ THÊM THÔNG TIN CÁ NHÂN VÀ Y TẾ
+  gender      String?   // "Nam", "Nữ", "Khác"
+  height      Float?    // Chiều cao (cm)
+  weight      Float?    // Cân nặng (kg)
+  age         Int?      // Tuổi
+  allergies   String?   // Dị ứng (có thể nhiều loại, phân tách bằng dấu ,)
+  
+  // Tiền sử bệnh án
+  hasHypertension Boolean @default(false) // Có từng bị cao huyết áp không
+  hasDiabetes     Boolean @default(false) // Có từng bị tiểu đường không
+  isSmoker        Boolean @default(false) // Có hút thuốc lá không
+  
+  currentMedications String? @db.Text // Các loại thuốc đang dùng (dạng text dài)
+  
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   
