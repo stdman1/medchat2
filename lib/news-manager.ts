@@ -1,14 +1,14 @@
 // lib/news-manager.ts
 import { prisma } from './prisma';
 
-// Types cho News System (giữ nguyên interface để tương thích)
+// ✅ FIX: Đổi interface NewsArticle - source_chunk_id thành string
 export interface NewsArticle {
   id: string;
   title: string;
   content: string;
   summary: string;
   image_url?: string;
-  source_chunk_id: number;
+  source_chunk_id: string; // ✅ CHANGED: number → string
   created_at: string;
   tags: string[];
   category: 'medical' | 'health' | 'research' | 'news';
@@ -16,7 +16,7 @@ export interface NewsArticle {
 
 export interface NewsDatabase {
   articles: NewsArticle[];
-  used_chunk_ids: number[];
+  used_chunk_ids: string[]; // ✅ CHANGED: number[] → string[]
   stats: {
     total_generated: number;
     last_generated: string | null;
@@ -28,21 +28,21 @@ export interface NewsDatabase {
   };
 }
 
-// Define types for Prisma returns
+// ✅ FIX: Đổi types cho Prisma returns
 interface PrismaArticle {
   id: string;
   title: string;
   content: string;
   summary: string;
   image_url: string | null;
-  source_chunk_id: number | null;
+  source_chunk_id: string | null; // ✅ CHANGED: number | null → string | null
   created_at: Date;
   tags: string[];
   category: string;
 }
 
 interface PrismaUsedChunk {
-  chunk_id: number;
+  chunk_id: string; // ✅ CHANGED: number → string
 }
 
 // Helper function để khởi tạo stats nếu chưa có
@@ -77,14 +77,14 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
       prisma.generationStats.findFirst()
     ]);
 
-    // Transform database data to match original interface
-    const transformedArticles: NewsArticle[] = articles.map((article: PrismaArticle) => ({
+    // ✅ FIX: Transform với string conversion
+    const transformedArticles: NewsArticle[] = articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: convert to string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -92,7 +92,7 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
 
     return {
       articles: transformedArticles,
-      used_chunk_ids: usedChunks.map((chunk: PrismaUsedChunk) => chunk.chunk_id),
+      used_chunk_ids: usedChunks.map((chunk) => chunk.chunk_id), // ✅ FIXED: already string
       stats: {
         total_generated: stats?.total_generated || 0,
         last_generated: stats?.last_generated?.toISOString() || null,
@@ -105,7 +105,6 @@ export async function readNewsDatabase(): Promise<NewsDatabase> {
     };
   } catch (error) {
     console.error('Error reading news database:', error);
-    // Return default structure nếu có lỗi
     return {
       articles: [],
       used_chunk_ids: [],
@@ -132,7 +131,7 @@ export async function addNewsArticle(article: Omit<NewsArticle, 'id' | 'created_
         content: article.content,
         summary: article.summary,
         image_url: article.image_url,
-        source_chunk_id: article.source_chunk_id,
+        source_chunk_id: article.source_chunk_id, // ✅ FIXED: now string
         tags: article.tags,
         category: article.category
       }
@@ -173,7 +172,7 @@ export async function addNewsArticle(article: Omit<NewsArticle, 'id' | 'created_
   }
 }
 
-// Cập nhật bài viết
+// ✅ FIX: Cập nhật bài viết
 export async function updateNewsArticle(id: string, updates: Partial<Omit<NewsArticle, 'id' | 'created_at'>>): Promise<boolean> {
   try {
     const updateData: {
@@ -183,7 +182,7 @@ export async function updateNewsArticle(id: string, updates: Partial<Omit<NewsAr
       image_url?: string | null;
       tags?: string[];
       category?: string;
-      source_chunk_id?: number | null;
+      source_chunk_id?: string | null; // ✅ FIXED: string instead of number
     } = {};
     
     if (updates.title !== undefined) updateData.title = updates.title;
@@ -229,7 +228,7 @@ export async function deleteNewsArticle(id: string): Promise<boolean> {
   }
 }
 
-// Lấy danh sách bài viết
+// ✅ FIX: Lấy danh sách bài viết
 export async function getNewsArticles(limit?: number): Promise<NewsArticle[]> {
   try {
     const articles = await prisma.article.findMany({
@@ -237,13 +236,13 @@ export async function getNewsArticles(limit?: number): Promise<NewsArticle[]> {
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: PrismaArticle) => ({
+    return articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -254,7 +253,7 @@ export async function getNewsArticles(limit?: number): Promise<NewsArticle[]> {
   }
 }
 
-// Lấy bài viết theo ID
+// ✅ FIX: Lấy bài viết theo ID
 export async function getNewsArticleById(id: string): Promise<NewsArticle | null> {
   try {
     const article = await prisma.article.findUnique({
@@ -269,7 +268,7 @@ export async function getNewsArticleById(id: string): Promise<NewsArticle | null
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -280,13 +279,13 @@ export async function getNewsArticleById(id: string): Promise<NewsArticle | null
   }
 }
 
-// Thêm chunk ID vào used list
-export async function addUsedChunkId(chunkId: number): Promise<boolean> {
+// ✅ FIX: Thêm chunk ID vào used list
+export async function addUsedChunkId(chunkId: string): Promise<boolean> {
   try {
     await prisma.usedChunk.upsert({
-      where: { chunk_id: chunkId },
+      where: { chunk_id: chunkId }, // ✅ FIXED: string
       update: {},
-      create: { chunk_id: chunkId }
+      create: { chunk_id: chunkId } // ✅ FIXED: string
     });
 
     return true;
@@ -296,14 +295,14 @@ export async function addUsedChunkId(chunkId: number): Promise<boolean> {
   }
 }
 
-// Lấy danh sách chunk IDs đã sử dụng
-export async function getUsedChunkIds(): Promise<number[]> {
+// ✅ FIX: Lấy danh sách chunk IDs đã sử dụng
+export async function getUsedChunkIds(): Promise<string[]> {
   try {
     const usedChunks = await prisma.usedChunk.findMany({
       select: { chunk_id: true }
     });
 
-    return usedChunks.map((chunk: PrismaUsedChunk) => chunk.chunk_id);
+    return usedChunks.map((chunk) => chunk.chunk_id); // ✅ FIXED: already string
   } catch (error) {
     console.error('Error getting used chunk IDs:', error);
     return [];
@@ -352,7 +351,7 @@ export async function getNewsStats() {
   }
 }
 
-// Tìm kiếm bài viết
+// ✅ FIX: Tìm kiếm bài viết
 export async function searchNewsArticles(query: string, limit?: number): Promise<NewsArticle[]> {
   try {
     const articles = await prisma.article.findMany({
@@ -368,13 +367,13 @@ export async function searchNewsArticles(query: string, limit?: number): Promise
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: PrismaArticle) => ({
+    return articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -385,7 +384,7 @@ export async function searchNewsArticles(query: string, limit?: number): Promise
   }
 }
 
-// Lấy bài viết theo category
+// ✅ FIX: Lấy bài viết theo category
 export async function getNewsArticlesByCategory(category: string, limit?: number): Promise<NewsArticle[]> {
   try {
     const articles = await prisma.article.findMany({
@@ -394,13 +393,13 @@ export async function getNewsArticlesByCategory(category: string, limit?: number
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: PrismaArticle) => ({
+    return articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -411,7 +410,7 @@ export async function getNewsArticlesByCategory(category: string, limit?: number
   }
 }
 
-// Lấy bài viết có tag cụ thể
+// ✅ FIX: Lấy bài viết có tag cụ thể
 export async function getNewsArticlesByTag(tag: string, limit?: number): Promise<NewsArticle[]> {
   try {
     const articles = await prisma.article.findMany({
@@ -422,13 +421,13 @@ export async function getNewsArticlesByTag(tag: string, limit?: number): Promise
       ...(limit && { take: limit })
     });
 
-    return articles.map((article: PrismaArticle) => ({
+    return articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'
@@ -439,7 +438,7 @@ export async function getNewsArticlesByTag(tag: string, limit?: number): Promise
   }
 }
 
-// Lấy bài viết mới nhất
+// ✅ FIX: Lấy bài viết mới nhất
 export async function getLatestNewsArticles(limit: number = 5): Promise<NewsArticle[]> {
   try {
     const articles = await prisma.article.findMany({
@@ -447,13 +446,13 @@ export async function getLatestNewsArticles(limit: number = 5): Promise<NewsArti
       take: limit
     });
 
-    return articles.map((article: PrismaArticle) => ({
+    return articles.map((article) => ({
       id: article.id,
       title: article.title,
       content: article.content,
       summary: article.summary,
       image_url: article.image_url || undefined,
-      source_chunk_id: article.source_chunk_id || 0,
+      source_chunk_id: article.source_chunk_id || '0', // ✅ FIXED: string
       created_at: article.created_at.toISOString(),
       tags: article.tags,
       category: article.category as 'medical' | 'health' | 'research' | 'news'

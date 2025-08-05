@@ -73,7 +73,7 @@ model Article {
   image_url       String?
   tags            String[]
   category        String
-  source_chunk_id Int?
+  source_chunk_id String?  // ✅ ĐÃ SỬA: BigInt? → String?
   created_at      DateTime @default(now())
   updated_at      DateTime @updatedAt
   
@@ -83,7 +83,7 @@ model Article {
 // THÊM MỚI - Bảng tracking chunks đã sử dụng
 model UsedChunk {
   id         String   @id @default(cuid())
-  chunk_id   Int      @unique
+  chunk_id   String   @unique  // ✅ ĐÃ SỬA: BigInt → String
   created_at DateTime @default(now())
   
   @@map("used_chunks")

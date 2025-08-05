@@ -13,7 +13,7 @@ export interface GeneratedNews {
   article: NewsArticle | null;
   message: string;
   generation_details?: {
-    chunk_id: number;
+    chunk_id: string; // ✅ FIXED: number → string
     image_generated: boolean;
     image_uploaded: boolean;
     image_url?: string;
@@ -125,13 +125,13 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       // Continue without image - article can still be created
     }
 
-    // Step 4: Save article to database (giữ nguyên)
+    // Step 4: Save article to database ✅ FIXED
     const articleData = {
       title: newsContent.title,
       content: newsContent.content,
       summary: newsContent.summary,
       image_url: finalImageUrl,
-      source_chunk_id: chunk.id,
+      source_chunk_id: chunk.id.toString(), // ✅ FIXED: Convert to string
       tags: newsContent.tags,
       category: newsContent.category as 'medical' | 'health' | 'research' | 'news'
     };
@@ -146,8 +146,8 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       };
     }
 
-    // Step 5: Mark chunk as used (giữ nguyên)
-    await addUsedChunkId(chunk.id);
+    // Step 5: Mark chunk as used ✅ FIXED
+    await addUsedChunkId(chunk.id.toString()); // ✅ FIXED: Convert to string
 
     // Step 6: Get saved article for response (giữ nguyên)
     const { getNewsArticleById } = await import('./news-manager');
@@ -160,7 +160,7 @@ export async function generateNewsArticle(): Promise<GeneratedNews> {
       article: savedArticle,
       message: 'News article generated and saved successfully',
       generation_details: {
-        chunk_id: chunk.id,
+        chunk_id: chunk.id.toString(), // ✅ FIXED: Convert to string
         image_generated: imageGenerated,
         image_uploaded: imageUploaded, // ✅ ĐỔI TÊN từ image_downloaded
         image_url: finalImageUrl,

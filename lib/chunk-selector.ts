@@ -89,7 +89,7 @@ export async function selectRandomChunk(): Promise<ChunkSelectionResult> {
     }
     
     // Tìm chunks chưa sử dụng
-    const availableChunkIds = allChunkIds.filter(id => !usedChunkIds.includes(id));
+    const availableChunkIds = allChunkIds.filter(id => !usedChunkIds.includes(String(id)));
     console.log(`📊 Available chunks: ${availableChunkIds.length}`);
     
     let selectedChunkId: number;

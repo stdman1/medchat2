@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
       content: content.trim(),
       summary: summary.trim(),
       image_url: body.image_url || undefined,
-      source_chunk_id: parseInt(source_chunk_id),
+      source_chunk_id: source_chunk_id,
       tags: body.tags || [],
       category: body.category || 'medical'
     };

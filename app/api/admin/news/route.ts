@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
       summary: summary?.trim() || content.substring(0, 200) + '...',
       category: category || 'medical',
       tags: Array.isArray(tags) ? tags : [],
-      source_chunk_id: source_chunk_id ? parseInt(source_chunk_id) : 0,
+      source_chunk_id: source_chunk_id ? source_chunk_id.toString() : '0',
       image_url: body.image_url || undefined
     };
     
