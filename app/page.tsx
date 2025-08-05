@@ -18,6 +18,15 @@ interface User {
   id: string;
   email: string;
   displayName: string;
+  gender?: string;
+  height?: number;
+  weight?: number;
+  age?: number;
+  allergies?: string;
+  hasHypertension?: boolean;
+  hasDiabetes?: boolean;
+  isSmoker?: boolean;
+  currentMedications?: string;
 }
 
 interface NewsArticle {
@@ -211,7 +220,7 @@ function NewsSection() {
   );
 }
 
-// News Detail Component - Thiết kế đẹp y như artifact
+// News Detail Component
 function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: () => void }) {
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [loading, setLoading] = useState(true);
@@ -486,6 +495,665 @@ function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: (
           </div>
         </div>
       </article>
+    </div>
+  );
+}
+
+// Profile Form Component
+function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUser: (userData: User) => void }) {
+  const [formData, setFormData] = useState({
+    displayName: user?.displayName || '',
+    gender: user?.gender || '',
+    height: user?.height || '',
+    weight: user?.weight || '',
+    age: user?.age || '',
+    allergies: user?.allergies || '',
+    hasHypertension: user?.hasHypertension || false,
+    hasDiabetes: user?.hasDiabetes || false,
+    isSmoker: user?.isSmoker || false,
+    currentMedications: user?.currentMedications || ''
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => ({ ...prev, [name]: checked }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!user) return;
+
+    setLoading(true);
+    setMessage({ type: '', text: '' });
+
+    try {
+      const response = await fetch('/api/user/profile', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: user.id,
+          ...formData
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setMessage({ type: 'success', text: 'Cập nhật thông tin thành công!' });
+        onUpdateUser(data.user);
+        
+        // Tự động ẩn thông báo sau 3 giây
+        setTimeout(() => {
+          setMessage({ type: '', text: '' });
+        }, 3000);
+      } else {
+        setMessage({ type: 'error', text: data.error || 'Có lỗi xảy ra' });
+      }
+    } catch (error) {
+      console.error('Update profile error:', error);
+      setMessage({ type: 'error', text: 'Không thể kết nối đến server' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!user) {
+    return (
+      <div className="profile-no-user">
+        <div className="profile-no-user-content">
+          <i className="fas fa-user-circle"></i>
+          <h3>Đăng nhập để quản lý hồ sơ</h3>
+          <p>Đăng nhập để lưu và quản lý thông tin y tế cá nhân của bạn</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="profile-container">
+      {/* CSS Styles cho profile form */}
+      <style jsx>{`
+        .profile-container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
+        .profile-card {
+          background: white;
+          border-radius: 20px;
+          box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+          overflow: hidden;
+          animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .profile-header {
+          background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+          color: white;
+          padding: 30px;
+          text-align: center;
+        }
+
+        .profile-header h1 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .profile-header p {
+          opacity: 0.9;
+          font-size: 1.1rem;
+        }
+
+        .profile-form {
+          padding: 40px;
+        }
+
+        .info-box {
+          background: linear-gradient(135deg, #fef3c7, #fde68a);
+          border: 1px solid #f59e0b;
+          border-radius: 12px;
+          padding: 20px;
+          margin-bottom: 30px;
+          animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.02); }
+        }
+
+        .info-box h3 {
+          color: #92400e;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .info-box p {
+          color: #78350f;
+          line-height: 1.6;
+        }
+
+        .form-section {
+          margin-bottom: 40px;
+        }
+
+        .section-title {
+          font-size: 1.4rem;
+          color: #1e40af;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #f0f9ff;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .form-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 25px;
+        }
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-group.full-width {
+          grid-column: 1 / -1;
+        }
+
+        label {
+          font-weight: 600;
+          color: #1f2937;
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .units {
+          font-size: 0.9rem;
+          color: #6b7280;
+          font-weight: normal;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+          padding: 12px 16px;
+          border: 2px solid #e5e7eb;
+          border-radius: 10px;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          background: white;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+          outline: none;
+          border-color: #0ea5e9;
+          box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+          transform: translateY(-1px);
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 100px;
+        }
+
+        .checkbox-group {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          margin-top: 10px;
+        }
+
+        .checkbox-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 15px;
+          background: #f0f9ff;
+          border-radius: 10px;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .checkbox-item:hover {
+          border-color: #0ea5e9;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          accent-color: #0ea5e9;
+          cursor: pointer;
+        }
+
+        .checkbox-label {
+          font-weight: 500;
+          color: #1f2937;
+          cursor: pointer;
+          flex: 1;
+        }
+
+        .form-actions {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          margin-top: 40px;
+          padding-top: 30px;
+          border-top: 1px solid #e5e7eb;
+        }
+
+        .btn {
+          padding: 15px 30px;
+          border: none;
+          border-radius: 12px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          min-width: 150px;
+          justify-content: center;
+        }
+
+        .btn-primary {
+          background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+          color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-primary:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        .message {
+          padding: 15px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .message.success {
+          background: #dcfce7;
+          border: 1px solid #22c55e;
+          color: #166534;
+        }
+
+        .message.error {
+          background: #fef2f2;
+          border: 1px solid #ef4444;
+          color: #dc2626;
+        }
+
+        .profile-no-user {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 400px;
+        }
+
+        .profile-no-user-content {
+          text-align: center;
+          padding: 40px;
+          background: white;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-no-user-content i {
+          font-size: 4rem;
+          color: #0ea5e9;
+          margin-bottom: 20px;
+        }
+
+        .profile-no-user-content h3 {
+          font-size: 1.5rem;
+          color: #1f2937;
+          margin-bottom: 10px;
+        }
+
+        .profile-no-user-content p {
+          color: #6b7280;
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+          .profile-container {
+            padding: 10px;
+          }
+
+          .profile-card {
+            border-radius: 15px;
+          }
+
+          .profile-header {
+            padding: 20px;
+          }
+
+          .profile-header h1 {
+            font-size: 1.5rem;
+          }
+
+          .profile-form {
+            padding: 20px;
+          }
+
+          .form-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .form-actions {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .btn {
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+      `}</style>
+
+      <div className="profile-card">
+        <div className="profile-header">
+          <h1>
+            <i className="fas fa-user-md"></i>
+            Hồ Sơ Y Khoa
+          </h1>
+          <p>Cập nhật thông tin cá nhân và y tế của bạn</p>
+        </div>
+
+        <div className="profile-form">
+          <div className="info-box">
+            <h3>
+              <i className="fas fa-shield-alt"></i>
+              Thông tin quan trọng
+            </h3>
+            <p>
+              Thông tin y tế của bạn được bảo mật tuyệt đối và chỉ được sử dụng để cung cấp tư vấn y tế chính xác hơn. 
+              Tất cả dữ liệu được mã hóa và tuân thủ các tiêu chuẩn bảo mật y tế.
+            </p>
+          </div>
+
+          {message.text && (
+            <div className={`message ${message.type}`}>
+              <i className={`fas ${message.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}`}></i>
+              {message.text}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit}>
+            {/* Thông tin cá nhân */}
+            <div className="form-section">
+              <h2 className="section-title">
+                <i className="fas fa-user"></i>
+                Thông tin cá nhân
+              </h2>
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="displayName">
+                    <i className="fas fa-signature"></i>
+                    Tên hiển thị
+                  </label>
+                  <input
+                    type="text"
+                    id="displayName"
+                    name="displayName"
+                    value={formData.displayName}
+                    onChange={handleInputChange}
+                    placeholder="Nhập tên hiển thị"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="gender">
+                    <i className="fas fa-venus-mars"></i>
+                    Giới tính
+                  </label>
+                  <select
+                    id="gender"
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">-- Chọn giới tính --</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="age">
+                    <i className="fas fa-birthday-cake"></i>
+                    Tuổi <span className="units">(năm)</span>
+                  </label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    value={formData.age}
+                    onChange={handleInputChange}
+                    min="0"
+                    max="150"
+                    placeholder="Nhập tuổi"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Thông số cơ thể */}
+            <div className="form-section">
+              <h2 className="section-title">
+                <i className="fas fa-weight"></i>
+                Thông số cơ thể
+              </h2>
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="height">
+                    <i className="fas fa-ruler-vertical"></i>
+                    Chiều cao <span className="units">(cm)</span>
+                  </label>
+                  <input
+                    type="number"
+                    id="height"
+                    name="height"
+                    value={formData.height}
+                    onChange={handleInputChange}
+                    min="50"
+                    max="300"
+                    step="0.1"
+                    placeholder="VD: 170"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="weight">
+                    <i className="fas fa-weight-hanging"></i>
+                    Cân nặng <span className="units">(kg)</span>
+                  </label>
+                  <input
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    value={formData.weight}
+                    onChange={handleInputChange}
+                    min="10"
+                    max="500"
+                    step="0.1"
+                    placeholder="VD: 65"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Tiền sử bệnh án */}
+            <div className="form-section">
+              <h2 className="section-title">
+                <i className="fas fa-heartbeat"></i>
+                Tiền sử bệnh án
+              </h2>
+              <div className="checkbox-group">
+                <div className="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="hasHypertension"
+                    name="hasHypertension"
+                    checked={formData.hasHypertension}
+                    onChange={handleInputChange}
+                  />
+                  <label htmlFor="hasHypertension" className="checkbox-label">
+                    <i className="fas fa-heart"></i>
+                    Từng bị cao huyết áp
+                  </label>
+                </div>
+
+                <div className="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="hasDiabetes"
+                    name="hasDiabetes"
+                    checked={formData.hasDiabetes}
+                    onChange={handleInputChange}
+                  />
+                  <label htmlFor="hasDiabetes" className="checkbox-label">
+                    <i className="fas fa-tint"></i>
+                    Từng bị tiểu đường
+                  </label>
+                </div>
+
+                <div className="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="isSmoker"
+                    name="isSmoker"
+                    checked={formData.isSmoker}
+                    onChange={handleInputChange}
+                  />
+                  <label htmlFor="isSmoker" className="checkbox-label">
+                    <i className="fas fa-smoking"></i>
+                    Có hút thuốc lá
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            {/* Thông tin y tế bổ sung */}
+            <div className="form-section">
+              <h2 className="section-title">
+                <i className="fas fa-pills"></i>
+                Thông tin y tế bổ sung
+              </h2>
+              <div className="form-grid">
+                <div className="form-group full-width">
+                  <label htmlFor="allergies">
+                    <i className="fas fa-exclamation-triangle"></i>
+                    Dị ứng
+                  </label>
+                  <textarea
+                    id="allergies"
+                    name="allergies"
+                    value={formData.allergies}
+                    onChange={handleInputChange}
+                    placeholder="Mô tả các loại dị ứng (thức ăn, thuốc, môi trường...)"
+                  />
+                </div>
+
+                <div className="form-group full-width">
+                  <label htmlFor="currentMedications">
+                    <i className="fas fa-prescription-bottle-alt"></i>
+                    Thuốc đang sử dụng
+                  </label>
+                  <textarea
+                    id="currentMedications"
+                    name="currentMedications"
+                    value={formData.currentMedications}
+                    onChange={handleInputChange}
+                    placeholder="Liệt kê các loại thuốc đang sử dụng, liều lượng và tần suất..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Form Actions */}
+            <div className="form-actions">
+              <button type="submit" className="btn btn-primary" disabled={loading}>
+                {loading ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin"></i>
+                    Đang lưu...
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-save"></i>
+                    Lưu thông tin
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
@@ -803,6 +1471,12 @@ export default function OceanChatPage() {
     }
   };
 
+  // Handle update user profile
+  const handleUpdateUser = (updatedUser: User) => {
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
   return (
     <div className="ocean-app-container">
       {/* Auth Modal */}
@@ -820,8 +1494,6 @@ export default function OceanChatPage() {
             <span>MedChat AI</span>
           </div>
         </div>
-
-        {/* User Info - Xóa phần này */}
 
         <nav className="ocean-nav-menu">
           {/* Nút Tư vấn mới */}
@@ -854,7 +1526,6 @@ export default function OceanChatPage() {
             </div>
             Hồ sơ
           </div>
-          {/* Thay đổi từ link thành tab */}
           <div 
             className={`ocean-nav-item ${currentContent === 'news' ? 'active' : ''}`}
             onClick={() => switchContent('news')}
@@ -1016,27 +1687,7 @@ export default function OceanChatPage() {
 
           {/* Profile Section */}
           <div className={`ocean-content-section ${currentContent === 'profile' ? 'active' : ''}`}>
-            <div className="ocean-profile-content">
-              {user ? (
-                <>
-                  <h2>Hồ sơ cá nhân</h2>
-                  <div className="ocean-profile-info">
-                    <p><strong>Tên hiển thị:</strong> {user.displayName}</p>
-                    <p><strong>Email:</strong> {user.email}</p>
-                  </div>
-                </>
-              ) : (
-                <div className="ocean-no-user">
-                  <p>Đăng nhập để cá nhân hóa trải nghiệm</p>
-                  <button
-                    onClick={() => setShowAuthModal(true)}
-                    className="ocean-login-btn"
-                  >
-                    Đăng nhập
-                  </button>
-                </div>
-              )}
-            </div>
+            <ProfileSection user={user} onUpdateUser={handleUpdateUser} />
           </div>
 
           {/* News Section */}
