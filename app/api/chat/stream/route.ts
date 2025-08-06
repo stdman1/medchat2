@@ -54,7 +54,26 @@ async function getUserMedicalContext(userId: string): Promise<string> {
       }
     });
 
-    if (!user) return '';
+    if (!user) {
+      console.log('❌ No user found for ID:', userId);
+      return '';
+    }
+
+    // ✅ DEBUG: Log user data
+    console.log('👤 User data from DB:', {
+      displayName: user.displayName,
+      gender: user.gender,
+      age: user.age,
+      height: user.height,
+      weight: user.weight,
+      hasConditions: {
+        hypertension: user.hasHypertension,
+        diabetes: user.hasDiabetes,
+        smoker: user.isSmoker
+      },
+      hasAllergies: !!user.allergies,
+      hasMedications: !!user.currentMedications
+    });
 
     // ✅ COMPACT FORMAT - tiết kiệm tokens
     let context = `\n[BỆNH NHÂN: ${user.displayName}`;
@@ -80,6 +99,9 @@ async function getUserMedicalContext(userId: string): Promise<string> {
     if (user.currentMedications) context += ` | Thuốc: ${user.currentMedications.substring(0, 50)}`;
     
     context += `]\n`;
+    
+    // ✅ DEBUG: Log final context
+    console.log('🏥 Generated medical context:', context);
     
     return context;
     
@@ -179,38 +201,39 @@ export async function POST(request: NextRequest) {
               .map((context: ContextItem) => `- ${context.content}`)
               .join('\n');
 
-            const ragPromptTemplate = process.env.RAG_SYSTEM_PROMPT || 
-              `Bạn là MedChat AI chuyên nghiệp.
+            // ✅ FIX: Build prompt trực tiếp thay vì dùng template
+            systemPrompt = `Bạn là MedChat AI chuyên nghiệp.
 
-{MEDICAL_CONTEXT}
+${userMedicalContext}
 
 Chỉ trả lời dựa trên thông tin sau từ cơ sở dữ liệu chính thức: 
 
-{CONTEXT}
+${contextText}
 
 Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.
 
 ${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}`;
-
-            systemPrompt = ragPromptTemplate
-              .replace('{CONTEXT}', contextText)
-              .replace('{MEDICAL_CONTEXT}', userMedicalContext);
               
           } else {
             // Fallback chat without RAG context
-            const fallbackTemplate = process.env.FALLBACK_SYSTEM_PROMPT || 
-              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
+            // ✅ FIX: Build prompt trực tiếp
+            systemPrompt = `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
 
-{MEDICAL_CONTEXT}
+${userMedicalContext}
 
 Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
 
 ${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}
 
 **Ghi chú rõ: đây chỉ là thông tin tham khảo.**`;
-
-            systemPrompt = fallbackTemplate.replace('{MEDICAL_CONTEXT}', userMedicalContext);
           }
+
+          // ✅ THÊM DEBUG LOG để kiểm tra
+          console.log('🔍 Final system prompt preview:');
+          console.log('📋 User medical context:', userMedicalContext);
+          console.log('📝 System prompt length:', systemPrompt.length);
+          console.log('💡 Prompt contains user info:', systemPrompt.includes('BỆNH NHÂN:'));
+          console.log('🎯 First 200 chars of prompt:', systemPrompt.substring(0, 200));
 
           // Step 3: Call OpenAI Chat API với streaming
           // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL

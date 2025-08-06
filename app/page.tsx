@@ -514,9 +514,80 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
     currentMedications: ''
   });
 
-  // Load user data khi component mount hoặc user thay đổi
-  useEffect(() => {
-    if (user) {
+// THAY THẾ useEffect hiện tại trong ProfileSection bằng code này:
+
+// Load user data khi component mount hoặc user thay đổi
+useEffect(() => {
+  const loadProfileFromDatabase = async () => {
+    if (!user?.id) {
+      // Reset form nếu không có user
+      setFormData({
+        displayName: '',
+        gender: '',
+        height: '',
+        weight: '',
+        age: '',
+        allergies: '',
+        hasHypertension: false,
+        hasDiabetes: false,
+        isSmoker: false,
+        currentMedications: ''
+      });
+      return;
+    }
+
+    try {
+      console.log('🔄 Loading profile from database for user:', user.id);
+      
+      // Gọi API để lấy dữ liệu mới nhất từ database
+      const response = await fetch(`/api/user/profile?userId=${user.id}`);
+      const data = await response.json();
+      
+      if (data.success && data.user) {
+        console.log('✅ Profile loaded from DB:', data.user);
+        
+        // Load dữ liệu từ database vào form
+        setFormData({
+          displayName: data.user.displayName || '',
+          gender: data.user.gender || '',
+          height: data.user.height?.toString() || '',
+          weight: data.user.weight?.toString() || '',
+          age: data.user.age?.toString() || '',
+          allergies: data.user.allergies || '',
+          hasHypertension: data.user.hasHypertension || false,
+          hasDiabetes: data.user.hasDiabetes || false,
+          isSmoker: data.user.isSmoker || false,
+          currentMedications: data.user.currentMedications || ''
+        });
+        
+        // Cập nhật user state với dữ liệu mới nhất từ DB
+        const updatedUser = {
+          ...user,
+          ...data.user
+        };
+        onUpdateUser(updatedUser);
+        
+      } else {
+        console.error('❌ Failed to load profile:', data.error);
+        
+        // Fallback: Load từ localStorage nếu API thất bại
+        setFormData({
+          displayName: user.displayName || '',
+          gender: user.gender || '',
+          height: user.height?.toString() || '',
+          weight: user.weight?.toString() || '',
+          age: user.age?.toString() || '',
+          allergies: user.allergies || '',
+          hasHypertension: user.hasHypertension || false,
+          hasDiabetes: user.hasDiabetes || false,
+          isSmoker: user.isSmoker || false,
+          currentMedications: user.currentMedications || ''
+        });
+      }
+    } catch (error) {
+      console.error('❌ Error loading profile:', error);
+      
+      // Fallback: Load từ localStorage nếu có lỗi
       setFormData({
         displayName: user.displayName || '',
         gender: user.gender || '',
@@ -530,7 +601,10 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
         currentMedications: user.currentMedications || ''
       });
     }
-  }, [user]);
+  };
+
+  loadProfileFromDatabase();
+}, [user?.id]); // Chỉ depend vào user.id để tránh infinite loop
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -1153,10 +1227,50 @@ export default function OceanChatPage() {
   };
 
   // Xử lý đăng nhập - CHỈ để personalize
-  const handleLogin = (userData: User) => {
+  // ✅ THAY THẾ BẰNG:
+const handleLogin = async (userData: User) => {
+  console.log('🔓 User logged in, loading full profile...');
+  
+  try {
+    // Bước 1: Set user cơ bản trước
     setUser(userData);
     localStorage.setItem('user', JSON.stringify(userData));
-  };
+    
+    // Bước 2: Load đầy đủ thông tin từ database
+    const response = await fetch(`/api/user/profile?userId=${userData.id}`);
+    const data = await response.json();
+    
+    if (data.success && data.user) {
+      console.log('✅ Full profile loaded from database');
+      
+      // Merge thông tin cơ bản + thông tin đầy đủ
+      const fullUserData = {
+        ...userData,    // id, email, displayName
+        ...data.user   // gender, age, hasHypertension, hasDiabetes, isSmoker, etc.
+      };
+      
+      // Update với dữ liệu đầy đủ
+      setUser(fullUserData);
+      localStorage.setItem('user', JSON.stringify(fullUserData));
+      
+      console.log('💾 Full user data saved:', {
+        hasGender: !!fullUserData.gender,
+        hasAge: !!fullUserData.age,
+        hasHeight: !!fullUserData.height,
+        hasWeight: !!fullUserData.weight,
+        hasHypertension: !!fullUserData.hasHypertension, // ✅
+        hasDiabetes: !!fullUserData.hasDiabetes,         // ✅ 
+        isSmoker: !!fullUserData.isSmoker               // ✅
+      });
+      
+    } else {
+      console.warn('⚠️ Could not load full profile, using basic info only');
+    }
+    
+  } catch (error) {
+    console.error('❌ Error loading full user profile:', error);
+  }
+};
 
   // Xử lý đăng xuất
   const handleLogout = () => {
