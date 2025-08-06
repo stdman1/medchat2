@@ -1024,7 +1024,10 @@ export default function OceanChatPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: trimmedInput }),
+        body: JSON.stringify({ 
+        message: trimmedInput,
+        userId: user?.id || 'anonymous'
+        }),
         signal: controller.signal
       });
 
