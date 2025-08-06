@@ -134,10 +134,10 @@ function NewsSection() {
   if (articles.length === 0) {
     return (
       <div className="news-content-area">
-        <div className="text-center py-12">
-          <i className="fas fa-newspaper text-6xl text-gray-300 mb-4"></i>
-          <h3 className="text-xl font-semibold text-gray-600 mb-2">Chưa có tin tức nào</h3>
-          <p className="text-gray-500">Hệ thống đang cập nhật tin tức mới...</p>
+        <div style={{ textAlign: 'center', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <i className="fas fa-newspaper" style={{ fontSize: '3.75rem', color: '#d1d5db', marginBottom: '1rem' }}></i>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#4b5563', marginBottom: '0.5rem' }}>Chưa có tin tức nào</h3>
+          <p style={{ color: '#6b7280' }}>Hệ thống đang cập nhật tin tức mới...</p>
         </div>
       </div>
     );
@@ -259,10 +259,10 @@ function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: (
   if (loading) {
     return (
       <div className="news-content-area">
-        <div className="flex items-center justify-center h-full">
-          <div className="text-center">
-            <i className="fas fa-spinner fa-spin text-4xl text-blue-600 mb-4"></i>
-            <p className="text-gray-600">Đang tải bài báo...</p>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          <div style={{ textAlign: 'center' }}>
+            <i className="fas fa-spinner fa-spin" style={{ fontSize: '2.25rem', color: '#2563eb', marginBottom: '1rem' }}></i>
+            <p style={{ color: '#4b5563' }}>Đang tải bài báo...</p>
           </div>
         </div>
       </div>
@@ -272,10 +272,10 @@ function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: (
   if (!article) {
     return (
       <div className="news-content-area">
-        <div className="text-center py-12">
-          <i className="fas fa-exclamation-triangle text-6xl text-gray-300 mb-4"></i>
-          <h3 className="text-xl font-semibold text-gray-600 mb-2">Không tìm thấy bài báo</h3>
-          <p className="text-gray-500 mb-6">Bài báo bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
+        <div style={{ textAlign: 'center', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <i className="fas fa-exclamation-triangle" style={{ fontSize: '3.75rem', color: '#d1d5db', marginBottom: '1rem' }}></i>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#4b5563', marginBottom: '0.5rem' }}>Không tìm thấy bài báo</h3>
+          <p style={{ color: '#6b7280', marginBottom: '1.5rem' }}>Bài báo bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
           <button
             onClick={onBack}
             className="ocean-button-primary"
@@ -291,6 +291,165 @@ function NewsDetailSection({ articleId, onBack }: { articleId: string; onBack: (
   return (
     <div className="news-content-area">
       {/* CSS Styles cho news detail - nhúng inline */}
+      <style jsx>{`
+        .news-detail-card {
+          max-width: 800px;
+          margin: 0 auto;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-detail-content {
+          padding: 32px;
+        }
+
+        .news-detail-meta {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 20px;
+          font-size: 14px;
+          color: #666;
+        }
+
+        .category-tag {
+          background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+          color: white;
+          padding: 6px 14px;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .date-time {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .date-time::before {
+          content: '📅';
+          font-size: 14px;
+        }
+
+        .news-detail-title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #2c3e50;
+          margin-bottom: 16px;
+          line-height: 1.3;
+        }
+
+        .news-detail-summary {
+          font-size: 16px;
+          color: #555;
+          line-height: 1.7;
+          margin-bottom: 24px;
+          background: #f8f9fa;
+          padding: 20px;
+          border-radius: 12px;
+          border-left: 4px solid #4facfe;
+          font-weight: 500;
+        }
+
+        .news-detail-content-text {
+          font-size: 16px;
+          line-height: 1.8;
+          color: #333;
+          margin-bottom: 24px;
+        }
+
+        .news-detail-content-text p {
+          margin-bottom: 16px;
+          text-align: justify;
+        }
+
+        .news-detail-content-text p:last-child {
+          margin-bottom: 0;
+        }
+
+        .news-detail-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+
+        .tag {
+          background: rgba(79, 172, 254, 0.1);
+          color: #4facfe;
+          padding: 6px 12px;
+          border-radius: 20px;
+          font-size: 13px;
+          font-weight: 500;
+          border: 1px solid rgba(79, 172, 254, 0.2);
+        }
+
+        .news-detail-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 20px;
+          border-top: 1px solid #eee;
+        }
+
+        .article-id {
+          font-size: 12px;
+          color: #999;
+          font-family: 'Courier New', monospace;
+        }
+
+        .back-btn {
+          background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 12px 24px;
+          border: none;
+          border-radius: 25px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .back-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+          .news-detail-card {
+            margin: 10px;
+            border-radius: 12px;
+          }
+          
+          .news-detail-content {
+            padding: 24px;
+          }
+          
+          .news-detail-title {
+            font-size: 24px;
+          }
+          
+          .news-detail-summary {
+            font-size: 15px;
+            padding: 16px;
+          }
+          
+          .news-detail-footer {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+          }
+        }
+      `}</style>
 
       <article className="news-detail-card">
         <div className="news-detail-content">
@@ -448,9 +607,6 @@ function ProfileSection({ user, onUpdateUser }: { user: User | null; onUpdateUse
 
   return (
     <div className="profile-container">
-      {/* CSS Styles cho profile form */}
-  
-
       <div className="profile-card">
         <div className="profile-header">
           <h1>
