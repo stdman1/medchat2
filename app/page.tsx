@@ -1430,8 +1430,8 @@ const handleLogin = async (userData: User) => {
                       </div>
                       <h3>Xin chào{user ? ` ${user.displayName}` : ''}! Tôi là MedChat AI</h3>
                       <p>
-                        Tôi có thể giúp bạn tư vấn về các vấn đề sức khỏe cơ bản, triệu chứng bệnh, 
-                        và hướng dẫn chăm sóc sức khỏe. Hãy mô tả triệu chứng hoặc đặt câu hỏi để bắt đầu!
+                        Tôi được đào tạo để phân tích chi tiết về HIV và bệnh truyền nhiễm STDs 
+                        Hãy mô tả triệu chứng hoặc đặt câu hỏi để bắt đầu!
                       </p>
                     </div>
                   ) : (
@@ -1451,7 +1451,7 @@ const handleLogin = async (userData: User) => {
                             <div className="medical-inline-stethoscope">
                               <i className="fas fa-stethoscope"></i>
                             </div>
-                            <div className="medical-inline-text">Đang phân tích triệu chứng...</div>
+                            <div className="medical-inline-text">Đang phân tích ...</div>
                           </div>
                         ) : (
                           <div className="ocean-bubble">
