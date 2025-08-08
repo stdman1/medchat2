@@ -249,7 +249,7 @@ ${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ
                 content: trimmedMessage
               }
             ],
-            max_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ Tăng lên 600
+            max_completion_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ Tăng lên 600
             temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
             stream: true,
             stream_options: {
