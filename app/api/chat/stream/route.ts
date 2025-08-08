@@ -263,7 +263,7 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
                 content: trimmedMessage
               }
             ],
-            max_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ Tăng lên 600
+            max_completion_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ SỬA: max_tokens → max_completion_tokens
             temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
             stream: true,
             stream_options: {
