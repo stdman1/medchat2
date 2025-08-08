@@ -250,9 +250,8 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
           console.log('🎯 First 200 chars of prompt:', systemPrompt.substring(0, 200));
 
           // Step 3: Call OpenAI Chat API với streaming
-          // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL
           const chatResponse = await openai.chat.completions.create({
-            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini', // ✅ Sửa model name
+            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini',
             messages: [
               {
                 role: 'system',
@@ -263,11 +262,11 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
                 content: trimmedMessage
               }
             ],
-            max_completion_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ SỬA: max_tokens → max_completion_tokens
-            temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
+            max_completion_tokens: parseInt(process.env.MAX_TOKENS || '600'),
+            // ✅ ĐÃ XÓA temperature vì gpt-4o-mini chỉ hỗ trợ default
             stream: true,
             stream_options: {
-              include_usage: true // Quan trọng: bật usage tracking
+              include_usage: true
             }
           });
 
