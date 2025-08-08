@@ -1,0 +1,63 @@
+SOURCE: Journal of Infectious Diseases 2020
+TOPIC: HIV Minimum Infectious Dose and Transmission Routes
+RISK: CRITICAL
+
+# Liều Lây Nhiễm Tối Thiểu HIV và Ngưỡng Lây Truyền
+
+Liều lây nhiễm tối thiểu (ID50, ID90) của HIV khác nhau đáng kể giữa các đường lây truyền. ID50 là liều virus cần thiết để lây nhiễm 50% số người phơi nhiễm, trong khi ID90 lây nhiễm 90%. Truyền máu có ID50 thấp nhất (10.000-100.000 bản sao) với nguy cơ gần 100% mỗi lần phơi nhiễm. Kim tiêm có ID50 khoảng 10.000-20.000 bản sao với nguy cơ 0,23% mỗi lần phơi nhiễm. Giao hợp qua hậu môn có ID50 30.000 bản sao cho người nhận (1,7% nguy cơ) và 100.000-400.000 bản sao cho người cho (0,6% nguy cơ). Giao hợp qua âm đạo có ID50 cao hơn: 140.000 bản sao cho người nhận (0,08% nguy cơ) và 400.000 bản sao cho người cho (0,04% nguy cơ). Lây truyền từ mẹ sang con có ID50 10.000-100.000 bản sao với nguy cơ 15-45% nếu không điều trị ART. Cho con bú có ID50 khoảng 10.000 bản sao mỗi lần bú. Liều này chịu ảnh hưởng mạnh bởi tải lượng virus, tính toàn vẹn niêm mạc và bệnh đồng nhiễm.
+
+SOURCE: Nature Medicine 2019
+TOPIC: HIV Viral Load in Body Fluids and Transmission Risk
+RISK: CRITICAL
+
+# Nồng Độ Virus HIV trong Dịch Cơ Thể và Nguy Cơ Lây Truyền
+
+Nồng độ RNA HIV khác nhau đáng kể giữa các dịch cơ thể, ảnh hưởng trực tiếp đến nguy cơ lây truyền. Huyết tương có tải lượng virus trung bình 30.000 bản sao/mL (khoảng 100-10.000.000) với nguy cơ lây truyền cao. Tinh dịch có trung bình 7.000 bản sao/mL (100-1.000.000) cũng với nguy cơ cao. Dịch âm đạo có khoảng 1.000 bản sao/mL (từ dưới giới hạn định lượng đến 100.000) với nguy cơ cao. Sữa mẹ có 150 bản sao/mL (từ dưới giới hạn định lượng đến 100.000) với nguy cơ trung bình. Nước bọt có nồng độ rất thấp dưới 1 bản sao/mL (thường dưới 1-100) với nguy cơ rất thấp. Mặc dù nồng độ virus trong nước bọt thấp, nguy cơ lây truyền qua đường miệng vẫn được xem xét trong trường hợp có loét miệng hoặc chấn thương. Cứ mỗi 10 lần tăng tải lượng virus huyết tương sẽ tăng nguy cơ lây truyền qua đường tình dục gấp 2,5 lần.
+
+SOURCE: The Lancet HIV 2021
+TOPIC: Undetectable Equals Untransmittable U=U Science
+RISK: CRITICAL
+
+# Khái Niệm U=U và Cơ Sở Khoa Học Không Phát Hiện Bằng Không Lây Truyền
+
+Khái niệm "U=U" (Undetectable = Untransmittable) có cơ sở khoa học vững chắc cho thấy người nhiễm HIV có tải lượng virus không thể phát hiện sẽ không thể lây truyền virus qua đường tình dục. Ngưỡng an toàn được xác định khi tải lượng virus dưới 200 bản sao/mL, mặc dù nhiều nghiên cứu sử dụng ngưỡng thấp hơn (<50 hoặc <20 bản sao/mL). Điều này áp dụng cho cả quan hệ tình dục qua hậu môn, âm đạo và miệng. Để đảm bảo an toàn, tải lượng virus phải được duy trì ở mức không phát hiện trong ít nhất 6 tháng với việc tuân thủ ART đều đặn. Các nghiên cứu lớn như PARTNER và PARTNER2 đã theo dõi hàng nghìn cặp đôi và không ghi nhận trường hợp lây truyền nào khi người nhiễm HIV có tải lượng virus không phát hiện. Khái niệm này không chỉ giúp giảm sự kỳ thị mà còn thúc đẩy việc điều trị ART sớm và tuân thủ điều trị, góp phần vào chiến lược phòng chống HIV toàn cầu.
+
+SOURCE: Clinical Infectious Diseases 2020
+TOPIC: HIV Compartmentalization and Tissue-Specific Viral Loads
+RISK: HIGH
+
+# Phân Ngăn Virus HIV và Tải Lượng Virus theo Mô
+
+HIV có khả năng tồn tại và nhân lên trong các mô hoặc "khoang" riêng biệt, độc lập với tải lượng virus trong máu, gọi là hiện tượng "phân ngăn" virus. Ở giai đoạn nhiễm cấp tính, huyết tương có 10⁶-10⁷ bản sao/mL, tinh dịch và dịch âm đạo có nồng độ gần bằng huyết tương. Ở giai đoạn mạn tính chưa điều trị, huyết tương có 10³-10⁶ bản sao/mL, tinh dịch thường thấp hơn 10-100 lần, dịch âm đạo cũng thấp hơn huyết tương. Khi điều trị ART đã ức chế, huyết tương dưới 20-200 bản sao/mL, tinh dịch và dịch âm đạo thường dưới 50-1.000 bản sao/mL hoặc dưới giới hạn định lượng. Dịch não tủy có thể cao hơn huyết tương ở giai đoạn cấp và có thể tồn tại phân ngăn virus riêng biệt. Tải lượng virus có thể cao hơn trong tinh hoàn, tuyến tiền liệt và ở phụ nữ bị viêm cổ tử cung. Điều này giải thích tại sao đôi khi tải lượng virus trong dịch sinh dục vẫn phát hiện được ngay cả khi tải lượng virus trong máu không phát hiện.
+
+SOURCE: Virology Journal 2018
+TOPIC: HIV Environmental Stability and Survival Times
+RISK: HIGH
+
+# Tính Ổn Định Môi Trường và Thời Gian Sống Sót của HIV
+
+HIV là virus có vỏ bọc với lớp màng lipid kép, làm cho nó cực kỳ dễ bị suy thoái bởi môi trường và có khả năng sống sót bên ngoài vật chủ rất hạn chế. Trong máu/huyết tương dạng lỏng ở 20-25°C, virus có thể sống sót vài ngày (lên đến 7 ngày), và ở 4°C có thể sống ≥7 ngày với tính ổn định được tăng cường. Máu khô trên bề mặt ở 21-23°C sẽ giảm 99,9% khả năng lây nhiễm trong 1 giờ và không thể phát hiện sau 24 giờ. Tinh dịch ở 37°C có thời gian bán hủy 2-4 giờ và có thể sống đến 24 giờ ở 25°C. Nước bọt ở 37°C giảm >2-log10 trong 30 phút. Kim tiêm còn máu ở nhiệt độ phòng có thể chứa virus sống đến 42 ngày nếu được bảo vệ khỏi bị khô. Trên bề mặt không xốp ở 20-22°C, virus chỉ sống vài phút đến vài giờ (≤2 giờ), trong khi trên bề mặt xốp thời gian sống sót ngắn hơn do khô nhanh hơn. Thời gian bán hủy của HIV trong huyết tương ở 37°C là khoảng 2 giờ.
+
+SOURCE: Applied and Environmental Microbiology 2019
+TOPIC: Environmental Factors Affecting HIV Viability
+RISK: HIGH
+
+# Các Yếu Tố Môi Trường Ảnh Hưởng đến Khả Năng Sống Sót của HIV
+
+Nhiều yếu tố môi trường ảnh hưởng mạnh đến khả năng sống sót của HIV. Nhiệt độ có tác động tỷ lệ thuận với tốc độ bất hoạt - virus bị phá hủy nhanh hơn ở nhiệt độ cao. Sự khô (desiccation) là yếu tố bất hoạt hiệu quả nhất, khi bị khô lớp vỏ lipid của virus sẽ vỡ và mất khả năng lây nhiễm. Trên các bề mặt xốp như vải, quá trình khô diễn ra nhanh hơn nên virus bị bất hoạt nhanh hơn. HIV rất nhạy cảm với các chất khử trùng thông thường như dung dịch cồn 70%, thuốc tẩy và các hợp chất chứa chlorine. Virus bị bất hoạt nhanh chóng ở pH axit (<5) và kiềm (>10). Tia UV, đặc biệt trong ánh sáng mặt trời trực tiếp, làm tổn thương vật liệu di truyền và bất hoạt virus nhanh chóng. Các yếu tố này kết hợp làm cho nguy cơ lây truyền HIV qua các bề mặt hoặc dụng cụ bị ô nhiễm là cực kỳ thấp trong điều kiện môi trường thông thường.
+
+SOURCE: Journal of Virology 2020
+TOPIC: Cell-free versus Cell-associated HIV Stability
+RISK: HIGH
+
+# So Sánh Tính Ổn Định Virus HIV Tự Do và Virus trong Tế Bào
+
+Có sự khác biệt quan trọng giữa virus HIV tự do (cell-free) và virus liên quan tế bào (cell-associated) về khả năng sống sót trong môi trường. Virus tự do là các hạt virus tồn tại độc lập, không được bảo vệ và dễ bị bất hoạt bởi các yếu tố môi trường như nhiệt độ, độ ẩm, pH và các chất khử trùng. Chúng có thời gian sống sót ngắn và nhanh chóng mất khả năng lây nhiễm khi tiếp xúc với điều kiện bất lợi. Ngược lại, virus trong tế bào là virus ẩn mình bên trong các tế bào bạch cầu sống, được bảo vệ khỏi môi trường bên ngoài bởi màng tế bào chủ. Điều này giúp virus sống sót lâu hơn đáng kể và duy trì khả năng lây nhiễm trong thời gian dài hơn. Đây chính là lý do tại sao virus trong kim tiêm dính máu có thể tồn tại lên đến 42 ngày nếu được bảo vệ khỏi sự khô, so với chỉ vài giờ đối với virus tự do trong môi trường mở. Sự khác biệt này có ý nghĩa quan trọng trong đánh giá nguy cơ lây truyền qua các dụng cụ y tế và trong việc xây dựng các biện pháp phòng ngừa phù hợp.
+
+SOURCE: AIDS Research and Human Retroviruses 2019
+TOPIC: HIV Detection Limits and Clinical Significance
+RISK: HIGH
+
+# Giới Hạn Phát Hiện HIV và Ý Nghĩa Lâm Sàng
+
+Các xét nghiệm tải lượng virus HIV hiện đại có khả năng phát hiện và định lượng virus ở nồng độ rất thấp với độ chính xác cao. Giới hạn phát hiện (LoD) của các xét nghiệm hiện tại có thể thấp tới 20 bản sao/mL, trong khi giới hạn định lượng (LoQ) chính xác thường ở mức 50 bản sao/mL. Ngưỡng "không phát hiện" trong thực hành lâm sàng thường được định nghĩa là <200 bản sao/mL theo khuyến cáo quốc tế, mặc dù hầu hết các phòng thí nghiệm hiện nay sử dụng ngưỡng thấp hơn nhiều (<50 hoặc <20 bản sao/mL). Tải lượng virus trong huyết tương là chỉ số quan trọng nhất để đánh giá hiệu quả điều trị ART và theo dõi đáp ứng của bệnh nhân. Mặc dù tải lượng virus trong máu có thể không phát hiện được, tải lượng virus trong các dịch sinh dục vẫn có thể dao động nhẹ do hiện tượng phân ngăn, nhưng nguy cơ lây truyền vẫn được coi là bằng không khi đạt ngưỡng không phát hiện ổn định. Tải lượng virus cao có liên quan trực tiếp đến tốc độ suy giảm miễn dịch nhanh hơn và tiên lượng bệnh xấu hơn, nhấn mạnh tầm quan trọng của việc theo dõi định kỳ và duy trì điều trị hiệu quả.

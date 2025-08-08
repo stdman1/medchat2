@@ -1,0 +1,87 @@
+SOURCE: Comparative Analysis Medical Literature 2024
+TOPIC: TDF vs TAF Pharmacology
+RISK: MEDIUM
+
+# Dược lý và cơ chế hoạt động TDF và TAF
+
+Tenofovir Disoproxil Fumarate (TDF) là một tiền chất của tenofovir dưới dạng ester disoproxil fumarate. Sau khi uống, TDF nhanh chóng bị thủy phân trong huyết tương để giải phóng tenofovir, sau đó được các tế bào hấp thụ và phosphoryl hóa thành chất chuyển hóa có hoạt tính, tenofovir diphosphate (TFV-DP).
+
+Tenofovir Alafenamide (TAF) là một tiền chất phosphonamidate của tenofovir. Nó ổn định hơn trong huyết tương và ưu tiên được các tế bào đích (tế bào lympho, tế bào gan) hấp thụ, nơi nó bị thủy phân bởi men cathepsin A để giải phóng tenofovir, sau đó được phosphoryl hóa thành TFV-DP.
+
+TDF có liều 300 mg x 1 lần/ngày và thủy phân nhanh trong huyết tương. TAF có liều 25 mg x 1 lần/ngày (10 mg với các chất tăng cường) và ổn định, thủy phân trong tế bào. Cả hai thuốc đều tạo ra TFV-DP, chất này ức chế men sao chép ngược của virus HIV hoặc men DNA polymerase HBV bằng cách kết thúc chuỗi.
+
+SOURCE: Clinical Trials and Meta-analysis 2024
+TOPIC: TDF vs TAF Efficacy HIV HBV
+RISK: LOW
+
+# Hiệu quả điều trị HIV và HBV của TDF và TAF
+
+Các thử nghiệm lâm sàng ngẫu nhiên và phân tích tổng hợp cho thấy các phác đồ dựa trên TAF và TDF có hiệu quả tương đương trong việc đạt được và duy trì ức chế virus ở cả bệnh nhân chưa từng điều trị và bệnh nhân đã ức chế virus. Sau 48–96 tuần, tỷ lệ HIV RNA <50 copies/mL là tương đương giữa hai phác đồ.
+
+TAF và TDF đều có hiệu quả cao trong việc ức chế HBV DNA, với tỷ lệ chuyển đổi huyết thanh HBeAg và HBsAg tương đương. Sự khác biệt về hiệu quả giữa hai thuốc là không đáng kể, cho thấy cả hai đều là những lựa chọn điều trị hiệu quả cho HBV.
+
+Về mặt hiệu quả ức chế virus, TAF và TDF là tương đương cho cả điều trị HIV và HBV. Lựa chọn giữa hai thuốc chủ yếu dựa trên hồ sơ an toàn và các yếu tố khác của bệnh nhân.
+
+SOURCE: Safety Profile Studies 2024
+TOPIC: TDF vs TAF Renal Bone Safety
+RISK: HIGH
+
+# An toàn thận và xương của TDF và TAF
+
+Tenofovir liều cao trong huyết tương từ TDF có thể tích tụ trong tế bào ống thận, gây độc tính trực tiếp và tổn thương ty thể. TDF liên quan đến nguy cơ rối loạn chức năng ống thận gần cao hơn, có thể dẫn đến hội chứng Fanconi và suy thận.
+
+TAF với nồng độ tenofovir trong huyết tương thấp hơn nhiều, làm giảm đáng kể nguy cơ độc tính trên thận. Các thử nghiệm lâm sàng cho thấy TAF liên quan đến mức giảm eGFR và albumin niệu thấp hơn so với TDF. Dù an toàn hơn, cả hai thuốc đều yêu cầu theo dõi chức năng thận, đặc biệt ở bệnh nhân có suy thận từ trước.
+
+Về sức khỏe xương, tenofovir trong huyết tương từ TDF có thể tích tụ trong các tế bào xương, ảnh hưởng đến quá trình tạo xương và khoáng hóa xương. TDF gây giảm mật độ xương (BMD) đáng kể hơn ở cột sống và hông so với TAF. Dữ liệu lâu dài cho thấy nguy cơ gãy xương cao hơn một chút với TDF. TAF liên quan đến sự giảm BMD ít hơn và có thể giúp cải thiện BMD sau khi chuyển từ TDF.
+
+SOURCE: Metabolic and Lipid Studies 2024
+TOPIC: TDF vs TAF Metabolic Effects
+RISK: MEDIUM
+
+# Tác động chuyển hóa và lipid của TDF và TAF
+
+TDF thường liên quan đến sự giảm nhẹ nồng độ cholesterol toàn phần và LDL-C. Về cân nặng, TDF ít tác động đến cân nặng hoặc có thể liên quan đến sự giảm cân nhẹ.
+
+TAF liên quan đến sự gia tăng khiêm tốn nhưng có ý nghĩa thống kê về nồng độ cholesterol toàn phần, LDL-C và triglyceride so với TDF. Sự gia tăng này thường không cần can thiệp nhưng cần được theo dõi ở những bệnh nhân có nguy cơ tim mạch cao.
+
+TAF có liên quan đến việc tăng cân khiêm tốn nhưng có ý nghĩa lâm sàng ở một số bệnh nhân, đặc biệt là khi kết hợp với INSTI như dolutegravir.
+
+SOURCE: Clinical Guidelines and Special Populations 2024
+TOPIC: TDF vs TAF Special Populations
+RISK: HIGH
+
+# Nhóm dân số đặc biệt và hướng dẫn sử dụng
+
+Về chức năng thận: TDF được khuyến cáo với GFR ≥50 mL/phút cho HIV và ≥30 mL/phút cho HBV. TAF được khuyến cáo với GFR ≥30 mL/phút cho HIV và >15 mL/phút cho HBV.
+
+Đối với bệnh nhân loãng xương, nên tránh TDF nếu có thể và ưu tiên TAF. Trong thai kỳ, TDF được ưu tiên do có dữ liệu an toàn, trong khi TAF không được khuyến cáo do dữ liệu hạn chế.
+
+Ở nhi khoa, TDF được chấp thuận cho trẻ ≥2 tuổi, TAF được chấp thuận cho trẻ ≥2 tuổi với HIV và ≥12 tuổi với HBV.
+
+TAF được khuyến cáo cho bệnh nhân có hoặc có nguy cơ mắc bệnh thận hoặc xương, và ở người lớn tuổi. TDF vẫn được ưu tiên trong thai kỳ và khi chi phí là mối quan tâm lớn.
+
+SOURCE: Health Economics and Global Access 2024
+TOPIC: TDF vs TAF Cost Effectiveness
+RISK: MEDIUM
+
+# Hiệu quả chi phí và khả năng tiếp cận toàn cầu
+
+TDF có sẵn rộng rãi dưới dạng thuốc generic với chi phí cực kỳ thấp ở các quốc gia có thu nhập thấp và trung bình (LMICs). TAF được cấp bằng sáng chế ở hầu hết các khu vực, chi phí cao hơn, phiên bản generic còn hạn chế nhưng đang được mở rộng.
+
+Các mô hình kinh tế cho thấy TAF chỉ hiệu quả về chi phí ở những bệnh nhân có nguy cơ trung bình đến cao mắc bệnh thận mạn (CKD) hoặc gãy xương, với sự khác biệt về giá hiện tại.
+
+Đối với y tế công cộng, ở hầu hết bệnh nhân tại các LMICs, TDF vẫn là xương sống của liệu pháp HIV/HBV do giá cả phải chăng và hồ sơ an toàn chấp nhận được ở những người trẻ tuổi, khỏe mạnh.
+
+WHO khuyến cáo TDF là phác đồ đầu tay được ưu tiên, TAF cho các nhóm dân số đặc biệt (nguy cơ thận/xương) nếu có sẵn. Các quốc gia có nguồn lực hạn chế chọn TDF là lựa chọn chính do chi phí và tính sẵn có, TAF được dành cho những người có lo ngại cụ thể về an toàn.
+
+SOURCE: Clinical Decision Making Guidelines 2024
+TOPIC: TDF vs TAF Selection Criteria
+RISK: HIGH
+
+# Tiêu chí lựa chọn TDF và TAF
+
+TAF được ưu tiên khi bệnh nhân có tiền sử hoặc nguy cơ cao mắc bệnh thận mạn (eGFR <60 mL/phút), có tiền sử loãng xương hoặc giảm mật độ xương, bệnh nhân lớn tuổi (>50 tuổi), người cấy ghép nội tạng hoặc những người cần điều trị HBV suốt đời, hoặc bệnh nhân gặp vấn đề về kích thước viên thuốc hoặc khả năng dung nạp đường tiêu hóa.
+
+TDF vẫn phù hợp khi bệnh nhân mang thai (cho đến khi có nhiều dữ liệu hơn về TAF), bệnh nhân có chức năng thận và xương bình thường với nguy cơ tim mạch thấp và hạn chế về chi phí, hoặc các trường hợp sử dụng các chất cảm ứng P-gp mạnh như liệu pháp lao dựa trên rifampicin, nơi nồng độ TAF sẽ không đủ.
+
+Về liều dùng, TDF là 300 mg x 1 lần/ngày, TAF là 25 mg x 1 lần/ngày (10 mg với chất tăng cường). TFV trong huyết tương cao với TDF, thấp hơn 90% với TAF. TFV-DP trong tế bào trung bình với TDF, cao hơn 4-7 lần với TAF.

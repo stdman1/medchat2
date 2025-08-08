@@ -1,0 +1,87 @@
+SOURCE: Nature Reviews Microbiology 2021
+TOPIC: HIV Molecular Clock Analysis and Phylogenetic Dating
+RISK: HIGH
+
+# Phân Tích Đồng Hồ Phân Tử và Xác Định Niên Đại HIV
+
+Phân tích đồng hồ phân tử HIV dựa trên giả thuyết rằng những thay đổi di truyền tích lũy với tốc độ gần như không đổi theo thời gian, cho phép ước tính thời gian phân kỳ từ dữ liệu trình tự. HIV-1 tiến hóa nhanh chóng với tốc độ thay thế ≈1-3×10⁻³ thay thế/vị trí/năm, khiến nó phù hợp để xác định niên đại bằng đồng hồ phân tử. Phương pháp sử dụng mô hình Bayesian thư giãn cho phép tốc độ thay đổi giữa các dòng dõi và sử dụng "xác định niên đại theo đầu mút" dựa trên năm lấy mẫu đã biết. Các điểm neo thực nghiệm quan trọng bao gồm ZR59 (1959, Kinshasa) và DRC60 (1960, Kinshasa) cho nhóm M, YA-C (1966, Cameroon) cho nhóm O. Dòng thời gian được suy luận: nhóm M có tMRCA ước tính 1908 (1884-1920) ở SE Cameroon/Kinshasa, nhóm O có tMRCA ~1920-1935 ở bờ biển Cameroon, nhóm N có tMRCA 1961-1966 ở Cameroon, và nhóm P có tMRCA 1964-1974 ở Cameroon. Thách thức bao gồm tốc độ không đồng nhất giữa các phân nhóm, tái tổ hợp có thể làm rối loạn suy luận phát sinh loài, và chọn lọc thanh lọc có thể đánh giá thấp thời gian phân kỳ.
+
+SOURCE: PLoS Computational Biology 2022
+TOPIC: HIV Quasispecies Dynamics and Mutation Rates
+RISK: HIGH
+
+# Động Lực Tiến Hóa Quasispecies HIV và Tỷ Lệ Đột Biến
+
+HIV tồn tại dưới dạng quần thể quasispecies năng động với tỷ lệ đột biến cao. Tỷ lệ lỗi của enzyme sao chép ngược là 2.4-3.4×10⁻⁵ thay thế/vị trí/chu kỳ sao chép. Với bộ gen ~9.7 kb và 10⁹-10¹⁰ virion được sản xuất hàng ngày, gần như mọi đột biến điểm có thể có đều phát sinh hàng ngày trong một bệnh nhân điển hình. Sự đa dạng bổ sung từ đột biến chèn/mất (~5% sự kiện) và siêu đột biến G→A bởi APOBEC3G/F làm tăng thêm biến đổi. Áp lực chọn lọc từ tế bào T gây độc tế bào (CTL) và kháng thể trung hòa thúc đẩy đột biến thoát hiểm, thường đi kèm thay đổi bù đắp để phục hồi khả năng thích nghi. Liệu pháp kháng virus áp đặt chọn lọc định hướng mạnh mẽ dẫn đến xuất hiện nhanh chóng đột biến kháng thuốc (DRM). Phong cảnh thích nghi cực kỳ gồ ghề với nhiều đỉnh và thung lũng, các đột biến có lợi có thể trở nên có hại trừ khi có thay đổi bù đắp. Kích thước quần thể hiệu quả (Ne) trong vật chủ là ~10³-10⁴ mặc dù kích thước thực tế ≥10⁸.
+
+SOURCE: Nature Reviews Microbiology 2015
+TOPIC: HIV Transmission Bottlenecks and Founder Virus Selection
+RISK: CRITICAL
+
+# Hiệu Ứng Nút Thắt Lây Truyền và Chọn Lọc Virus Khởi Phát HIV
+
+Hầu hết ca nhiễm HIV-1 mới được thiết lập bởi virus khởi phát/lây truyền (T/F) duy nhất, đặc biệt trong lây truyền dị tính (~80%). Số lượng virus khởi phát thay đổi theo con đường: quan hệ tình dục đồng giới nam (MSM) và tiêm chích ma túy (IDU) có tỷ lệ nhiễm nhiều virus khởi phát cao hơn (2-8 virus khởi phát trong ~40% trường hợp). Virus khởi phát thường có tropism R5, vòng V1/V2 ngắn hơn, ít glycan hơn và phản ứng trimer Env cao hơn, cho thấy chọn lọc để thích nghi với lây truyền. Nút thắt làm giảm đáng kể đa dạng di truyền: kích thước quần thể hiệu quả giảm từ ≥10³ (trong vật chủ) xuống 1-5 (khởi phát), giảm >99% sự đa dạng. Các trình tự giai đoạn nhiễm cấp tính tạo cây phát sinh loài hình sao, phản ánh tổ tiên chung gần đây và đa dạng hạn chế. Nút thắt khuếch đại sự mất ngẫu nhiên các biến thể thiểu số, bao gồm đột biến kháng thuốc và thoát hiểm miễn dịch. Lây truyền được mô hình hóa như nút thắt nghiêm trọng, sau đó tăng trưởng theo cấp số nhân nhanh chóng.
+
+SOURCE: Journal of Virology 2018
+TOPIC: HIV Recombination Mechanisms and CRF Formation
+RISK: HIGH
+
+# Cơ Chế Tái Tổ Hợp HIV và Hình Thành CRF
+
+Tái tổ hợp HIV xảy ra thông qua cơ chế lựa chọn bản sao (copy-choice) trong quá trình sao chép ngược, khi enzyme sao chép ngược chuyển đổi giữa hai bộ gen RNA được đóng gói cùng nhau, tạo ra provirus tái tổ hợp. Tốc độ tái tổ hợp cao với 2-10 sự kiện chéo mỗi chu kỳ sao chép, các marker cách nhau 1 kb gần như phân ly độc lập (tốc độ tái tổ hợp ≈50%). Tái tổ hợp chỉ xảy ra trong virion dị hợp tử từ tế bào đồng nhiễm các virus khác nhau. Sự cùng lưu hành các phân nhóm khác nhau trong quần thể dẫn đến tái tổ hợp giữa các phân nhóm thường xuyên, tạo CRF. CRF được định nghĩa bởi cấu trúc bộ gen khảm chung được tìm thấy trong ≥3 trường hợp không liên quan dịch tễ học. Điểm nóng tái tổ hợp tập trung tại cấu trúc thứ cấp RNA, vùng giàu AU và ranh giới gen (gag|pol, pol|vif, env|nef). Các CRF có thể trở nên chiếm ưu thế khu vực hoặc toàn cầu, làm phức tạp việc phát triển vắc-xin và chẩn đoán. Trung tâm tái tổ hợp ở các khu vực có đa dạng phân nhóm cao và tỷ lệ đồng nhiễm cao như Tây-Trung Phi, Đông Nam Á, Trung Quốc.
+
+SOURCE: Virus Evolution 2019
+TOPIC: HIV CRFs Geographic Distribution and Epidemiology
+RISK: HIGH
+
+# Phân Bố Địa Lý và Dịch Tễ Học của CRF HIV
+
+Các dạng tái tổ hợp lưu hành (CRF) HIV có mẫu phân bố địa lý và dịch tễ học riêng biệt. CRF02_AG từ phân nhóm A và G chiếm >50% HIV-1 ở Cameroon, Gabon, Nigeria và phổ biến ở Tây-Trung Phi. CRF01_AE từ phân nhóm A và E (giả định) chiếm ưu thế ở Thái Lan, Việt Nam, miền nam Trung Quốc và Đông Nam Á. CRF07_BC và CRF08_BC từ phân nhóm B và C phổ biến trong mạng lưới tiêm chích ma túy (IDU) ở Trung Quốc. CRF55_01B từ 01_AE và B xuất hiện ở Trung Quốc trong nhóm nam quan hệ đồng giới (MSM). Một số CRF như CRF01_AE và CRF02_AG đã lây lan toàn cầu, trong khi những CRF khác vẫn cục bộ. Sự hình thành CRF được tạo điều kiện bởi sự đa dạng phân nhóm cao và tỷ lệ đồng nhiễm cao trong các quần thể cụ thể. Các CRF đặt ra thách thức cho việc phát triển vắc-xin do sự đa dạng antigenic tăng lên và có thể ảnh hưởng đến hiệu quả của các xét nghiệm chẩn đoán và thuốc kháng virus nếu có sự khác biệt về nhạy cảm.
+
+SOURCE: Current Opinion in Virology 2020
+TOPIC: HIV Population Genetics and Fitness Landscapes
+RISK: HIGH
+
+# Di Truyền Quần Thể HIV và Phong Cảnh Thích Nghi
+
+Di truyền quần thể HIV được đặc trưng bởi kích thước quần thể lớn, tỷ lệ đột biến cao và áp lực chọn lọc mạnh mẽ. Mặc dù kích thước quần thể thực tế ≥10⁸ virion, kích thước quần thể hiệu quả (Ne) trong vật chủ chỉ ~10³-10⁴ do sự phân bố con cái bị lệch và chọn lọc. Phong cảnh thích nghi HIV cực kỳ gồ ghề và giao tiếp (epistatic), với nhiều đỉnh và thung lũng địa phương. Các đột biến có lợi trong một bối cảnh có thể trở nên có hại trong bối cảnh khác trừ khi được bù đắp bằng đột biến thứ cấp. Tiến hóa trong vật chủ thường có dạng "thang", phản ánh các đợt chọn lọc liên tiếp khi virus thích nghi với áp lực mới như phản ứng miễn dịch hoặc liệu pháp thuốc. Trôi dạt di truyền đóng vai trò quan trọng do kích thước hiệu quả hạn chế, đặc biệt trong nút thắt lây truyền và trong các tình huống khi áp lực chọn lọc yếu. Hệ số chọn lọc cho các đột biến kháng thuốc chính thường s=0.1-0.3. Sự tương tác giữa đột biến, trôi dạt và chọn lọc tạo ra động lực tiến hóa phức tạp định hình sự đa dạng và thích nghi của HIV.
+
+SOURCE: Nature Structural & Molecular Biology 2023
+TOPIC: HIV Env Trimer Structure and Conformational States
+RISK: CRITICAL
+
+# Cấu Trúc Trimer Env HIV và Các Trạng Thái Cấu Hình
+
+Trimer vỏ (Env) HIV-1 là phức hợp không bền vững, được glycosyl hóa nhiều, làm trung gian cho xâm nhập virus và là mục tiêu duy nhất cho kháng thể trung hòa. Nó gồm ba heterodimer gp120-gp41, mỗi heterodimer từ sự cắt rời bằng protease của tiền chất gp160. Trimer có cấu trúc hình nấm với gp120 tạo đầu xa màng và gp41 tạo thân gần màng. Trạng thái trước hợp nhất (đóng) là gọn, đối xứng ba lần, với vòng V1/V2 và V3 ở đỉnh tạo vòng glycan che khuất vị trí gắn CD4 (CD4bs). Gắn CD4 ban đầu kích hoạt chuỗi sắp xếp lại cấu trúc: xoay ra ngoài và dịch chuyển tiểu đơn vị gp120, sắp xếp lại tấm cầu nối từ cấu hình ba chuỗi thành bốn chuỗi, dịch chuyển vòng V1/V2 làm lộ vòng V3 và vị trí gắn đồng thụ thể, hình thành trạng thái trung gian bị che khuất. Trạng thái sau hợp nhất có gp41 cuộn lại thành bó sáu xoắn ốc ổn định (trimer-of-hairpins), kéo màng virus và tế bào lại gần nhau. Trimer được ổn định bởi tiếp xúc rộng rãi giữa tiểu đơn vị và lớp giáp glycan dày đặc bao phủ ~50% bề mặt.
+
+SOURCE: Cell 2021
+TOPIC: HIV gp120 gp41 Conformational Dynamics and Entry
+RISK: CRITICAL
+
+# Động Học Cấu Hình gp120/gp41 HIV trong Quá Trình Xâm Nhập
+
+gp120 bao gồm các domain trong và ngoài, tấm cầu nối và năm vòng biến đổi (V1-V5). Các vòng V1/V2 và V3 rất linh hoạt và được glycosyl hóa, tạo đỉnh trimer và che khuất vị trí gắn đồng thụ thể ở trạng thái đóng. Khi gắn CD4, V1/V2 bị dịch chuyển và V3 lộ ra với cấu hình kéo dài để gắn đồng thụ thể. Động lực học phân tử và cryo-EM cho thấy V1/V2 và V3 có thể dao động >10 Å, góp phần vào trốn tránh miễn dịch và thích nghi thụ thể. gp41 trước hợp nhất phần lớn được chôn vùi dưới gp120, với peptide hợp nhất (FP) cô lập tại giao diện gp120-gp41. Kích hoạt hợp nhất khi gắn CD4 và đồng thụ thể khiến gp41 trải qua thay đổi cấu hình mạnh mẽ: FP (dư lượng 512-527) vung ra và chèn vào màng tế bào đích neo virus, gp41 tạo trung gian trước kẹp tóc với xoắn ốc HR1 kéo dài và vùng HR2 chuẩn bị quay lại tạo bó sáu xoắn ốc. Ngay cả khi không có thụ thể, Env vẫn ở các trạng thái đóng, trung gian và mở trên thang thời gian mili giây-giây. Gắn CD4 có thể gây mở trimer không đối xứng, chỉ một hoặc hai protomer có cấu hình mở.
+
+SOURCE: Journal of Molecular Biology 2020
+TOPIC: HIV Enzyme Active Sites and Drug Binding
+RISK: CRITICAL
+
+# Vị Trí Hoạt Động Enzyme HIV và Gắn Thuốc
+
+Enzyme sao chép ngược (RT) HIV-1 là heterodimer của tiểu đơn vị p66 (polymerase + RNase H) và p51 (cấu trúc). Vị trí hoạt động polymerase trong p66 palm có bộ ba xúc tác Y183-M184-D185-D186, phối hợp hai ion Mg²⁺ để tổng hợp DNA. NRTI gắn tại vị trí hoạt động polymerase hoạt động như chất kết thúc chuỗi. NNRTI gắn vào túi dị lập thể cách vị trí hoạt động ~10 Å, khóa enzyme ở cấu hình không hiệu quả. Enzyme integrase (IN) có ba domain: đầu N (gắn Zn²⁺), lõi xúc tác (motif DDE: D64, D116, E152), và đầu C. Motif DDE phối hợp hai ion Mg²⁺, xúc tác xử lý 3' và chuyển chuỗi. INSTI gắn tại vị trí hoạt động tạo phức với Mg²⁺ và ngăn chuyển chuỗi. Chất ức chế dị lập thể (ALLINI/LEDGIN) gắn tại giao diện dimer gây đa hóa bất thường và ức chế trưởng thành virus. Enzyme protease (PR) là homodimer đối xứng, mỗi monomer đóng góp D25-T26-G27 vào bộ đôi xúc tác. Vị trí hoạt động là khe giữa monomer được bao quanh bởi cánh linh hoạt (dư lượng 43-58). PI là chất bắt chước trạng thái chuyển tiếp gắn tại vị trí hoạt động, tương tác với cả hai aspartate xúc tác.
+
+SOURCE: Nature Reviews Drug Discovery 2019
+TOPIC: Structure-Based HIV Drug Design and Cryptic Sites
+RISK: HIGH
+
+# Thiết Kế Thuốc HIV Dựa Trên Cấu Trúc và Vị Trí Ẩn
+
+Thiết kế thuốc HIV dựa trên cấu trúc khai thác kiến thức về cấu trúc 3D của protein virus để phát triển chất ức chế hiệu quả. Các vị trí gắn ẩn (cryptic) là túi thoáng qua hoặc ẩn không rõ ràng trong cấu trúc tĩnh, được bộc lộ bởi động lực học protein hoặc gắn phối tử. Mô phỏng động lực học phân tử (MD) và sàng lọc mảnh vỡ có thể xác định vị trí ẩn trong Env, RT và PR, cho phép thiết kế chất ức chế gắn bên ngoài vị trí hoạt động kinh điển và vượt qua kháng thuốc. Cơ chế khớp cảm ứng (induced fit) xảy ra khi gắn phối tử gây ra thay đổi cấu hình trong mục tiêu, tạo ra hoặc mở rộng túi gắn. Nhiều chất ức chế HIV (NNRTI, PI) khai thác sự khớp cảm ứng, thích nghi với vùng enzyme linh hoạt và duy trì hiệu lực chống đột biến. Phân tích đột biến kháng thuốc hướng dẫn thiết kế chất ức chế phù hợp với "vỏ bọc cơ chất" - thể tích đồng thuận bị chiếm bởi cơ chất tự nhiên - giảm thiểu con đường thoát hiểm. Quy trình bao gồm: xác định cấu trúc độ phân giải cao, mô phỏng MD để thăm dò tính linh hoạt, sàng lọc ảo và tối ưu hóa dựa trên cấu trúc, thử nghiệm chống bảng đột biến kháng thuốc, tinh chỉnh lặp để tối đa hóa rào cản di truyền.
+
+SOURCE: Annual Review of Biochemistry 2021
+TOPIC: HIV Drug Resistance Structural Mechanisms
+RISK: CRITICAL
+
+# Cơ Chế Cấu Trúc Kháng Thuốc HIV
+
+Kháng thuốc HIV phát sinh thông qua đột biến làm thay đổi cấu trúc và chức năng của protein virus mục tiêu. Trong RT, gắn NNRTI gây ra thay đổi cấu hình ức chế hoạt động polymerase, và các đột biến kháng thuốc (K103N, Y181C) làm thay đổi hình dạng hoặc động lực học của túi NNRTI. Đột biến NRTI như M184V làm thay đổi vị trí hoạt động polymerase, giảm khả năng kết hợp nucleotide tương tự và tăng độ chính xác enzyme. Trong integrase, đột biến (Q148H, N155H) làm thay đổi sự phối hợp Mg²⁺ hoặc gắn DNA, làm giảm hiệu quả của INSTI. Đột biến kháng thuốc thường có chi phí thích nghi, làm giảm hiệu quả nhân lên virus, nhưng các đột biến bù đắp thứ cấp có thể khôi phục thích nghi trong khi duy trì kháng thuốc. Trong protease, đột biến tại vị trí hoạt động (I50V, V82A, I84V) hoặc vị trí xa hơn (L10I, L90M) làm thay đổi gắn chất ức chế hoặc ổn định dimer. Phân tích cấu trúc đột biến kháng thuốc cho thấy chúng thường làm giảm ái lực thuốc trong khi duy trì ái lực cơ chất tự nhiên. Thiết kế thuốc thế hệ mới nhắm mục tiêu vào vỏ bọc cơ chất và sử dụng nhiều điểm tiếp xúc để tăng rào cản di truyền đối với kháng thuốc.

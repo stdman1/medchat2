@@ -1,0 +1,95 @@
+SOURCE: WHO/CDC/EACS Guidelines 2023-2025, Nature Reviews 2024
+TOPIC: Pediatric HIV Weight-Based Dosing and Age-Specific Management
+RISK: CRITICAL
+
+# Hướng Dẫn Liều Dùng ARV Theo Độ Tuổi và Cân Nặng Cho Trẻ Em
+
+Liều dùng dựa trên cân nặng và độ tuổi, với điều chỉnh thường xuyên khi trẻ lớn lên. Phác đồ và dạng bào chế ưu tiên theo nhóm tuổi/cân nặng: Sơ sinh – 4 tuần sử dụng AZT + 3TC + RAL dạng lỏng (hạt RAL), không khuyến cáo dùng DTG <4 tuần tuổi. WHO khuyến nghị tính liều theo dải cân nặng (weight-band dosing) giúp đơn giản hóa việc tính toán và giảm sai sót. Theo dõi cân nặng thường xuyên với liều phải được tính lại ở mỗi lần khám để phù hợp với sự tăng trưởng và phát triển. Thanh thiếu niên ≥35–40 kg hoặc đã ở giai đoạn phát triển dậy thì cao có thể chuyển sang liều người lớn. Các công cụ hỗ trợ bao gồm máy tính liều kỹ thuật số như ứng dụng WHO Paediatric ARV Dosing và máy tính của BIPAI, cùng viên phối hợp liều cố định (FDCs) để cải thiện tuân thủ và giảm gánh nặng uống thuốc.
+
+SOURCE: Pediatric HIV Clinical Management 2024
+TOPIC: Growth Development Monitoring and Transition Protocols
+RISK: HIGH
+
+# Theo Dõi Tăng Trưởng và Phát Triển HIV Trẻ Em
+
+Đo chiều cao, cân nặng, BMI, tuổi xương định kỳ. Đánh giá giai đoạn dậy thì hằng năm từ 8 tuổi (thang Tanner). Sàng lọc phát triển thần kinh sử dụng Denver II hoặc Ages & Stages, giới thiệu khám chuyên khoa nếu chậm ≥2 tháng. Đánh giá nội tiết với tầm soát thiếu hormone tăng trưởng nếu SDS chiều cao ≤ -2 ở trẻ ≥5 tuổi. Suy dinh dưỡng và thấp còi cần theo dõi sát vì là nguy cơ lớn gây bệnh tật và tử vong. Quy trình chuyển tiếp từ chăm sóc nhi khoa sang người lớn bắt đầu lập kế hoạch từ 12–14 tuổi và hoàn tất ở 18–19 tuổi. Yếu tố chính bao gồm sử dụng checklist đánh giá sẵn có như "Got Transition", đảm bảo ổn định CD4/tải lượng virus ≥12 tháng, đánh giá khả năng tự dùng thuốc và sức khỏe tâm thần. Có giai đoạn khám song song với bác sĩ người lớn ≥6 tháng giúp tăng duy trì điều trị thêm 30%, với ghi chép và theo dõi tiến trình, sự tham gia của gia đình và cả đội nhi khoa/người lớn.
+
+SOURCE: Clinical Pediatric HIV Studies 2022-2024
+TOPIC: Pediatric HIV-Specific Opportunistic Infections and Prevention
+RISK: CRITICAL
+
+# Nhiễm Trùng Cơ Hội Đặc Thù Ở Trẻ Em HIV
+
+Trẻ em thường mắc bệnh lần đầu (không tái hoạt) và biểu hiện nặng hơn so với người lớn. Nhiễm thường gặp bao gồm BCG-osis, viêm phổi do vi khuẩn nặng, bệnh phổi mạn tính, CMV lan tỏa, Cryptosporidiosis. Dự phòng PCP sử dụng TMP-SMX 5 mg/kg TMP uống mỗi ngày từ 4 tuần tuổi cho đến khi CD4% >25% (hoặc >500 tế bào/µL nếu ≥6 tuổi). Lao cần điều trị dự phòng (3HR hoặc 6H) sau khi loại trừ bệnh lao hoạt động, với DTG liều gấp đôi vẫn đạt nồng độ rifampin đầy đủ. Chẩn đoán khó hơn ở trẻ em, cần nghi ngờ lâm sàng cao. Lịch tiêm chủng cho trẻ HIV dương tính bao gồm vaccine bất hoạt theo lịch quốc gia, vaccine sống chỉ dùng khi CD4% >15%. MMR, thủy đậu, BCG (tiêm lúc sơ sinh nếu mẹ đã ức chế tải lượng virus), rotavirus (nếu CD4% >25%). Phế cầu với PCV13 lúc 6, 10, 14 tuần + PPSV23 khi ≥2 tuổi. HPV vaccine 9 týp từ 9 tuổi, cho cả nam và nữ (phác đồ 2 liều nếu <15 tuổi).
+
+SOURCE: Pediatric HIV Long-term Outcomes 2023
+TOPIC: Pediatric HIV Long-term Effects and Adult Transition Outcomes
+RISK: HIGH
+
+# Tác Dụng Phụ và Biến Chứng Lâu Dài HIV Trẻ Em
+
+Tác dụng phụ thường gặp ngắn hạn bao gồm buồn nôn, nôn, tiêu chảy, phát ban, tăng men gan, hầu hết nhẹ và có thể xử trí ngoại trú. Tác dụng phụ lâu dài gồm rối loạn chuyển hóa như rối loạn lipid, kháng insulin, tăng cân (đặc biệt với thuốc nhóm INSTI). Về xương, 7% trẻ bị loãng xương khi đo DEXA, đặc biệt với tenofovir. Tim mạch có dày lớp nội–trung mạc động mạch cảnh, rối loạn chức năng thất trái dưới lâm sàng. Bệnh phổi mạn tính chiếm tỷ lệ 15–20% trong một số nhóm nghiên cứu. Ung thư có nguy cơ cao gấp 2–3 lần, chủ yếu là u lympho không Hodgkin và sarcoma Kaposi, nhưng nguy cơ tuyệt đối vẫn thấp. Về tăng trưởng và dậy thì, khởi động ART sớm giúp trẻ bắt kịp phát triển, khởi trị muộn dễ dẫn đến thấp còi và chậm dậy thì, đặc biệt ở bé trai. Kết quả sống còn cho thấy >80% trẻ bắt đầu ART hiện đại sống đến tuổi trưởng thành, khoảng 60% duy trì ức chế virus bền vững.
+
+SOURCE: HIV Cure Research Updates 2023-2024
+TOPIC: Shock and Kill Strategies and Clinical Trial Results
+RISK: CRITICAL
+
+# Chiến Lược "Shock and Kill" và Kết Quả Thử Nghiệm Lâm Sàng
+
+Chiến lược "shock and kill" nhằm kích hoạt ổ chứa HIV tiềm ẩn bằng các tác nhân đảo ngược tiềm ẩn (LRA), sau đó tiêu diệt các tế bào bị nhiễm bởi đáp ứng miễn dịch hoặc tác nhân độc tế bào. Các LRA chính bao gồm chất ức chế HDAC (vorinostat, panobinostat), chất chủ vận PKC (ingenol, bryostatin), và chất ức chế BET (JQ1, OTX015). Kết quả thử nghiệm lâm sàng cho thấy hầu hết LRA đơn độc chỉ tăng RNA HIV trong tế bào một cách khiêm tốn mà không làm giảm kích thước ổ chứa đo bằng DNA nguyên vẹn. Thử nghiệm kết hợp LRA + bNAbs (3BNC117, 10-1074) cho thấy một số bệnh nhân có giảm DNA HIV nhưng không bền vững. Các thách thức bao gồm LRA gây độc tính toàn thân, kích hoạt không đồng nhất của ổ chứa, và khả năng thanh thải tế bào bị kích hoạt kém. Hướng nghiên cứu mới tập trung vào LRA đặc hiệu mô, kết hợp với liệu pháp miễn dịch được tăng cường (checkpoint inhibitors, CAR-T cells), và các phương pháp nhắm mục tiêu ổ chứa trong các sanctuary site như CNS và lymphoid tissue.
+
+SOURCE: Gene Therapy and CRISPR Applications 2024
+TOPIC: CRISPR Cas9 Applications and CAR-T Cell Therapy for HIV
+RISK: HIGH
+
+# Liệu Pháp Gene và Ứng Dụng CRISPR/Cas9 Trong HIV
+
+Xóa CCR5 bằng zinc-finger nucleases đã cho thấy kiểm soát lâu dài ở một số ít bệnh nhân nhưng hiệu quả chỉnh sửa thấp. CRISPR/Cas9 (EBT-101) trong thử nghiệm pha I/IIa đang diễn ra, mục tiêu loại bỏ provirus HIV trực tiếp trong cơ thể. Tế bào CAR-T và CAR-NK ở giai đoạn thử nghiệm sớm cho thấy tiềm năng giảm tải lượng virus. Các thách thức bao gồm hiệu quả chỉnh sửa không hoàn hảo, khả năng off-target effects, và khó tiếp cận tất cả ổ chứa virus. Vaccine điều trị và liệu pháp miễn dịch bao gồm Ad26.Mos4.HIV + gp140 (Imbokodo) đã dừng do không hiệu quả nhưng tạo đáp ứng miễn dịch rộng. Vaccine mRNA mosaic T-cell có tỉ lệ đáp ứng cao trong thử nghiệm pha I. PD-1 blockade + LRA giảm tải lượng virus ở mức khiêm tốn, 8% gặp tác dụng phụ liên quan miễn dịch. Broadly neutralizing antibodies (bNAbs) tác dụng kéo dài với đột biến LS kéo dài thời gian bán thải, tiêm dưới da mỗi 24 tuần trong thử nghiệm.
+
+SOURCE: HIV Reservoir Biology 2023-2024
+TOPIC: Latent Reservoir Characterization and Measurement Techniques
+RISK: CRITICAL
+
+# Đặc Điểm và Kỹ Thuật Đo Lường Ổ Chứa Virus Tiềm Ẩn
+
+Intact Proviral DNA Assay (IPDA) là tiêu chuẩn vàng với trung vị ổ chứa nguyên vẹn là 44 bản sao/10⁶ tế bào CD4. Lập bản đồ tế bào đơn sử dụng RNA FISH-flow, ASAPseq và PET imaging với kháng thể đánh dấu. Thách thức bao gồm ổ chứa hiếm, đa dạng và khó phân biệt với tế bào không nhiễm. Các phương pháp đo lường khác gồm Quantitative Viral Outgrowth Assay (QVOA) - tiêu chuẩn vàng cho virus có khả năng sao chép nhưng đánh giá thấp kích thước thực tế của ổ chứa. Tat/Rev Induced Limiting Dilution Assay (TILDA) đo RNA có khả năng kích hoạt, tương quan tốt với QVOA. Single-cell RNA sequencing (scRNA-seq) cho phép đặc điểm hóa trạng thái phiên mã của từng tế bào bị nhiễm. Các biomarker mới bao gồm đo lường epigenetic marks (H3K4me3, H3K27me3) tại HIV LTR, phân tích chromatin accessibility bằng ATAC-seq, và định lượng intracellular HIV DNA/RNA ratio. Thử nghiệm Reservoir size tương quan với thời gian đến viral rebound sau ngừng ART, với median time to rebound khoảng 28 ngày khi reservoir size <10 infectious units per million (IUPM).
+
+SOURCE: HIV-TB Coinfection Management 2023-2024
+TOPIC: HIV-TB Coinfection Treatment Protocols and Drug Interactions
+RISK: CRITICAL
+
+# Phác Đồ Quản Lý Đồng Nhiễm HIV–Lao
+
+Bắt đầu điều trị lao ngay, khởi/duy trì ART trong vòng 2 tuần nếu CD4 <50 tế bào/µL. Với CD4 >50 tế bào/µL, có thể trễ ART 8-12 tuần để giảm nguy cơ IRIS. Phác đồ lao tiêu chuẩn 2HRZE/4HR với điều chỉnh ART: không dùng rilpivirine do tương tác với rifampin, tăng liều dolutegravir lên 50mg x2/ngày, efavirenz liều tiêu chuẩn 600mg/ngày. Theo dõi chặt chẽ hepatotoxicity với baseline ALT/AST, theo dõi hàng tuần 4 tuần đầu. Hội chứng phục hồi miễn dịch (IRIS) xảy ra ở 8-43% bệnh nhân, cao nhất khi CD4 <100 và viral load cao. Triệu chứng bao gồm sốt, hạch to, infiltrate phổi mới hoặc tăng nặng. Điều trị IRIS bằng corticosteroid (prednisone 1mg/kg x 2 tuần sau đó giảm dần), không ngừng ART trừ trường hợp đe dọa tính mạng. Dự phòng lao sử dụng isoniazid 5mg/kg x 6 tháng hoặc 3HP (isoniazid + rifapentine) hàng tuần x 12 tuần ở người CD4 ≥100. Cần loại trừ lao hoạt động bằng chest X-ray, WHO symptom screen, và Xpert MTB/RIF nếu có triệu chứng.
+
+SOURCE: HIV-HCV Coinfection Treatment 2024
+TOPIC: HIV-HCV Coinfection Management and Drug Interactions
+RISK: HIGH
+
+# Điều Trị Đồng Nhiễm HIV-HCV và Tương Tác Thuốc
+
+Tỷ lệ đồng nhiễm HIV-HCV khoảng 20-30% ở các nước phát triển, cao hơn trong nhóm tiêm chích ma túy (60-95%). HCV làm tăng tốc độ tiến triển HIV với viral load cao hơn và CD4 giảm nhanh hơn. Điều trị HCV ưu tiên sớm với Direct-Acting Antivirals (DAAs) đạt SVR12 >95%. Phác đồ pan-genotypic bao gồm sofosbuvir/velpatasvir 12 tuần cho genotype 1-6, glecaprevir/pibrentasvir 8 tuần cho treatment-naïve không có xơ gan. Tương tác thuốc quan trọng: không dùng efavirenz với velpatasvir do giảm nồng độ, không dùng TDF với sofosbuvir ở bệnh nhân có nguy cơ thận cao, atazanavir và darunavir tăng nồng độ một số DAAs. Theo dõi chức năng thận và gan trong quá trình điều trị, đặc biệt ở bệnh nhân xơ gan. Sau SVR, cần theo dõi tái nhiễm HCV ở nhóm nguy cơ cao (tiêm chích ma túy, sex workers), xét nghiệm HCV RNA hàng năm. Điều trị thành công HCV làm cải thiện function gan, giảm cardiovascular risk, và cải thiện quality of life ở bệnh nhân đồng nhiễm HIV.
+
+SOURCE: Cardiovascular Risk Management HIV 2023-2024
+TOPIC: Cardiovascular Risk Assessment and Management in HIV Patients
+RISK: HIGH
+
+# Đánh Giá và Quản Lý Nguy Cơ Tim Mạch Ở Bệnh Nhân HIV
+
+Bệnh nhân HIV có nguy cơ tim mạch cao gấp 1.5-2 lần dân số chung do viêm mãn tính, rối loạn chuyển hóa, và tác dụng phụ ART. Các yếu tố nguy cơ bao gồm viêm mãn tính (hsCRP, IL-6 tăng cao), rối loạn lipid (tăng cholesterol, triglyceride), kháng insulin, tăng huyết áp, và hút thuốc (tỷ lệ 40-70% vs 20% dân số chung). Đánh giá nguy cơ sử dụng modified Framingham Risk Score hoặc ASCVD Risk Calculator, điều chỉnh nhân với hệ số 1.5-2.0 cho HIV. Screening và theo dõi bao gồm lipid profile hàng năm, glucose/HbA1c hàng năm, huyết áp mỗi lần khám, ECG baseline và khi có triệu chứng. Quản lý can thiệp bao gồm thay đổi lối sống (tập thể dục, bỏ thuốc lá, chế độ ăn Mediterranean), điều chỉnh ART (thay PI bằng INSTI, TDF sang TAF nếu cần), và điều trị thuốc (statin cho LDL >100 mg/dL, ACE inhibitor cho huyết áp >130/80, metformin cho diabetes). Mục tiêu điều trị nghiêm ngặt hơn: LDL <70 mg/dL (hoặc <55 nếu nguy cơ rất cao), HbA1c <7%, huyết áp <130/80 mmHg. Theo dõi C-reactive protein và coronary calcium scoring có thể giúp stratification nguy cơ ở một số bệnh nhân.
+
+SOURCE: Long-Acting Injectable Antiretrovirals 2024
+TOPIC: Long-Acting Injectable Formulations Beyond CAB-LA
+RISK: HIGH
+
+# Các Dạng Thuốc Tiêm Tác Dụng Kéo Dài Ngoài CAB-LA
+
+Lenacapavir là ức chế capsid tiêm dưới da mỗi 6 tháng, FDA phê duyệt cho HIV kháng đa thuốc trong thử nghiệm pha III. Có hiệu lực rất cao, thể tích tiêm nhỏ, cơ chế khác biệt và đang có thử nghiệm phòng ngừa. Islatravir LAI là NRTTI tiêm bắp/dưới da ≥6 tháng, hiện ở pha I/II tiếp tục lại 2023. Dự kiến kết hợp với lenacapavir, từng ghi nhận tín hiệu giảm bạch cầu lympho đang được xem xét. Rilpivirine LA là NNRTI tiêm bắp hàng tháng hoặc mỗi 8 tuần, EMA phê duyệt trong combo CAB/RPV. Dùng kết hợp với CAB-LA, thử nghiệm PrEP đơn trị liệu đang diễn ra. Broadly neutralizing antibodies (bNAbs) dùng miễn dịch thụ động, tiêm tĩnh mạch/dưới da mỗi 12–16 tuần trong thử nghiệm pha I/II phòng ngừa/điều trị. Thế hệ mới có thời gian bán thải >100 ngày, thử nghiệm AMP xác định tương quan bảo vệ. Nano-prodrug siêu dài hạn là tiền dược nano tinh thể hướng tới liều hàng năm, hiện ở giai đoạn tiền lâm sàng trên khỉ macaque. Duy trì nồng độ điều trị 1 năm, dự kiến thử nghiệm người vào 2025. LAI đặc biệt hữu ích cho bệnh nhân gặp khó khăn tuân thủ, mệt mỏi với việc uống thuốc, hoặc lo ngại về kỳ thị, nhưng cần theo dõi sát để tránh kháng thuốc khi bỏ lỡ liều.
+
+SOURCE: HIV Implantable Drug Delivery Systems 2023-2024
+TOPIC: Implantable Devices for Continuous HIV Drug Release
+RISK: MEDIUM
+
+# Thiết Bị Cấy Ghép Giải Phóng Thuốc HIV
+
+Implant Islatravir sử dụng khoang chứa bằng poly-ethylene vinyl acetate trong 12 tháng, đã hoàn tất pha I và duy trì nồng độ bảo vệ >52 tuần. Implant nano-lưu chất chứa Cabotegravir ≥1 năm với màng silicon nano-lưu chất, đã chứng minh hiệu quả PrEP trên động vật linh trưởng và đang thử nghiệm độc tính GLP. Bơm thuốc Medici (Intarcia) chứa TAF trong 6–12 tháng là bơm titan mini-thẩm thấu, đã được xác thực trong điều trị tiểu đường và dự kiến thử nghiệm pha I cho PrEP HIV. Implant ISF phân hủy sinh học chứa TDF/FTC trong 3–6 tháng sử dụng gel polymer tạo hình tại chỗ, đã thử nghiệm trên lợn và dự kiến thử nghiệm trên người. Các thiết bị này được thiết kế để cung cấp thuốc kháng virus liên tục và kiểm soát, giúp giảm hơn nữa tần suất dùng thuốc và hỗ trợ tuân thủ điều trị. Ưu điểm bao gồm giải phóng thuốc ổn định, không cần nhớ dùng thuốc hàng ngày, và giảm kỳ thị. Nhược điểm gồm cần phẫu thuật cấy ghép/tháo bỏ, nguy cơ nhiễm trùng tại chỗ, và khó điều chỉnh liều khi cần thiết.

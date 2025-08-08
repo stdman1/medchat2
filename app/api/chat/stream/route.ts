@@ -196,36 +196,50 @@ export async function POST(request: NextRequest) {
           let systemPrompt = '';
 
           if (!fallbackNeeded && ragContext.length > 0) {
-            // Normal chat with RAG context
+            // ✅ RAG MODE: Sử dụng RAG_SYSTEM_PROMPT từ biến môi trường
             const contextText = ragContext
               .map((context: ContextItem) => `- ${context.content}`)
               .join('\n');
 
-            // ✅ FIX: Build prompt trực tiếp thay vì dùng template
-            systemPrompt = `Bạn là MedChat AI chuyên nghiệp.
+            // Lấy RAG prompt template từ env
+            const ragPromptTemplate = process.env.RAG_SYSTEM_PROMPT || 
+              `Bạn là MedChat AI chuyên nghiệp.
 
-${userMedicalContext}
+{USER_MEDICAL_CONTEXT}
 
 Chỉ trả lời dựa trên thông tin sau từ cơ sở dữ liệu chính thức: 
 
-${contextText}
+{RAG_CONTEXT}
 
 Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.
 
-${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}`;
+{USER_CONTEXT_INSTRUCTION}`;
+
+            // Replace placeholders với dữ liệu thực tế
+            systemPrompt = ragPromptTemplate
+              .replace('{USER_MEDICAL_CONTEXT}', userMedicalContext)
+              .replace('{RAG_CONTEXT}', contextText)
+              .replace('{USER_CONTEXT_INSTRUCTION}', 
+                userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : '');
               
           } else {
-            // Fallback chat without RAG context
-            // ✅ FIX: Build prompt trực tiếp
-            systemPrompt = `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
+            // ✅ FALLBACK MODE: Sử dụng FALLBACK_SYSTEM_PROMPT từ biến môi trường
+            const fallbackPromptTemplate = process.env.FALLBACK_SYSTEM_PROMPT || 
+              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
 
-${userMedicalContext}
+{USER_MEDICAL_CONTEXT}
 
 Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
 
-${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}
+{USER_CONTEXT_INSTRUCTION}
 
 **Ghi chú rõ: đây chỉ là thông tin tham khảo.**`;
+
+            // Replace placeholders với dữ liệu thực tế
+            systemPrompt = fallbackPromptTemplate
+              .replace('{USER_MEDICAL_CONTEXT}', userMedicalContext)
+              .replace('{USER_CONTEXT_INSTRUCTION}', 
+                userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : '');
           }
 
           // ✅ THÊM DEBUG LOG để kiểm tra

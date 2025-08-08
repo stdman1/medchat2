@@ -1,0 +1,131 @@
+SOURCE: International Journal of HIV Medicine - Clinical Review 2024
+TOPIC: Acute HIV Infection Clinical Manifestations
+RISK: CRITICAL
+
+# Biểu Hiện Lâm Sàng Nhiễm HIV Cấp Tính
+
+Nhiễm HIV cấp tính (AHI) là giai đoạn đầu sau khi mắc HIV, thường xảy ra 2-4 tuần sau phơi nhiễm. Giai đoạn này đặc trưng bởi sự nhân lên virus mạnh mẽ, đáp ứng miễn dịch mạnh và tập hợp các triệu chứng không đặc hiệu thường giống các bệnh virus khác.
+
+Các triệu chứng chính bao gồm sốt (75-90%), hạch bạch huyết sưng to (40-70%), viêm họng (40-70%), phát ban (40-60%), đau cơ khớp (50-70%) và nhức đầu (30-50%). Sốt thường là triệu chứng thường gặp nhất, kéo dài 3-10 ngày với cơ chế do giải phóng cytokine gây viêm.
+
+Nhận biết sớm AHI rất quan trọng cho chẩn đoán kịp thời, bắt đầu điều trị kháng virus sớm và giảm nguy cơ lây truyền thứ phát.
+
+SOURCE: International Journal of HIV Medicine - Clinical Review 2024  
+TOPIC: HIV Acute Infection Fever and Lymphadenopathy
+RISK: HIGH
+
+# Sốt và Hạch Bạch Huyết Sưng To Trong AHI
+
+Sốt là triệu chứng phổ biến nhất trong nhiễm HIV cấp tính, xuất hiện ở 75-90% bệnh nhân có triệu chứng. Sốt thường liên tục, nhẹ đến trung bình (≥38°C), hiếm khi có rét run như nhiễm khuẩn huyết do vi khuẩn.
+
+Cơ chế bệnh sinh của sốt do giải phóng cytokine gây viêm nội sinh (IL-1β, IL-6, TNF-α) bởi đại thực bào và tế bào dendritic được kích hoạt đáp ứng với sự nhân lên HIV mạnh mẽ. Các cytokine này tác động lên vùng dưới đồi để tăng điểm cài đặt điều nhiệt.
+
+Hạch bạch huyết sưng to xuất hiện ở 40-70% trường hợp, thường đối xứng, mềm, di động, không đau ở vùng cổ, nách và chẩm. Kích thước thường 1-4 cm, do tăng sinh nang bạch huyết và sản xuất immunoglobulin đa dòng.
+
+SOURCE: International Journal of HIV Medicine - Clinical Review 2024
+TOPIC: HIV Acute Infection Skin and Mucosal Manifestations  
+RISK: HIGH
+
+# Biểu Hiện Da và Niêm Mạc Trong AHI
+
+Phát ban xuất hiện ở 40-60% bệnh nhân AHI, là dạng ban đỏ không ngứa, dạng đốm hoặc morbilliform, chủ yếu ở thân mình, cổ và mặt. Có thể lan đến lòng bàn tay và bàn chân ở ~10% trường hợp.
+
+Cơ chế bệnh sinh do kích hoạt nội mô mạch máu qua trung gian miễn dịch (TNF-α, IFN-γ) và thâm nhiễm CD8+ quanh mạch máu. Lắng đọng phức hợp miễn dịch và môi trường cytokine tạo ra viêm lớp bì nông.
+
+Loét niêm mạc xuất hiện ở 10-30% trường hợp, là những loét nông, đau, giống aphthous với đáy xám và viền đỏ ở niêm mạc miệng, sinh dục hoặc quanh hậu môn. Loét do chết tế bào CD4+ T niêm mạc nhanh chóng, độc tế bào miễn dịch và hoại tử biểu mô do TNF-α.
+
+SOURCE: International Journal of HIV Medicine - Clinical Review 2024
+TOPIC: HIV Acute Infection Systemic Symptoms
+RISK: MODERATE
+
+# Triệu Chứng Toàn Thân Trong AHI
+
+Đau cơ và khớp xuất hiện ở 50-70% bệnh nhân, bao gồm đau cơ lan tỏa (chi gần, lưng) và đau khớp không có viêm khớp hoặc sưng khớp khách quan. Cơ chế do môi trường cytokine dị hóa (IL-1, IL-6, TNF-α) gây phân giải protein cơ.
+
+Nhức đầu gặp ở 30-50% trường hợp, thường là đau đầu vùng trán hoặc sau ổ mắt, đôi khi có sợ ánh sáng nhưng dấu hiệu màng não vắng mặt hoặc nhẹ. Cơ chế do xâm nhập thần kinh sớm gây viêm màng não lympho bào và tăng cytokine trong não.
+
+Triệu chứng tiêu hóa bao gồm chán ăn, khó chịu thượng vị nhẹ, tiêu chảy nước không máu (4-6 lần/ngày), xuất hiện ở 20-40% bệnh nhân. Cơ chế do cạn kiệt tế bào CD4+ T CCR5+ ở mô bạch huyết ruột gây rối loạn hàng rào niêm mạc.
+
+SOURCE: WHO Guidelines - Opportunistic Infections 2024
+TOPIC: Pneumocystis Pneumonia in HIV/AIDS
+RISK: CRITICAL
+
+# Viêm Phổi Do Pneumocystis jirovecii (PCP)
+
+PCP là nhiễm trùng cơ hội phổ biến nhất ở bệnh nhân HIV/AIDS, thường xảy ra khi số lượng CD4 dưới 200 tế bào/µL. Pneumocystis jirovecii là một loại nấm có đặc điểm giống động vật nguyên sinh, lây truyền qua đường hô hấp từ người sang người.
+
+Triệu chứng điển hình bao gồm khởi phát âm thầm với ho khan, sốt và khó thở khi gắng sức tiến triển dần. Hiếm khi có đờm và bệnh tiến triển nhanh hơn ở bệnh nhân không dùng ART.
+
+Chẩn đoán dựa trên PCR từ dịch rửa phế quản phế nang có độ nhạy cao. X-quang ngực cho thấy thâm nhiễm kẽ lan tỏa hai bên từ rốn phổi. Điều trị bằng trimethoprim-sulfamethoxazole, bổ sung corticosteroid toàn thân trong trường hợp nặng.
+
+SOURCE: WHO Guidelines - Opportunistic Infections 2024  
+TOPIC: Tuberculosis in HIV Coinfection
+RISK: CRITICAL
+
+# Bệnh Lao Trong Đồng Nhiễm HIV
+
+Lao là nhiễm trùng cơ hội quan trọng nhất ở bệnh nhân HIV, có thể xảy ra ở bất kỳ số lượng CD4 nào. Khi CD4 > 350, thường là bệnh lao điển hình ở phổi. Khi CD4 < 200, bệnh lao thường là ngoài phổi hoặc lan tỏa.
+
+Biểu hiện lâm sàng bao gồm sốt, đổ mồ hôi đêm, ho, sụt cân và hạch bạch huyết sưng to. Bệnh lao phổi thường gây ho có đờm, còn bệnh lao ngoài phổi có thể biểu hiện ở bất kỳ cơ quan nào.
+
+Chẩn đoán bằng nhuộm Ziehl-Neelsen, cấy đờm hoặc xét nghiệm khuếch đại axit nucleic từ đờm, máu hoặc dịch cơ thể. Điều trị bằng phác đồ nhiều thuốc trong 6 tháng. Hội chứng IRIS có thể xảy ra khi bắt đầu ART sau điều trị lao.
+
+SOURCE: WHO Guidelines - Opportunistic Infections 2024
+TOPIC: Mycobacterium Avium Complex in AIDS
+RISK: HIGH
+
+# Bệnh Do Phức Hợp Mycobacterium Avium (MAC)
+
+MAC là nhiễm trùng cơ hội nghiêm trọng thường xảy ra khi số lượng CD4 dưới 50 tế bào/µL. Phức hợp MAC bao gồm M. avium và M. intracellulare, lây truyền qua hít phải hoặc nuốt phải vi khuẩn trong môi trường.
+
+Sự suy giảm CD4+ T nghiêm trọng làm suy yếu khả năng của đại thực bào tiêu diệt vi khuẩn nội bào, cho phép MAC nhân lên không kiểm soát và lan truyền theo đường máu gây bệnh lan tỏa.
+
+Triệu chứng toàn thân bao gồm sốt, đổ mồ hôi đêm, sụt cân, đau bụng và tiêu chảy. Khám lâm sàng thường thấy gan lách to và bệnh hạch bạch huyết. Chẩn đoán bằng cấy máu hoặc tủy xương. Điều trị bằng phác đồ nhiều thuốc bao gồm clarithromycin và ethambutol.
+
+SOURCE: WHO Guidelines - Opportunistic Infections 2024
+TOPIC: Cryptococcal Meningitis in HIV/AIDS  
+RISK: CRITICAL
+
+# Viêm Màng Não Do Cryptococcus neoformans
+
+Viêm màng não do Cryptococcus là nguyên nhân hàng đầu gây viêm màng não ở người sống chung với HIV, thường xảy ra khi số lượng CD4 dưới 100 tế bào/µL. Lây truyền qua hít phải bào tử từ đất bị ô nhiễm bởi phân chim.
+
+Triệu chứng khởi phát âm thầm với nhức đầu, sốt, buồn nôn và nôn. Các dấu hiệu màng não như cứng cổ thường không có. Biểu hiện tâm thần có thể xuất hiện trong một số trường hợp.
+
+Chẩn đoán dựa trên phát hiện kháng nguyên cryptococcal (CrAg) trong huyết thanh và dịch não tủy có độ nhạy rất cao. Điều trị bằng amphotericin B kết hợp flucytosine tiêm tĩnh mạch giai đoạn tấn công, sau đó fluconazole uống giai đoạn củng cố.
+
+SOURCE: International Guidelines - HIV Treatment 2024
+TOPIC: Modern Antiretroviral Therapy Regimens
+RISK: HIGH
+
+# Phác Đồ Điều Trị Kháng Virus Hiện Đại
+
+Các phác đồ ART hiện đại sử dụng kết hợp thuốc từ các nhóm cơ chế khác nhau: NRTI (thuốc ức chế sao chép ngược nucleoside), INSTI (thuốc ức chế integrase), PI (thuốc ức chế protease) và NNRTI (thuốc ức chế sao chép ngược non-nucleoside).
+
+Phác đồ bước một được ưu tiên bao gồm: Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF), Dolutegravir/Abacavir/Lamivudine (DTG/ABC/3TC), và Dolutegravir + Tenofovir alafenamide/Emtricitabine (DTG + TAF/FTC).
+
+Các phác đồ dựa trên INSTI có hiệu quả cao nhất, hàng rào di truyền kháng thuốc cao, khả năng dung nạp tuyệt vời với tác dụng phụ tối thiểu và tương tác thuốc-thuốc thấp. Mục tiêu điều trị là đạt và duy trì tải lượng virus không phát hiện được (<50 copies/mL).
+
+SOURCE: International Guidelines - HIV Treatment 2024
+TOPIC: HIV Drug Resistance and Salvage Therapy
+RISK: HIGH
+
+# Kháng Thuốc HIV và Liệu Pháp Cứu Nguy
+
+Kháng thuốc HIV phát triển thông qua đột biến trong các gene mã hóa các enzyme mục tiêu. Các đột biến chính bao gồm M184V/I (kháng NRTI), K103N (kháng NNRTI), Q148H/K/R (kháng INSTI) và I50V/L (kháng PI).
+
+Nguyên tắc thiết kế phác đồ cứu nguy bao gồm: xét nghiệm kháng thuốc kiểu gen và kiểu hình, sử dụng ít nhất 2-3 thuốc có hiệu quả hoàn toàn, ưu tiên thuốc có hàng rào di truyền cao và sử dụng các thuốc mới với cơ chế độc đáo.
+
+Các thuốc mới trong liệu pháp cứu nguy bao gồm fostemsavir (thuốc ức chế gắn), ibalizumab (kháng thể đơn dòng hậu gắn) và lenacapavir (thuốc ức chế capsid tác dụng kéo dài). Phác đồ phải được cá nhân hóa dựa trên tiền sử dùng thuốc và hồ sơ kháng thuốc.
+
+SOURCE: International Guidelines - HIV Treatment 2024
+TOPIC: HIV Treatment Monitoring and Prognosis
+RISK: MODERATE
+
+# Giám Sát Điều Trị và Tiên Lượng HIV
+
+Các thông số giám sát chính bao gồm tải lượng virus (mục tiêu <20-50 copies/mL), số lượng CD4 (đánh giá phục hồi miễn dịch), chức năng thận và gan, hồ sơ lipid và glucose để phát hiện tác dụng phụ.
+
+Tải lượng virus là tiêu chí quan trọng nhất đánh giá hiệu quả điều trị, giám sát 2-8 tuần sau khi bắt đầu ART, sau đó 3-6 tháng một lần. Số lượng CD4 giám sát tại thời điểm chẩn đoán và 3-6 tháng sau ART.
+
+Với ART sớm và bền vững, tuổi thọ của bệnh nhân gần bằng dân số chung (≥90%). Ức chế virus có thể đạt được ở >95% bệnh nhân với các phác đồ hiện đại. Bệnh cảnh lâm sàng thay đổi từ các bệnh xác định AIDS sang các bệnh không liên quan đến AIDS.

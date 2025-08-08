@@ -1,0 +1,119 @@
+SOURCE: Cell Host & Microbe 2019
+TOPIC: HIV Cellular Entry and Receptor Binding Mechanisms
+RISK: CRITICAL
+
+# Cơ Chế Xâm Nhập Tế Bào và Liên Kết Thụ Thể của HIV
+
+Quá trình HIV-1 xâm nhập tế bào là chuỗi nhiều bước liên quan glycoprotein vỏ bọc (Env: gp120 và gp41) và thụ thể tế bào chủ. Trình tự bắt đầu với gp120 liên kết CD4 có ái lực cao, gây thay đổi cấu trúc làm lộ vị trí liên kết đồng thụ thể. Vòng V3 của gp120 tương tác với CCR5 hoặc CXCR4, tiếp tục kích hoạt thay đổi cấu trúc. gp41 làm trung gian cho dung hợp màng bằng cách chèn peptide dung hợp vào màng tế bào chủ. Mật độ thụ thể quyết định hiệu quả xâm nhập: tế bào T CD4+ nhớ hoạt hóa có 60-100×10³ phân tử CD4/tế bào, 1-4×10³ CCR5/tế bào và 3-10×10³ CXCR4/tế bào, làm chúng dễ bị nhiễm HIV cao. Tế bào T CD4+ nhớ nghỉ có mật độ thụ thể thấp hơn và khả năng lây nhiễm thấp hơn. Đại thực bào có 15-25×10³ CD4/tế bào và 1-2×10³ CCR5/tế bào. Đơn vị xâm nhập tối thiểu cần khoảng 10 CD4 và 3 CCR5 trong diện tích 1 µm².
+
+SOURCE: Nature Reviews Immunology 2020
+TOPIC: HIV Tissue Tropism and Anatomical Susceptibility
+RISK: CRITICAL
+
+# Tính Hướng Mô HIV và Độ Nhạy Cảm Giải Phẫu
+
+Các vị trí giải phẫu có mức độ nhạy cảm khác nhau với HIV dựa trên mật độ thụ thể và đặc điểm rào cản. Niêm mạc trực tràng có độ nhạy cảm cao nhất với biểu mô một lớp và mật độ tế bào T CCR5+ cao. Vùng biến đổi cổ tử cung có độ nhạy cảm cao với biểu mô mỏng và nhiều tế bào mục tiêu. Niêm mạc trong bao quy đầu có độ nhạy cảm trung bình với mật độ tế bào T CCR5+ cao nhưng ít keratin hóa. Vùng ngoài cổ tử cung có độ nhạy cảm thấp hơn với biểu mô nhiều lớp có keratin hóa. Niêm mạc miệng có độ nhạy cảm thấp nhất với biểu mô dày, keratin hóa và mật độ tế bào mục tiêu thấp. Virus R5 (CCR5-tropic) thống trị lây truyền qua niêm mạc và nhắm vào tế bào T CD4+ nhớ hoạt hóa ở niêm mạc ruột (GALT), cổ tử cung và trực tràng. Virus X4 (CXCR4-tropic) khó lây truyền qua niêm mạc và chủ yếu nhắm vào tế bào T naive ở máu ngoại vi.
+
+SOURCE: Journal of Virology 2018
+TOPIC: Cell-free versus Cell-associated HIV Transmission
+RISK: HIGH
+
+# So Sánh Lây Truyền HIV Tự Do và HIV Liên Kết Tế Bào
+
+Có sự khác biệt quan trọng giữa virus tự do (virion) và virus liên kết tế bào trong hiệu quả lây truyền. Virus tự do trong tải lượng virus huyết tương và dịch sinh dục xâm nhập tế bào bằng cách bám vào thụ thể trực tiếp. Virus liên kết tế bào trên các tế bào lympho hoặc đại thực bào bị nhiễm di chuyển qua niêm mạc và trực tiếp truyền virus cho tế bào T CD4+ không bị nhiễm thông qua khớp thần kinh virus (virological synapse). Sự lây truyền giữa các tế bào hiệu quả hơn 100 lần so với virus tự do và có thể vượt qua rào cản niêm mạc tốt hơn. Tế bào đuôi gai ở niêm mạc (tế bào Langerhans) có thể bắt giữ HIV-1 thông qua thụ thể lectin như DC-SIGN, sau đó di chuyển đến hạch bạch huyết và truyền virus cho tế bào T CD4+. Đại thực bào ở mô là nơi chứa virus quan trọng và có thể truyền virus cho tế bào T trong mô niêm mạc. Nút thắt lây truyền nghiêm trọng xảy ra khi chỉ 1 (hiếm khi ≤5) biến thể T/F thiết lập sự lây nhiễm bất chấp lượng virus ban đầu lớn.
+
+SOURCE: Nature Genetics 2021
+TOPIC: Host Genetic Polymorphisms and HIV Susceptibility
+RISK: CRITICAL
+
+# Đa Hình Di Truyền Vật Chủ và Tính Nhạy Cảm HIV
+
+CCR5-Δ32 là đột biến mất 32 cặp base tạo thụ thể bị cắt ngắn, không hoạt động. Người đồng hợp tử có khả năng đề kháng cao với HIV-1 hướng R5 gây phần lớn lây truyền qua đường tình dục. Người dị hợp tử có bảo vệ một phần với tiến triển bệnh chậm hơn và giảm nguy cơ lây truyền. Allele CCR5-Δ32 phổ biến nhất ở Bắc Âu (8-15%), hiếm ở châu Phi và châu Á. Các allele HLA-B bảo vệ như HLA-B*57, HLA-B*27 và HLA-B*81:01 liên quan với tải lượng virus thấp hơn, tiến triển bệnh chậm hơn và nguy cơ lây truyền thấp hơn bằng cách trình diện epitope HIV được bảo tồn cho CTL. CCR2-64I liên quan với chậm tiến triển thành AIDS. Số lượng bản sao CCL3L1 cao làm giảm tính nhạy cảm lây nhiễm HIV do ức chế cạnh tranh. SDF1-3'A liên quan với chậm tiến triển ở giai đoạn muộn. Gen KIR3DS1 và KIR2DS4 hoạt hóa kết hợp HLA-Bw4 tăng cường độc tế bào qua tế bào NK. Nghiên cứu gia đình ước tính 30-40% thay đổi trong lây nhiễm HIV-1 do yếu tố di truyền vật chủ.
+
+SOURCE: Immunity 2019
+TOPIC: Innate Immune Restriction Factors Against HIV
+RISK: HIGH
+
+# Các Yếu Tố Hạn Chế Miễn Dịch Bẩm Sinh Chống HIV
+
+APOBEC3G là cytidine deaminase được tích hợp vào virion HIV đang nảy chồi và gây đột biến G-thành-A trong cDNA virus trong quá trình phiên mã ngược, khiến virus mất khả năng lây nhiễm. Protein Vif của HIV-1 nhắm mục tiêu APOBEC3G để phân hủy qua proteasome, ngăn tích hợp vào virion. Các đa hình làm suy yếu tương tác Vif-APOBEC3G (như APOBEC3G H186R) liên quan giảm khả năng lây nhiễm. TRIM5α nhận diện khung capsid HIV-1, đẩy nhanh loại bỏ lớp vỏ và ngăn phiên mã ngược. TRIM5α ở người kém hiệu quả hơn so với linh trưởng khác, nhưng biến thể R136Q tăng cường hoạt động khiêm tốn và thấy nhiều hơn ở người HESN trong một số quần thể châu Phi. BST-2/tetherin liên kết virion đang nảy chồi vào bề mặt tế bào, ngăn giải phóng và lây nhiễm tế bào mới. Protein Vpu của HIV-1 làm giảm biểu hiện BST-2 trên bề mặt tế bào cho phép virion được giải phóng. Một số dạng đồng phân BST-2 chống lại đối kháng Vpu hiệu quả hơn và liên quan trì hoãn chuyển đổi huyết thanh.
+
+SOURCE: Mucosal Immunology 2020
+TOPIC: Mucosal Immune Factors and HIV Protection
+RISK: HIGH
+
+# Các Yếu Tố Miễn Dịch Niêm Mạc và Bảo Vệ Chống HIV
+
+sIgA là globulin miễn dịch chiếm ưu thế trên bề mặt niêm mạc, trung hòa mầm bệnh và ngăn bám vào và xuyên qua rào cản biểu mô. sIgA polymeric từ người HESN có thể trung hòa virus của bạn tình và ngăn vận chuyển HIV qua biểu mô. Defensins bao gồm α-defensin ở người (HNP-1/3) được tạo bởi bạch cầu trung tính và β-defensin (HBD-2/3) từ tế bào biểu mô. Chúng liên kết HIV gp120, ngăn tương tác với đồng thụ thể và phá vỡ lớp vỏ virus. Số lượng bản sao gen DEFB103 tương quan với mức peptide ở niêm mạc và nguy cơ lây nhiễm. Các peptide khác như SLPI, elafin, lactoferrin và cathelicidin (LL-37) ức chế protease HIV, ngăn xâm nhập virus vào biểu mô và tạo môi trường kháng virus. Protein nối chặt (claudin-1, occludin) duy trì tính toàn vẹn biểu mô và biến thể di truyền làm giảm biểu hiện tạo tổn thương nhỏ tăng nguy cơ lây truyền. Hệ vi sinh vật do Lactobacillus chiếm ưu thế liên quan viêm thấp hơn và giảm nhạy cảm HIV, trong khi loạn khuẩn tăng nguy cơ.
+
+SOURCE: The Lancet Infectious Diseases 2020
+TOPIC: Natural Resistance to HIV Infection Mechanisms
+RISK: HIGH
+
+# Cơ Chế Đề Kháng Tự Nhiên với Lây Nhiễm HIV
+
+Đề kháng tự nhiên HIV được quyết định bởi nhiều yếu tố di truyền và miễn dịch. Đồng hợp tử CCR5-Δ32 mang lại khả năng đề kháng gần như hoàn toàn với HIV-1 hướng R5. Các allele HLA bảo vệ tạo điều kiện cho phản ứng CTL hiệu quả và kiểm soát virus. TRIM5α và các biến thể yếu tố hạn chế khác tăng cường khả năng đề kháng nội tại tế bào. Các cá nhân HESN (highly exposed seronegative) thường thể hiện hoạt động tế bào NK tăng cao, sản xuất IFN-γ tăng lên và dấu hiệu interferon loại I mạnh mẽ. Tế bào T CD8+ đặc hiệu HIV đa chức năng và tế bào T nhớ cư trú trong mô được tìm thấy nhiều hơn ở người đề kháng. Mức độ sIgA và peptide kháng khuẩn trong dịch tiết sinh dục cao góp phần bảo vệ niêm mạc. Trạng thái miễn dịch tĩnh với mức hoạt hóa miễn dịch cơ bản thấp làm giảm khả năng cung cấp tế bào mục tiêu và hạn chế lây nhiễm. Một số microRNA (miR-155, miR-223) làm giảm biểu hiện CCR5 và yếu tố phụ thuộc HIV khác góp phần vào đề kháng.
+
+SOURCE: AIDS Research and Human Retroviruses 2021
+TOPIC: HIV Sexual Transmission Quantitative Mechanisms
+RISK: CRITICAL
+
+# Cơ Chế Định Lượng Lây Truyền HIV Qua Đường Tình Dục
+
+Nồng độ virus trong dịch tiết sinh dục quyết định nguy cơ lây truyền. Tinh dịch có 10³-10⁵ bản sao/mL ở giai đoạn mạn tính không điều trị và 10⁵-10⁷ bản sao/mL ở giai đoạn cấp. Dịch âm đạo-cổ tử cung có 10³-10⁶ bản sao/mL với mức cao hơn vào thời kỳ kinh nguyệt. Dịch tiết trực tràng có 10⁴-10⁷ bản sao/mL. Rào cản biểu mô khác nhau: biểu mô lát tầng (âm đạo, ectocervix, bao quy đầu) chống lại virus tự do nhưng vết trầy xước, viêm nhiễm hoặc prostaglandin trong tinh dịch có thể làm gián đoạn nối chặt. Biểu mô trụ (endocervix, trực tràng) một lớp có tính thấm cao với tế bào mục tiêu gần lòng ống. Nguy cơ định lượng cho mỗi lần quan hệ: hậu môn người nhận 1,38% (0,8-2,2%), hậu môn người cho 0,11% (0,06-0,19%), âm đạo người nhận 0,08% (0,06-0,11%), âm đạo người cho 0,04% (0,03-0,06%). Quan hệ bằng miệng có nguy cơ rất thấp do virus bị bất hoạt nhanh chóng bởi nước bọt. Hơn 90% ca nhiễm mới bắt nguồn từ một biến thể virus CCR5 duy nhất cho thấy nút thắt lây truyền nghiêm trọng.
+
+SOURCE: Blood 2019
+TOPIC: Blood-borne HIV Transmission Mechanisms
+RISK: CRITICAL
+
+# Cơ Chế Lây Truyền HIV Qua Đường Máu
+
+Lây truyền qua máu có hiệu quả cao nhất do thể tích máu lớn và tải lượng virus cao được đưa trực tiếp vào tĩnh mạch. Truyền máu có nguy cơ 90-99% từ một đơn vị máu nhiễm virus. Dùng chung kim tiêm có nguy cơ 0,63% (0,2-1,7%) phụ thuộc vào lượng máu tồn dư, tải lượng virus và thời gian từ khi sử dụng. Kim tiêm y tế (vết kim đâm) có nguy cơ trung bình 0,23% (0,1-0,5%), thấp hơn do thể tích máu nhỏ hơn nhiều. Các yếu tố nguy cơ bao gồm tải lượng virus nguồn (nguy cơ tăng 20 lần nếu >10⁵ bản sao/mL), loại kim (kim rỗng có nguy cơ cao hơn kim đặc) và mức độ phơi nhiễm (máu dính kim đâm sâu có nguy cơ cao hơn). Virus trong tế bào được bảo vệ tốt hơn khỏi phân hủy so với virus tự do, giải thích tại sao truyền máu hoặc dùng chung kim tiêm có nguy cơ lây nhiễm cao hơn. Dự phòng sau phơi nhiễm (PEP) giảm nguy cơ lây nhiễm sau vết kim đâm từ 81% trở lên nếu sử dụng trong 72 giờ.
+
+SOURCE: Clinical Infectious Diseases 2020
+TOPIC: Mother-to-Child HIV Transmission Mechanisms
+RISK: HIGH
+
+# Cơ Chế Lây Truyền HIV từ Mẹ Sang Con
+
+Lây truyền từ mẹ sang con (MTCT) xảy ra qua ba thời điểm với cơ chế khác nhau. Hợp bào nuôi là các tế bào đa nhân không có CD4, biểu hiện IFN loại III và β-defensin chống virus. Chỉ virus tự do có thể vượt qua chủ yếu qua con đường xuyên tế bào với phức hợp miễn dịch HIV-IgG qua trung gian FcRn. Đại thực bào nhung mao màng đệm (tế bào Hofbauer) có thể chứa virus nhưng biểu hiện CCR5 thấp. Lây truyền trong tử cung chiếm 20-25% các ca thông qua xuyên tế bào và nhiễm trùng nhau thai. Lây truyền trong khi sinh chiếm 35-50% các ca khi niêm mạc trẻ tiếp xúc dịch tiết cổ tử cung và máu mẹ với sự truyền máu nhỏ (0,5-1 mL) khi tử cung co thắt. Lây truyền sau sinh chiếm 25-45% các ca qua cho con bú với virus tự do và liên kết tế bào. Các yếu tố nguy cơ bao gồm tải lượng virus mẹ cao, số lượng CD4 thấp, viêm nhau thai và thời gian cho con bú dài. Với ART khi tải lượng virus mẹ được ức chế (<200 bản sao/mL), nguy cơ MTCT giảm xuống <1%.
+
+SOURCE: PLoS Medicine 2018
+TOPIC: HIV Saliva and Oral Transmission Science
+RISK: LOW
+
+# Khoa Học Lây Truyền HIV Qua Nước Bọt và Đường Miệng
+
+Lây truyền HIV qua đường miệng có nguy cơ cực thấp do nhiều yếu tố bảo vệ. Nồng độ virus trong nước bọt rất thấp, trung bình <1 bản sao/mL và thường dưới giới hạn phát hiện/định lượng. Nước bọt chứa nhiều thành phần kháng virus bao gồm SLPI (secretory leukocyte protease inhibitor), mucin, lysozyme, peroxidase và IgA tiết, tất cả đều ức chế HIV hiệu quả. Các nghiên cứu thực nghiệm cho thấy không có ca lây truyền nào được ghi nhận qua hôn, cắn mà không có máu, dùng chung đồ dùng, mồ hôi, nước mắt, nước tiểu hoặc phân. Định lượng cho thấy ngay cả 5 mL nước bọt với 200 bản sao/mL chỉ tương đương 1.000 bản sao - dưới ID50 ở niêm mạc, và nước bọt thiếu tế bào T CD4+ sống sót cần thiết cho lây nhiễm hiệu quả. Nguy cơ lây truyền qua quan hệ tình dục bằng miệng được đánh giá rất thấp (<0,01%) và chỉ có thể xảy ra trong trường hợp có tổn thương niêm mạc miệng nghiêm trọng kết hợp với tải lượng virus cao trong dịch sinh dục.
+
+SOURCE: Environmental Science & Technology 2019
+TOPIC: Environmental Factors Affecting HIV Viability
+RISK: HIGH
+
+# Các Yếu Tố Môi Trường Ảnh Hưởng Khả Năng Sống Sót HIV
+
+HIV ổn định nhất ở pH sinh lý (7.0-7.4) và bị bất hoạt nhanh chóng ở môi trường axit (≤4) hoặc kiềm (≥10). Virus mất khả năng lây nhiễm trong 1 phút ở pH ≤4, và dịch âm đạo-cổ tử cung (pH 3.8-4.5) làm giảm khả năng lây nhiễm từ 3-log trở lên trong 30 phút. pH kiềm (≥10) gây mất hoàn toàn khả năng lây nhiễm trong 5 phút. Nhiệt độ ảnh hưởng mạnh: HIV tồn tại vài giờ đến vài ngày trong chất lỏng giàu protein ở nhiệt độ phòng (20-25°C), nhưng trên bề mặt khô có thời gian bán hủy 1-3 giờ và không phát hiện virus có khả năng nhân lên sau 24-48 giờ. Bất hoạt bằng nhiệt ở 56°C trong 30 phút hoặc 60°C trong 10 phút dẫn đến bất hoạt hoàn toàn. Hấp tiệt trùng (121°C, 15 psi, 1 phút) đạt giảm khả năng lây nhiễm ≥7-log. Bảo quản lạnh (4°C) hầu như không mất khả năng lây nhiễm trong ≥7 ngày. Các hóa chất bất hoạt hiệu quả: cồn 70% (giảm ≥4-log trong 30 giây), natri hypochlorite 0.5% (giảm ≥5-log trong ≤30 giây), chất tẩy rửa SDS 0.1% (phá vỡ lớp vỏ virus trong vài giây), hydrogen peroxide 3% (giảm >4-log trong <1 phút).
+
+SOURCE: The New England Journal of Medicine 2021
+TOPIC: Barrier Methods and Condom Effectiveness Science
+RISK: HIGH
+
+# Khoa Học Hiệu Quả Bao Cao Su và Phương Pháp Rào Cản
+
+Bao cao su làm từ cao su và vật liệu tổng hợp là mạng polymer vô định hình với lỗ rỗng kích thước 2-10 Å (0.2-1 nm), trong khi virion HIV có đường kính 100-120 nm - lớn hơn hàng bậc độ lớn. Các nghiên cứu in vitro sử dụng huyền dịch HIV nồng độ cao dưới áp suất cho thấy bao cao su nguyên vẹn làm từ cao su, polyisoprene và polyurethane ngăn chặn virus đi qua với yếu tố giảm ≥10⁵-10⁷. Không phát hiện virion bằng PCR hoặc xét nghiệm khả năng lây nhiễm khi bao cao su còn nguyên vẹn. Sử dụng hoàn hảo bảo vệ 98-99% cho mỗi lần quan hệ và giảm nguy cơ tích lũy ≈95% mỗi năm. Sử dụng điển hình giảm 70-91% trong các nghiên cứu theo dõi dọc, tính cả trường hợp rách/tuột bao cao su không thường xuyên (1-3%). Hiệu quả khác nhau theo quần thể: các cặp đôi khác giới 71-80%, các cặp đôi MSM 70-91%, mỗi lần tiếp xúc (dựa trên mô hình) ~95%. Cắt bao quy đầu nam giới loại bỏ niêm mạc bên trong bao quy đầu có mật độ cao tế bào mục tiêu HIV và biểu mô mỏng ít keratin hóa, giảm nguy cơ lây nhiễm HIV suốt đời 50-60%.
+
+SOURCE: The Lancet HIV 2022
+TOPIC: Pre-exposure and Post-exposure Prophylaxis Mechanisms
+RISK: CRITICAL
+
+# Cơ Chế Dự Phòng Trước và Sau Phơi Nhiễm HIV
+
+PrEP dựa trên NRTI (TDF/FTC) hoạt động khi tenofovir-diphosphate (TFV-DP) và emtricitabine-triphosphate (FTC-TP) được HIV reverse transcriptase kết hợp vào, gây kết thúc chuỗi và ngăn tổng hợp DNA virus. Ngưỡng TFV-DP bảo vệ trong tế bào là ≈16 fmol/10⁶ PBMC, đạt được sau 3 liều hàng ngày ở mô trực tràng, 7 liều ở mô âm đạo-cổ tử cung. Mô trực tràng đạt nồng độ TFV-DP cao hơn 25-100 lần so với mô âm đạo/cổ tử cung, giải thích hiệu quả cao hơn đối với quan hệ qua hậu môn. TDF/FTC đường uống với tuân thủ cao giảm nguy cơ 92-99%. Cabotegravir tác dụng dài (CAB-LA) giảm 66-89% ca nhiễm so với TDF/FTC đường uống. PEP phải bắt đầu sớm do động học virus: 0-24 giờ virus vượt qua niêm mạc và lây nhiễm tế bào tại chỗ, 24-48 giờ mở rộng tại chỗ lên 10²-10³ tế bào bị nhiễm, 72-96 giờ virus khuếch đại ở hạch bạch huyết với viremia toàn thân sau ngày 4-5. Bắt đầu PEP ≤24 giờ bảo vệ ≥95-100%, ở 48 giờ ~80%, 72 giờ ~50%, ≥96 giờ lợi ích không đáng kể. Dữ liệu ở người: tỷ lệ chuyển đổi huyết thanh 0,3% khi bắt đầu PEP trong 2 giờ so với 2,4% khi bắt đầu sau đó.
+
+SOURCE: Science Translational Medicine 2023
+TOPIC: Antiretroviral Therapy and Undetectable Equals Untransmittable
+RISK: CRITICAL
+
+# Liệu Pháp Kháng Virus và Khái Niệm Không Phát Hiện Bằng Không Lây Truyền
+
+ART ức chế sự nhân lên virus, làm giảm tải lượng virus trong huyết tương và dịch sinh dục xuống mức không thể phát hiện (<200 bản sao/mL). Khi tải lượng virus được duy trì ở mức không thể phát hiện trong ít nhất 6 tháng, nguy cơ lây truyền qua đường tình dục được xem là bằng không. Khái niệm U=U (Undetectable = Untransmittable) được hỗ trợ bởi các nghiên cứu lớn: 50.000 cặp đôi quan hệ tình dục không sử dụng bao cao su trong các nghiên cứu PARTNER và Opposites Attract không có trường hợp lây truyền nào xảy ra khi bạn tình dương tính có tải lượng virus được ức chế. Nghiên cứu PARTNER2 theo dõi 972 cặp đôi nam đồng tính trong 1.593 năm cặp đôi không ghi nhận lây truyền nào. Cơ chế khoa học đằng sau U=U là ART giảm tải lượng virus xuống dưới ngưỡng lây truyền tối thiểu, ngăn chặn quá trình nhân lên virus và giảm sự bài tiết virus ở dịch sinh dục. Ngưỡng không phát hiện thường được định nghĩa <200 bản sao/mL theo khuyến cáo quốc tế, mặc dù các xét nghiệm hiện đại có thể phát hiện xuống <20-50 bản sao/mL. Khái niệm U=U không chỉ có ý nghĩa y tế mà còn góp phần giảm sự kỳ thị và thúc đẩy tuân thủ điều trị ART.

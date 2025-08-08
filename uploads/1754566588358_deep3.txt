@@ -1,0 +1,47 @@
+SOURCE: Cell Metabolism 2023
+TOPIC: Metabolic Reprogramming in HIV-Infected Cells
+RISK: CRITICAL
+
+# Tái lập trình Chuyển hóa trong Tế bào bị nhiễm HIV
+
+Nhiễm HIV gây thay đổi sâu sắc chuyển hóa tế bào chủ đặc biệt tế bào T CD4+ và đại thực bào hướng tới tăng đường phân giống hiệu ứng Warburg. Tế bào T CD4+ bị nhiễm tăng biểu hiện protein vận chuyển glucose GLUT1/3/4/6 và hexokinase HK1/2, dẫn đến tăng cường hấp thụ glucose và đường phân. Dấu vết chuyển hóa cho thấy chuyển đổi glucose thành lactate tăng tốc ngay cả khi có oxy và chuyển hướng chất trung gian đường phân vào PPP để tổng hợp NADPH và ribose cần thiết cho phiên mã ngược và tổng hợp DNA. Việc chặn đường phân với 2-deoxy-glucose hoặc làm suy yếu GLUT1 giảm đáng kể sao chép HIV và sản xuất virion. Phân giải glutamine là trục trung tâm khác với HIV tăng điều hòa protein vận chuyển glutamine SLC1A5/ASCT2 và glutaminase GLS1, tăng dị hóa glutamine thành α-ketoglutarate bổ sung chất trung gian chu trình TCA và hỗ trợ OXPHOS. Ức chế glutaminase giảm sản xuất virion >70% và thúc đẩy con đường kynurenine góp phần môi trường ức chế miễn dịch.
+
+SOURCE: Nature Metabolism 2022
+TOPIC: HIV Lipid Metabolism Alterations and Viral Assembly
+RISK: HIGH
+
+# Thay đổi Chuyển hóa Lipid HIV và Lắp ráp Virus
+
+HIV thao túng chuyển hóa cholesterol tế bào chủ để tạo điều kiện sao chép và lắp ráp. Protein Nef hoạt hóa SREBP-2 tăng điều hòa HMG-CoA reductase và tăng tổng hợp cholesterol nội sinh, đồng thời giảm điều hòa thoát cholesterol qua ABCA1/ABCG1. Tế bào bị nhiễm tích lũy cholesterol 2-3 lần quan trọng cho hình thành vỏ bọc virus và khả năng lây nhiễm, góp phần rối loạn lipid máu với LDL tăng HDL giảm và nguy cơ tim mạch cao. HIV nảy chồi từ bè lipid giàu cholesterol và sphingolipid cung cấp nền tảng cho đa hợp Gag và lắp ráp virus. Vỏ bọc virus được làm giàu phosphatidylcholine không bão hòa chuỗi dài và giảm phosphatidylserine, tối ưu hóa độ cong và độ lỏng màng để giải phóng và dung hợp hạt. Suy giảm cholesterol từ vỏ bọc làm suy yếu gắn Gag, giảm khả năng lây nhiễm và mất ổn định cấu trúc virion. Gag được myristoyl hóa gắn PI(4,5)P2 nhưng cholesterol cao tại chỗ ổn định tương tác và tuyển dụ bộ máy ESCRT để nảy chồi.
+
+SOURCE: Cell 2021
+TOPIC: Mitochondrial Dysfunction in HIV Infection
+RISK: CRITICAL
+
+# Rối loạn Chức năng Ty thể trong Nhiễm HIV
+
+Nhiễm HIV và protein virus Tat, Nef, gp120 gây ROS trong ty thể và bào tương qua hoạt hóa NADPH oxidase và rò rỉ electron tại phức hợp I và III tăng sản xuất superoxide và hydrogen peroxide. Mức glutathione GSH giảm và tích lũy liên hợp protein/lipid 4-HNE tương quan với tiến triển bệnh. Nhiều thuốc kháng retrovirus làm trầm trọng căng thẳng oxy hóa. ROS tăng cao gây hình thành 8-oxo-dG và đứt gãy sợi mtDNA, số lượng bản sao mtDNA trong PBMCs giảm 20-60% trong nhiễm không điều trị. NRTI như AZT, d4T, ddI ức chế polymerase-γ làm trầm trọng mất mtDNA dẫn đến bệnh cơ ty thể, nhiễm toan lactic và loạn dưỡng mỡ. Tổn thương mtDNA liên quan suy giảm nhận thức thần kinh ở người nhiễm HIV. Nhiễm HIV và biểu hiện Tat ức chế phức hợp I NADH dehydrogenase và phức hợp V ATP synthase, giảm ATP và tăng sản xuất lactate. HIV làm thay đổi điện thế màng ty thể và tăng tích lũy ROS suy yếu vận chuyển electron và tổng hợp ATP. Vpr tương tác với ANT và VDAC thúc đẩy mở lỗ chuyển tiếp tính thấm, giải phóng cytochrome-c và apoptosis.
+
+SOURCE: Science 2020
+TOPIC: Network Analysis of HIV-Host Protein Interactions
+RISK: HIGH
+
+# Phân tích Mạng lưới Tương tác Protein HIV-Tế bào chủ
+
+Mạng lưới PPI là nền tảng hiểu tương tác phức tạp giữa HIV và tế bào chủ ở cấp độ hệ thống. Mạng lưới được xây dựng sử dụng dữ liệu thông lượng cao như tinh sạn ái lực-khối phổ, sàng lọc hai lai nấm men, cơ sở dữ liệu và dự đoán tính toán. Mạng lưới HIV-tế bào chủ thường hai phần với protein HIV liên kết protein tế bào chủ nhưng được chiếu vào mạng lưới tích hợp cho phân tích. Các mô-đun chức năng là nhóm protein tương tác chặt chẽ tương ứng con đường sinh học, được xác định bằng thuật toán phân rã mô-đun, phát hiện cộng đồng Louvain/Infomap và phân cụm hai chiều. Các thước đo độ trung tâm định lượng tầm quan trọng protein: degree centrality đếm kết nối trực tiếp, betweenness centrality đo tỷ lệ đường đi ngắn nhất qua nút, closeness centrality nghịch đảo độ dài đường đi trung bình, eigenvector centrality đo ảnh hưởng dựa trên kết nối với nút kết nối cao. HIV nhắm protein trung tâm và kết nối cao của tế bào chủ, thường cần thiết cho sự sống và chức năng miễn dịch.
+
+SOURCE: Nature Methods 2019
+TOPIC: Multi-omics Integration Strategies for HIV Research
+RISK: HIGH
+
+# Chiến lược Tích hợp Đa-omics cho Nghiên cứu HIV
+
+Tích hợp đa-omics kết hợp genomics, transcriptomics, proteomics và metabolomics cung cấp cái nhìn toàn diện nhiễm HIV. Tích hợp sớm kết hợp trực tiếp ma trận đặc điểm từ lớp omics khác nhau cho phân tích chung nhưng nhạy cảm sự khác biệt tỷ lệ và dữ liệu thiếu. Tích hợp trung gian sử dụng mô hình yếu tố chung MOFA, iClusterPlus hoặc phân tích tương quan chính tắc trích xuất nguồn biến đổi chung và duy nhất trên omics để xác định yếu tố tiềm ẩn giải thích sự khác biệt tiến triển bệnh hoặc phản ứng điều trị. Tích hợp muộn xây dựng mạng lưới riêng cho mỗi lớp omics và hợp nhất qua cạnh liên lớp hoặc SNF để tiết lộ mô-đun liên lớp như khối gen-protein-chất chuyển hóa liên quan bệnh sinh HIV. Học máy và học sâu sử dụng random forest, autoencoder khám phá dấu ấn sinh học và phân tầng bệnh nhân. Tác động bao gồm mô hình bệnh toàn diện, khám phá dấu ấn sinh học và mục tiêu mới, hỗ trợ y học cá nhân hóa.
+
+SOURCE: PLoS Computational Biology 2018
+TOPIC: Mathematical Models of HIV Viral Dynamics
+RISK: HIGH
+
+# Mô hình Toán học Động lực Virus HIV
+
+Mô hình cơ bản mô tả tương tác giữa tế bào T CD4+ chưa nhiễm T, tế bào bị nhiễm I và virus tự do V: dT/dt = λ - dT×T - β×V×T; dI/dt = β×V×T - δ×I; dV/dt = p×I - c×V. Trong đó λ là tốc độ tạo tế bào T mới, dT là tốc độ chết tế bào T, β là tốc độ lây nhiễm, δ là tốc độ chết tế bào bị nhiễm, p là tốc độ sản xuất virus, c là tốc độ thanh thải virus. Số sao chép cơ bản R₀ = (β×p×λ)/(c×dT×δ) đại diện số ca lây nhiễm thứ cấp trung bình từ một tế bào bị nhiễm trong quần thể hoàn toàn nhạy cảm. R₀>1 lây nhiễm lan rộng, R₀<1 nhiễm trùng bị thanh thải. Các mô hình mở rộng bao gồm phản ứng miễn dịch, kháng thuốc, nhiều khoang và độ trễ. Mô hình stochastic của tiềm ẩn mô tả chuyển đổi ngẫu nhiên giữa trạng thái im lặng và hoạt động provirus với tham số tốc độ kích hoạt và tái ức chế.

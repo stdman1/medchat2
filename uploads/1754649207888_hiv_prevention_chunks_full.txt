@@ -1,0 +1,101 @@
+SOURCE: WHO/CDC/EACS Guidelines 2023–2024
+TOPIC: Dự Phòng Sau Phơi Nhiễm HIV (PEP) - Cơ sở khoa học và phác đồ người lớn
+RISK: CRITICAL
+
+# Dự Phòng Sau Phơi Nhiễm HIV (PEP) - Cơ Sở Khoa Học và Phác Đồ Người Lớn
+
+PEP phải được bắt đầu trong vòng 72 giờ sau phơi nhiễm vì HIV sẽ chuyển từ giai đoạn xâm nhập qua niêm mạc sang tích hợp không thể đảo ngược vào DNA của vật chủ trong khoảng thời gian này. 
+Hiệu quả giảm mạnh nếu bắt đầu muộn hơn. 
+Phác đồ đầu tay khuyến cáo cho người lớn và thanh thiếu niên ≥13 kg (WHO, CDC, EACS 2023–2024): 
+- Tenofovir disoproxil fumarate (TDF) 300 mg + Emtricitabine (FTC) 200 mg uống 1 lần/ngày 
+- Dolutegravir (DTG) 50 mg uống 1 lần/ngày 
+Thời gian điều trị: 28 ngày liên tục.
+Các lựa chọn thay thế có thể áp dụng nếu dị ứng hoặc chống chỉ định TDF/FTC. 
+Theo dõi chức năng thận và gan khi điều trị. 
+Tư vấn bệnh nhân về tầm quan trọng của việc tuân thủ đủ thời gian để tối ưu hiệu quả và giảm nguy cơ kháng thuốc.
+
+SOURCE: WHO/CDC/EACS Guidelines 2023–2024
+TOPIC: Dự Phòng Sau Phơi Nhiễm HIV (PEP) - Trẻ em và CAB-LA
+RISK: HIGH
+
+# Dự Phòng Sau Phơi Nhiễm HIV (PEP) - Trẻ Em và CAB-LA
+
+Đối với trẻ em, ưu tiên dùng Dolutegravir (DTG) liều theo cân nặng kết hợp Abacavir (ABC) và Lamivudine (3TC). 
+Liều dùng điều chỉnh theo cân nặng, đảm bảo an toàn và hiệu quả. 
+Các nghiên cứu chỉ ra rằng tỷ lệ dung nạp thuốc tốt, nhưng cần giám sát tác dụng phụ, đặc biệt trên hệ thần kinh trung ương khi dùng DTG.
+Cabotegravir tác dụng kéo dài (CAB-LA) có thể là lựa chọn dự phòng sau phơi nhiễm trong tương lai gần, nếu chi phí hàng năm ≤1,000 USD/người. 
+CAB-LA tiêm bắp 2 tháng/lần giúp cải thiện tuân thủ, đặc biệt ở nhóm nguy cơ cao khó duy trì uống thuốc hàng ngày. 
+Tuy nhiên, việc áp dụng CAB-LA còn hạn chế do giá thành, nguồn cung, và yêu cầu đào tạo nhân viên y tế để tiêm và theo dõi.
+
+SOURCE: WHO Guidelines 2025
+TOPIC: Dự Phòng Trước Phơi Nhiễm HIV (PrEP) - Tổng quan và phác đồ uống
+RISK: HIGH
+
+# Dự Phòng Trước Phơi Nhiễm HIV (PrEP) - Tổng Quan và Phác Đồ Uống
+
+PrEP là chiến lược sử dụng thuốc kháng HIV cho những người chưa nhiễm nhưng có nguy cơ cao, nhằm ngăn chặn virus xâm nhập và nhân lên. 
+Phác đồ phổ biến: Tenofovir disoproxil fumarate (TDF) 300 mg + Emtricitabine (FTC) 200 mg uống hàng ngày. 
+PrEP đường uống đã được chứng minh giảm nguy cơ lây nhiễm HIV hơn 90% nếu tuân thủ đầy đủ. 
+Có thể áp dụng cho nam quan hệ đồng giới, người tiêm chích ma túy, phụ nữ dị tính ở khu vực dịch tễ cao, và cặp đôi có một người nhiễm HIV.
+Các yếu tố ảnh hưởng hiệu quả: mức độ tuân thủ, tải lượng virus của bạn tình, và tình trạng bệnh lây truyền qua đường tình dục khác.
+Theo dõi định kỳ: xét nghiệm HIV mỗi 3 tháng, kiểm tra chức năng thận, và tư vấn giảm nguy cơ.
+
+SOURCE: WHO Guidelines 2025
+TOPIC: Dự Phòng Trước Phơi Nhiễm HIV (PrEP) - Thuốc tác dụng kéo dài và cải thiện tuân thủ
+RISK: MEDIUM
+
+# Dự Phòng Trước Phơi Nhiễm HIV (PrEP) - Thuốc Tác Dụng Kéo Dài và Cải Thiện Tuân Thủ
+
+Cabotegravir tác dụng kéo dài (CAB-LA) tiêm bắp 8 tuần/lần là lựa chọn mới, được WHO khuyến cáo ở một số nhóm nguy cơ cao. 
+Ưu điểm: không cần uống thuốc hàng ngày, phù hợp với người gặp khó khăn trong duy trì uống thuốc. 
+Nhược điểm: yêu cầu cơ sở y tế có nhân lực tiêm, chi phí cao, và khả năng tồn tại thuốc trong cơ thể lâu nếu ngừng, có nguy cơ kháng thuốc nếu nhiễm HIV trong giai đoạn này.
+Các biện pháp cải thiện tuân thủ PrEP: 
+- Nhắc nhở bằng tin nhắn/mHealth 
+- Hỗ trợ đồng đẳng 
+- Tư vấn định kỳ 
+- Lồng ghép PrEP vào các dịch vụ chăm sóc sức khỏe sinh sản và tình dục.
+
+SOURCE: WHO PMTCT Guidelines 2024
+TOPIC: Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Điều trị mẹ và xử trí khi sinh
+RISK: CRITICAL
+
+# Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Điều Trị Mẹ và Xử Trí Khi Sinh
+
+Điều trị ARV cho phụ nữ mang thai nhiễm HIV trong suốt thai kỳ và khi cho con bú giúp giảm đáng kể nguy cơ lây truyền. 
+Nếu tải lượng virus >1,000 c/mL gần thời điểm sinh: cân nhắc truyền tĩnh mạch Zidovudine (AZT) và mổ lấy thai chủ động để giảm nguy cơ.
+Khuyến cáo: bắt đầu điều trị ARV càng sớm càng tốt, lý tưởng là ngay khi phát hiện mang thai. 
+Các phác đồ thường dùng: TDF + 3TC hoặc FTC + DTG.
+Theo dõi định kỳ tải lượng virus và sức khỏe mẹ. 
+Tư vấn về lợi ích điều trị liên tục cho sức khỏe mẹ và phòng lây nhiễm cho con.
+
+SOURCE: WHO PMTCT Guidelines 2024
+TOPIC: Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Phòng ngừa cho trẻ sơ sinh và nuôi dưỡng
+RISK: HIGH
+
+# Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Phòng Ngừa Cho Trẻ Sơ Sinh và Nuôi Dưỡng
+
+Trẻ sơ sinh nguy cơ thấp: uống Zidovudine (AZT) 4 mg/kg, 2 lần/ngày trong 2 tuần. 
+Trẻ nguy cơ cao: kết hợp AZT + Lamivudine (3TC) + Nevirapine (NVP) trong 4–6 tuần. 
+Bắt đầu điều trị dự phòng trong vòng 6 giờ sau sinh.
+Nuôi con: 
+- Ở nơi đủ điều kiện vệ sinh và kinh tế: dùng sữa công thức hoàn toàn. 
+- Ở nơi hạn chế nguồn lực: bú mẹ hoàn toàn kèm điều trị ARV cho mẹ và NVP cho trẻ trong 6 tuần.
+Kết hợp chăm sóc mẹ và bé, theo dõi tình trạng HIV của trẻ, và hỗ trợ cộng đồng để duy trì tuân thủ.
+
+SOURCE: WHO PMTCT Guidelines 2024
+TOPIC: Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Tích hợp chương trình và rào cản
+RISK: MEDIUM
+
+# Dự Phòng Lây Truyền HIV Từ Mẹ Sang Con (PMTCT) - Tích Hợp Chương Trình và Rào Cản
+
+Tích hợp PMTCT với chăm sóc thai sản, xét nghiệm cho bạn tình, và theo dõi tại cộng đồng giúp tăng hiệu quả. 
+Các yếu tố hỗ trợ: 
+- Nhắc lịch bằng mHealth 
+- Mẹ cố vấn (mentor mothers) 
+- Kết nối cộng đồng
+Các rào cản: 
+- Chi phí 
+- Chuỗi cung ứng 
+- Chậm trễ phê duyệt thuốc 
+- Rào cản xã hội và kỳ thị
+Giải pháp: phân cấp nhiệm vụ cho tuyến cơ sở, cung cấp thuốc tại cộng đồng, và lồng ghép dịch vụ để giảm kỳ thị và tăng tiếp cận.

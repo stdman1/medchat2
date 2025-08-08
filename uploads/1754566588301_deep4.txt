@@ -1,0 +1,129 @@
+SOURCE: Scientific Research - Network Analysis HIV
+TOPIC: HIV-Host Protein Interactions
+RISK: MEDIUM
+
+# Phương pháp phân tích mạng lưới protein-protein trong nghiên cứu HIV
+
+Các mạng lưới tương tác protein-protein (PPI) là nền tảng để hiểu sự tương tác phức tạp giữa HIV và tế bào chủ ở người. Các mạng lưới này lập bản đồ các liên kết vật lý và chức năng giữa các protein của virus và tế bào chủ, cung cấp một cái nhìn ở cấp độ hệ thống về cách HIV chiếm đoạt bộ máy tế bào để sao chép và tồn tại dai dẳng.
+
+Xây dựng mạng lưới PPI được thực hiện bằng cách sử dụng dữ liệu thực nghiệm thông lượng cao như tinh sạch ái lực-khối phổ, sàng lọc hai lai nấm men, cùng với cơ sở dữ liệu được tuyển chọn từ tài liệu và các dự đoán tính toán. Các mạng lưới PPI HIV-tế bào chủ thường là hai phần với protein HIV được liên kết với protein tế bào chủ.
+
+SOURCE: Scientific Research - Functional Modules HIV  
+TOPIC: HIV Functional Module Identification
+RISK: MEDIUM
+
+# Xác định mô-đun chức năng trong mạng lưới HIV
+
+Các mô-đun chức năng là các nhóm protein tương tác với nhau chặt chẽ hơn so với phần còn lại của mạng lưới, thường tương ứng với các con đường hoặc phức hợp sinh học.
+
+Phân cụm và phát hiện mô-đun sử dụng các thuật toán như phân rã mô-đun, phát hiện cộng đồng (Louvain, Infomap) và phân cụm hai chiều để xác định các mô-đun trong mạng lưới PPI. Sau khi phát hiện mô-đun, phân tích làm giàu được thực hiện để gán các chức năng sinh học cho mỗi mô-đun.
+
+Các mô-đun bị HIV nhắm mục tiêu thường được làm giàu cho các quá trình như điều hòa phiên mã, xử lý RNA, vận chuyển túi và truyền tín hiệu miễn dịch.
+
+SOURCE: Scientific Research - HIV Centrality Measures
+TOPIC: HIV Host Factor Prioritization  
+RISK: MEDIUM
+
+# Các thước đo độ trung tâm để ưu tiên yếu tố tế bào chủ
+
+Các thước đo độ trung tâm định lượng tầm quan trọng của các nút (protein) trong mạng lưới, giúp ưu tiên các yếu tố tế bào chủ quan trọng cho sự sao chép hoặc hạn chế của HIV.
+
+Độ trung tâm bậc xác định số lượng kết nối trực tiếp mà một nút có, giúp xác định các protein trung tâm thường cần thiết cho sự sao chép của virus. Độ trung tâm giữa đo tỷ lệ các đường đi ngắn nhất đi qua một nút, làm nổi bật các protein nút cổ chai kiểm soát luồng thông tin.
+
+Độ trung tâm gần là nghịch đảo của độ dài đường đi ngắn nhất trung bình đến tất cả các nút khác, xác định các protein có thể nhanh chóng ảnh hưởng đến mạng lưới. Độ trung tâm riêng đo ảnh hưởng của một nút dựa trên các kết nối với các nút được kết nối cao khác.
+
+SOURCE: Scientific Research - Multi-omics Integration HIV
+TOPIC: HIV Multi-omics Strategies
+RISK: MEDIUM  
+
+# Tích hợp đa-omics trong nghiên cứu HIV
+
+Tích hợp đa-omics kết hợp dữ liệu từ genomics, transcriptomics, proteomics và metabolomics để cung cấp một cái nhìn toàn diện về nhiễm HIV, phản ứng của tế bào chủ và sự tiến triển của bệnh.
+
+Genomics cung cấp dữ liệu DNA tế bào chủ/virus, SNP, vị trí tích hợp để nghiên cứu tính nhạy cảm của tế bào chủ, tiến hóa của virus và lập bản đồ kho chứa. Transcriptomics phân tích mRNA và RNA không mã hóa để hiểu biểu hiện gen của tế bào chủ/virus, hoạt hóa miễn dịch và trạng thái tiềm ẩn.
+
+Proteomics nghiên cứu số lượng protein và các sửa đổi sau dịch mã để đánh giá mức protein virus/tế bào chủ, truyền tín hiệu và trốn tránh miễn dịch. Metabolomics phân tích hồ sơ chất chuyển hóa để hiểu chuyển hóa tế bào, độc tính của ART và tương tác miễn dịch-chuyển hóa.
+
+SOURCE: Scientific Research - Integration Strategies HIV
+TOPIC: HIV Data Integration Methods
+RISK: MEDIUM
+
+# Các chiến lược tích hợp dữ liệu đa-omics
+
+Tích hợp sớm (ghép nối) kết hợp trực tiếp các ma trận đặc điểm từ các lớp omics khác nhau để phân tích chung như PCA, phân cụm, học máy. Tuy nhiên phương pháp này nhạy cảm với sự khác biệt về tỷ lệ và dữ liệu bị thiếu.
+
+Tích hợp trung gian sử dụng các mô hình yếu tố chung như MOFA, iClusterPlus hoặc phân tích tương quan chính tắc để trích xuất các nguồn biến đổi chung và duy nhất trên các omics. Phương pháp này giúp xác định các yếu tố tiềm ẩn giải thích sự khác biệt trong tiến triển bệnh hoặc phản ứng điều trị.
+
+Tích hợp muộn (dựa trên mạng lưới) xây dựng các mạng lưới riêng biệt cho mỗi lớp omics và hợp nhất chúng thông qua các cạnh liên lớp hoặc hợp nhất mạng lưới tương đồng. Phương pháp này tiết lộ các mô-đun liên lớp như các khối gen-protein-chất chuyển hóa liên quan đến bệnh sinh của HIV.
+
+SOURCE: Scientific Research - HIV Mathematical Models
+TOPIC: HIV Viral Dynamics Models  
+RISK: MEDIUM
+
+# Mô hình toán học về động lực học virus HIV
+
+Mô hình giới hạn tế bào đích là mô hình tiêu chuẩn mô tả sự tương tác giữa các tế bào T CD4+ chưa bị nhiễm (T), các tế bào bị nhiễm (I) và virus tự do (V).
+
+Các phương trình vi phân mô tả: dT/dt = λ - d_T T - β V T; dI/dt = β V T - δ I; dV/dt = p I - c V. Trong đó λ là tốc độ tạo ra tế bào T mới, d_T là tốc độ chết của tế bào T, β là tốc độ lây nhiễm, δ là tốc độ chết của các tế bào bị nhiễm, p là tốc độ sản xuất virus, c là tốc độ thanh thải virus tự do.
+
+Số sao chép cơ bản R_0 = (β p λ) / (c d_T δ) đại diện cho số ca lây nhiễm thứ cấp trung bình được tạo ra bởi một tế bào bị nhiễm trong một quần thể hoàn toàn nhạy cảm. Khi R_0 > 1 thì lây nhiễm lan rộng, khi R_0 < 1 thì lây nhiễm được kiểm soát.
+
+SOURCE: Scientific Research - HIV Fitness Landscapes
+TOPIC: HIV Drug Resistance Evolution
+RISK: HIGH
+
+# Cảnh quan khả năng tồn tại của HIV và tiến hóa kháng thuốc
+
+Cảnh quan khả năng tồn tại của HIV thể hiện sự ánh xạ giữa kiểu gen của virus và khả năng sao chép trong một môi trường nhất định. Tốc độ đột biến cao và sự đa dạng di truyền của HIV được tạo ra bởi enzyme phiên mã ngược có tỷ lệ lỗi cao và sự sao chép nhanh chóng trong các quần thể lớn.
+
+Sự gồ ghề và chiều không gian cao của cảnh quan tạo ra nhiều đỉnh (kiểu gen có khả năng tồn tại cao) và thung lũng (kiểu gen có khả năng tồn tại thấp). Epistasis là hiện tượng ảnh hưởng của một đột biến đối với khả năng tồn tại phụ thuộc vào sự hiện diện của các đột biến khác.
+
+Chi phí khả năng tồn tại và các đột biến bù trừ xuất hiện khi nhiều đột biến kháng thuốc làm giảm khả năng tồn tại của virus khi không có thuốc. Các thung lũng khả năng tồn tại yêu cầu virus phải đi qua các kiểu gen có khả năng tồn tại giảm trước khi đạt đến đỉnh kháng thuốc.
+
+SOURCE: Scientific Research - HIV Epistasis Analysis  
+TOPIC: HIV Adaptive Constraints
+RISK: HIGH
+
+# Epistasis và giới hạn thích nghi trong HIV
+
+Epistasis dương tính phổ biến trong số các đột biến liên quan đến kháng thuốc, có nghĩa là sự kết hợp của các đột biến kháng thuốc ít gây hại hơn dự kiến từ các hiệu ứng riêng lẻ. Điều này tạo điều kiện thuận lợi cho sự tích lũy của nhiều đột biến kháng thuốc.
+
+Sự cố định (Entrenchment) xảy ra khi các đột biến bù trừ đã phát sinh, chi phí khả năng tồn tại của việc đảo ngược các đột biến kháng thuốc tăng lên, làm cho sự kháng thuốc ổn định hơn ngay cả sau khi ngừng thuốc.
+
+Epistasis bậc cao (tương tác giữa ba đột biến trở lên) làm phức tạp thêm cảnh quan, làm cho các quỹ đạo tiến hóa ít có thể dự đoán hơn và đôi khi mở ra hoặc đóng lại các con đường dẫn đến kháng thuốc. Các đột biến bù trừ bù đắp chi phí khả năng tồn tại của các đột biến kháng thuốc chính.
+
+SOURCE: Scientific Research - HIV Complementation Studies
+TOPIC: HIV Functional Analysis Methods
+RISK: MEDIUM
+
+# Các nghiên cứu bổ trợ trong nghiên cứu HIV
+
+Các nghiên cứu bổ trợ là các phương pháp tiếp cận thực nghiệm được sử dụng để mổ xẻ chức năng của các gen virus, các miền protein và các yếu tố tế bào chủ trong chu trình sống của HIV. Chúng bao gồm việc khôi phục chức năng của một virus hoặc protein bị lỗi bằng cách cung cấp thành phần bị thiếu ở dạng trans.
+
+Các xét nghiệm bổ trợ trans sử dụng nguyên tắc một đột biến HIV không có khả năng sao chép được giải cứu bằng cách đồng biểu hiện gen hoặc protein bị thiếu từ một plasmid hoặc virus riêng biệt. Phương pháp này được sử dụng để xác định sản phẩm gen nào chịu trách nhiệm cho một bước sao chép cụ thể.
+
+Lập bản đồ miền protein sử dụng việc đột biến hóa có hệ thống để xác định các vùng thiết yếu trong các protein virus. Việc giải cứu chức năng bằng các miền kiểu hoang dã hoặc đột biến ở dạng trans chỉ ra các motif quan trọng cho sự lắp ráp, sao chép hoặc tương tác với tế bào chủ.
+
+SOURCE: Scientific Research - HIV Pseudotyping
+TOPIC: HIV Entry Mechanism Studies  
+RISK: MEDIUM
+
+# Thí nghiệm giả virion HIV để nghiên cứu cơ chế xâm nhập
+
+Giả virion (pseudotyping) bao gồm việc đóng gói lõi HIV với các glycoprotein vỏ bọc không đồng nhất, cho phép nghiên cứu sự xâm nhập của virus độc lập với các sự kiện sau khi xâm nhập. Phương pháp này là trung tâm để mổ xẻ các cơ chế xâm nhập, việc sử dụng thụ thể và độ nhạy với sự trung hòa.
+
+Giả virion VSV-G sử dụng protein G của virus viêm miệng mụn nước được kết hợp vào các virion HIV, cho phép xâm nhập vào một loạt các loại tế bào thông qua quá trình nội bào, bỏ qua con đường CD4/CCR5/CXCR4 tự nhiên. Phương pháp này mở rộng tính hướng mô và tăng hiệu quả truyền gen.
+
+Phân tích protein vỏ bọc trong giả virion được thực hiện bằng cách tạo ra các giả virion dựa trên HIV thông qua đồng biến nạp các tế bào với vector lentivirus, gen báo cáo và plasmid biểu hiện vỏ bọc. Khả năng lây nhiễm, dung hợp tế bào và độ nhạy với các chất ức chế được đo để đánh giá chức năng của vỏ bọc.
+
+SOURCE: Scientific Research - HIV Single Cell Virology
+TOPIC: HIV Single Cell Analysis Methods
+RISK: MEDIUM
+
+# Phương pháp tiếp cận vi-rút học đơn bào để nghiên cứu HIV
+
+Các phương pháp tiếp cận đơn bào tiết lộ các trạng thái hiếm gặp nhưng có liên quan đến lâm sàng trong nhiễm HIV, cung cấp cái nhìn sâu sắc về cơ chế tồn tại dai dẳng của virus và các chiến lược chữa khỏi. Các xét nghiệm tổng thể truyền thống che giấu sự không đồng nhất rộng lớn giữa các tế bào.
+
+Giải trình tự RNA đơn bào (scRNA-seq) cho phép định lượng biểu hiện gen của virus và tế bào chủ ở độ phân giải đơn bào, tiết lộ sự biến đổi rộng lớ trong mức phiên mã HIV giữa các tế bào bị nhiễm. Các tế bào T CD4+ bị nhiễm ở trạng thái tiềm ẩn có thể được chia thành các cụm riêng biệt với các tiềm năng hoạt hóa khác nhau.
+
+Phân tích trạng thái tiềm ẩn sử dụng các kỹ thuật đa-omics đơn bào như ECCITE-seq và DOGMA-seq kết hợp hồ sơ phiên mã, protein bề mặt và khả năng tiếp cận chromatin. Các kho dự trữ tiềm ẩn rất không đồng nhất với các trạng thái epigenetic và phiên mã riêng biệt, chỉ có thiểu số có thể được kích thích bởi các tác nhân đảo ngược trạng thái tiềm ẩn.

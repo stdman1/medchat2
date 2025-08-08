@@ -1,0 +1,63 @@
+SOURCE: Nature Structural & Molecular Biology 2024
+TOPIC: HIV Fitness Landscapes and Drug Resistance Evolution
+RISK: CRITICAL
+
+# Cảnh quan Khả năng Tồn tại HIV và Tiến hóa Kháng thuốc
+
+Cảnh quan khả năng tồn tại HIV thể hiện ánh xạ giữa kiểu gen virus và khả năng sao chép trong môi trường với hoặc không có thuốc kháng retrovirus. HIV RT có tỷ lệ lỗi cao và virus sao chép nhanh trong quần thể lớn, tạo đa dạng di truyền rộng lớn cho phép khám phá không gian đột biến và thích nghi với áp lực chọn lọc. Cảnh quan rất gồ ghề với nhiều đỉnh (kiểu gen khả năng tồn tại cao) và thung lũng (kiểu gen khả năng tồn tại thấp) phát sinh từ chiều không gian cao và tương tác phức tạp giữa đột biến. Epistasis làm cho ảnh hưởng một đột biến phụ thuộc sự hiện diện đột biến khác, có thể tích cực (đột biến kết hợp ít gây hại hơn dự kiến) hoặc tiêu cực (gây hại hơn dự kiến). Nhiều đột biến kháng thuốc làm giảm khả năng tồn tại khi không có thuốc, đột biến bù trừ có thể phát sinh khôi phục khả năng tồn tại cho phép virus kháng thuốc tồn tại và lây truyền. Epistasis dương tính phổ biến trong đột biến kháng thuốc có nghĩa kết hợp đột biến ít gây hại hơn dự kiến từ hiệu ứng riêng lẻ, tạo điều kiện tích lũy nhiều đột biến kháng thuốc.
+
+SOURCE: PLoS One 2020
+TOPIC: Molecular Dynamics Simulations of HIV Drug Binding
+RISK: HIGH
+
+# Mô phỏng Động lực Phân tử về Liên kết Thuốc HIV
+
+Mô phỏng MD của HIV-1 integrase với dolutegravir cho thấy đột biến kháng thuốc E92Q, G140S, Y143R gây thay đổi cấu trúc riêng biệt trong miền lõi xúc tác. G140S là đột biến gây mất ổn định nhất, tăng tính linh hoạt protein và giảm ái lực liên kết DTG được chứng minh bằng tăng dao động căn quân phương RMSF và giảm năng lượng tương tác không liên kết. Năng lượng tự do liên kết ΔG_bind cho thấy cả ba RAMs đều giảm ái lực DTG so với type hoang dã, với G140S có hiệu ứng lớn nhất tương quan với kháng thuốc lâm sàng. Các đột biến làm gián đoạn sự phối trí ion Mg2+ và vị trí DTG trong trung tâm hoạt động, dẫn đến liên kết chelation không tối ưu và giảm ức chế. Nghiên cứu MD protease cho thấy RAMs như I50V, V82A thay đổi cấu trúc protein, dịch chuyển cân bằng sang trạng thái mở hoặc bán mở của flap làm suy yếu liên kết chất ức chế. Biến thể PR kháng thuốc thể hiện tính linh hoạt flap tăng, giảm thời gian lưu trú chất ức chế trong trung tâm hoạt động.
+
+SOURCE: Cell Host & Microbe 2023
+TOPIC: HIV Complementation Studies and Functional Mapping
+RISK: HIGH
+
+# Nghiên cứu Bổ trợ HIV và Lập bản đồ Chức năng
+
+Nghiên cứu bổ trợ là phương pháp thực nghiệm mổ xẻ chức năng gen virus, miền protein và yếu tố tế bào chủ trong chu trình sống HIV bằng khôi phục chức năng virus hoặc protein bị lỗi thông qua cung cấp thành phần thiếu ở dạng trans. Xét nghiệm bổ trợ trans sử dụng đột biến HIV không có khả năng sao chép được giải cứu bằng đồng biểu hiện gen hoặc protein thiếu từ plasmid hoặc virus riêng biệt để xác định sản phẩm gen virus hoặc tế bào chủ chịu trách nhiệm cho bước sao chép cụ thể. Lập bản đồ miền protein sử dụng đột biến hóa có hệ thống như xóa, quét alanine để xác định vùng thiết yếu trong protein virus, giải cứu chức năng bằng miền kiểu hoang dã hoặc đột biến ở dạng trans chỉ ra motif quan trọng. Thí nghiệm giải cứu chức năng khôi phục chức năng cho protein đột biến hoặc bị xóa bằng đưa vào đột biến bù trừ hoặc protein ngoại sinh, cho phép đánh giá vai trò miền hoặc tương tác cụ thể. Các nghiên cứu này cần thiết để mổ xẻ cơ chế phân tử sao chép HIV và xác định mục tiêu điều trị tiềm năng.
+
+SOURCE: Journal of Virology 2022
+TOPIC: HIV Pseudotyping Experiments for Entry Mechanisms
+RISK: HIGH
+
+# Thí nghiệm Giả Virion HIV cho Cơ chế Xâm nhập
+
+Giả virion bao gồm đóng gói lõi HIV với glycoprotein vỏ bọc không đồng nhất, cho phép nghiên cứu xâm nhập virus độc lập với sự kiện sau xâm nhập. Giả virion VSV-G kết hợp protein G của virus viêm miệng mụn nước vào virion HIV, cho phép xâm nhập loạt tế bào thông qua nội bào, bỏ qua con đường CD4/CCR5/CXCR4 tự nhiên. Ưu điểm bao gồm mở rộng tính hướng mô cho phép lây nhiễm tế bào không nhạy cảm, tăng hiệu quả truyền gen để phân phối gen và sản xuất vector, tạo điều kiện nghiên cứu khối chặn sau xâm nhập và yếu tố hạn chế tế bào chủ. Phân tích protein vỏ bọc trong giả virion được tạo bằng đồng biến nạp tế bào với vector lentivirus, gen báo cáo và plasmid biểu hiện vỏ bọc. Xét nghiệm trung hòa sử dụng giả virion mang protein vỏ bọc HIV trong xét nghiệm lây nhiễm một chu trình để đo khả năng kháng thể hoặc chất ức chế xâm nhập chặn xâm nhập virus, ứng dụng đánh giá phản ứng kháng thể trung hòa trong nghiên cứu vắc-xin và lập bản đồ epitope trung hòa.
+
+SOURCE: Nature Methods 2021
+TOPIC: Single-Cell Virology Approaches to HIV Research
+RISK: CRITICAL
+
+# Phương pháp Vi-rút học Đơn bào cho Nghiên cứu HIV
+
+Các xét nghiệm tổng thể truyền thống che giấu sự không đồng nhất rộng lớn giữa tế bào trong nhiễm HIV, trạng thái tiềm ẩn và tái hoạt hóa. Phương pháp đơn bào tiết lộ trạng thái hiếm nhưng có liên quan lâm sàng, cung cấp cái nhìn sâu sắc về cơ chế tồn tại dai dẳng virus và chiến lược chữa khỏi. Giải trình tự RNA đơn bào scRNA-seq cho phép định lượng biểu hiện gen virus và tế bào chủ ở độ phân giải đơn bào, tiết lộ sự biến đổi rộng lớn trong mức phiên mã HIV giữa tế bào bị nhiễm. Tế bào T CD4+ bị nhiễm tiềm ẩn có thể chia thành cụm riêng biệt với tiềm năng hoạt hóa và hiệu quả tái hoạt hóa khác nhau. Đa-omics đơn bào như ECCITE-seq và DOGMA-seq kết hợp hồ sơ phiên mã, protein bề mặt và khả năng tiếp cận chromatin cho mô tả toàn diện tế bào bị nhiễm HIV ở trạng thái tiềm ẩn và hoạt động. Kho dự trữ tiềm ẩn rất không đồng nhất với trạng thái epigenetic và phiên mã riêng biệt, chỉ thiểu số dòng vô tính bị nhiễm tiềm ẩn có thể được kích thích bởi LRAs. Hình ảnh tế bào sống và thư viện proviral được gắn mã vạch theo dõi sự kiện tái hoạt hóa đơn bào, tiết lộ mô hình tái hoạt hóa ngẫu nhiên và giống bùng nổ.
+
+SOURCE: Science 2020
+TOPIC: HIV Capsid Structure and Nuclear Import Mechanisms
+RISK: HIGH
+
+# Cấu trúc Capsid HIV và Cơ chế Nhập Nhân
+
+Cryo-EM độ phân giải cao 1.8-3.3 Å và MD tiết lộ sự ổn định vỏ capsid CA HIV-1 được điều chỉnh bởi các "ổ" tĩnh điện với IP6 inositol hexakisphosphate liên kết với vòng dư lượng arginine và lysine R18, K25 tại lỗ hexamer CA, tăng sự ổn định hexamer lên -2.4 kcal/mol. Mạng lưới CA thể hiện sự "thở" ở giao diện NTD-CTD, các RAMs như A204E, G208R làm rộng lỗ, tăng tốc quá trình tháo vỏ và giảm khả năng lây nhiễm. CA liên kết với nucleoporin Nup153, Nup358 và CPSF6 tạo điều kiện nhập nhân, tính đàn hồi cho phép capsid thích ứng với giới hạn lỗ nhân. Lenacapavir liên kết với xoắn 1/2 NTD của CA, khóa giao diện, ngăn chặn liên kết IP6, ức chế nhập nhân với Kd 45 nM được xác định bằng cryo-EM 2.9 Å. GSK2838232 liên kết với khớp nối Gag CA-SP1 ngăn chặn hình thành cuộn xoắn với kháng thuốc qua V362I, A364V. Fostemsavir liên kết gp120 β20-β21 khóa Env ở trạng thái đóng với Ki 0.3 µM.
+
+SOURCE: Proceedings of the National Academy of Sciences 2023
+TOPIC: HIV Quantitative Molecular Biology and Replication Kinetics
+RISK: HIGH
+
+# Sinh học Phân tử Định lượng HIV và Động học Sao chép
+
+Mô hình động học các giai đoạn sao chép HIV cho thấy sao chép ngược có k_RT ≈ 0.12 min⁻¹ với hằng số Michaelis K_m ≈ 1.1 µM đối với dNTP. Tích hợp có k_INT ≈ 4.6×10⁻³ min⁻¹ tương đương một sự kiện tích hợp mỗi ~3 giờ. Phiên mã có k_TX cơ bản = 2.0 min⁻¹ và k_TX được kích hoạt bởi Tat = 20-40 min⁻¹. Lắp ráp/nảy chồi có k_ASM ≈ 1.3 min⁻¹ với thời gian bán hủy giải phóng virion t₁/₂ ≈ 46 min. Mô hình lai ngẫu nhiên/ODE dự đoán ~2600 phân tử Gag trên mỗi virion được lắp ráp trong 55 phút với CV=0.11. Nghiên cứu proteomic và phosphoproteomic tốc độ cao cho thấy nhiễm trùng sớm 0-6 giờ có 98 protein vật chủ được phosphoryl hóa như SAMHD1 S33, p-IKKβ S177/181 dẫn đến phá hủy yếu tố hạn chế và kích hoạt NF-κB. Sau tích hợp 12-24 giờ có 214 protein được điều hòa tăng với protein spliceosome SRSF1/3 bị phosphoryl hóa quá mức tăng cường nối gen và trưởng thành mRNA virus. Giai đoạn muộn ≥48 giờ có 61% enzyme chuyển hóa bị acetyl hóa với GAPDH K171ac tương quan với tăng lưu lượng đường phân.
+
+SOURCE: Cell 2019
+TOPIC: HIV Epigenetic Control of Latent Reservoirs
+RISK: CRITICAL
+
+# Điều hòa Di truyền Biểu sinh Ổ chứa Tiềm ẩn HIV
+
+Định vị nucleosome cho thấy Nuc-0/Nuc-1 nằm hai bên LTR với H3K27me3 và H3K9me3 tại Nuc-1 tuyển dụ Polycomb/HP1 củng cố trạng thái tiềm ẩn. Acetyl hóa histone với H3K9ac thấp tại LTR, Tat K28ac thay thế HDAC1 thúc đẩy tái hoạt động. Methyl hóa DNA tại CpG -119, -93 trong LTR với ~85% bị methyl hóa trong ART dài hạn, loại bỏ DNMT1 tăng phiên mã LTR ~6 lần. Tenofovir sớm trong PrEP duy trì DNA virus trong phức hợp trước tích hợp, dễ bị phân hủy bởi TREX1 với 90% kết thúc khuôn mẫu. Các con đường truyền tín hiệu được HIV điều chỉnh bao gồm NF-κB qua gp41 tuyển TRAF6→TAK1→IKK với Vpu điều chỉnh phân hủy IκBα tạo xung NF-κB hai pha tối ưu hóa liên kết LTR. MAPK qua Vpr kích hoạt DDB1-CUL4A, kích hoạt p38α với phosphoryl hóa Hsp27 S82 qua p38 hỗ trợ nhập nhân RTC. JAK/STAT qua gp120-CCR5 kích hoạt JAK2→STAT5 Y694 điều hòa tăng BCL-xL, Vif tuyển dụ PP2A-B56γ khử phosphoryl hóa STAT5.

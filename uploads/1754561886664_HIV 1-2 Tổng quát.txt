@@ -1,0 +1,63 @@
+SOURCE: Nature Reviews Disease Primers 2015
+TOPIC: HIV Classification and Definition
+RISK: CRITICAL
+
+# Định Nghĩa và Phân Loại HIV-1 và HIV-2
+
+HIV-1 và HIV-2 là hai loại virus khác biệt của virus suy giảm miễn dịch người (HIV), gây ra hội chứng suy giảm miễn dịch mắc phái (AIDS). Cả hai đều thuộc chi Lentivirus trong họ Retroviridae. HIV-1 phổ biến toàn cầu và có tính gây bệnh cao hơn, trong khi HIV-2 ít phổ biến hơn, chủ yếu được tìm thấy ở Tây Phi và thường ít hung dữ hơn. Cả hai virus đều có nguồn gốc từ virus suy giảm miễn dịch ở linh trưởng (SIV), với HIV-1 có nguồn gốc từ SIVcpz ở tinh tinh và HIV-2 từ SIVsm ở khỉ mangabey.
+
+SOURCE: Integrative Computational Approaches Journal 2025
+TOPIC: HIV Viral Structure and Genome
+RISK: HIGH
+
+# Cấu Trúc Virus và Tổ Chức Genome HIV
+
+HIV-1 có kích thước genome khoảng 9.2 kb trong khi HIV-2 có kích thước khoảng 9.5 kb. Cả hai đều có các gene cấu trúc giống nhau: gag, pol, env. Tuy nhiên, các gene điều hòa có sự khác biệt: HIV-1 có tat, rev, nef, vif, vpr, vpu còn HIV-2 có tat, rev, nef, vif, vpr, vpx. Sự khác biệt chính là HIV-1 có tính lây truyền cao hơn và tốc độ nhân bản nhanh hơn, trong khi HIV-2 có tính lây truyền thấp hơn và tiến triển chậm hơn.
+
+SOURCE: Current Opinion in Virology 2021
+TOPIC: HIV Phylogenetic Classification
+RISK: HIGH
+
+# Phân Loại Phân Tử Di Truyền HIV
+
+HIV-1 được chia thành bốn nhóm: M (Major), O (Outlier), N (Non-M/Non-O), và P. Nhóm M, chịu trách nhiệm cho hầu hết các ca nhiễm trên toàn cầu, có nhiều subtype (A, B, C, D, F, G, H, J, K) và nhiều dạng tái tổ hợp lưu hành (CRFs). HIV-2 có tám nhóm (A đến H), trong đó nhóm A và B có ý nghĩa lâm sàng quan trọng nhất. HIV-1 phân bố toàn cầu với subtype B phổ biến ở châu Mỹ, Tây Âu và Úc, subtype C thống trị ở Nam Phi, Ethiopia và Đông Nam Á.
+
+SOURCE: Journal of Infectious Diseases 2020
+TOPIC: HIV Clinical Differences and Pathology
+RISK: CRITICAL
+
+# Khác Biệt Lâm Sàng và Bệnh Lý HIV-1 và HIV-2
+
+HIV-1 có tiến triển bệnh nhanh hơn với nguy cơ AIDS cao hơn, viral load cao hơn và sự suy giảm CD4+ nhanh chóng. Hiệu quả truyền nhiễm của HIV-1 cũng cao hơn. Ngược lại, HIV-2 có tiến triển bệnh chậm hơn với nguy cơ AIDS thấp hơn, tải lượng virus thấp hơn và sự suy giảm CD4+ chậm hơn. Điều này dẫn đến sự khác biệt quan trọng trong quản lý lâm sàng và tiên lượng bệnh nhân.
+
+SOURCE: Viruses Journal 2010
+TOPIC: HIV Cellular Entry Mechanisms
+RISK: HIGH
+
+# Cơ Chế Xâm Nhập Tế Bào của HIV
+
+HIV-1 chủ yếu sử dụng các đồng thụ thể CCR5 hoặc CXCR4 để xâm nhập, ảnh hưởng đến khả năng nhạy cảm của nó với các chất ức chế xâm nhập. HIV-2 có thể sử dụng nhiều loại đồng thụ thể hơn, bao gồm CCR5, CXCR4 và các loại khác , ảnh hưởng đến tính hướng đích và khả năng nhạy cảm với chất ức chế xâm nhập của nó. Sự khác biệt này có ý nghĩa quan trọng trong việc lựa chọn thuốc điều trị và hiệu quả của các liệu pháp nhắm mục tiêu.
+
+SOURCE: Clinical Infectious Diseases 2021
+TOPIC: HIV Drug Resistance and Treatment
+RISK: CRITICAL
+
+# Kháng Thuốc và Điều Trị HIV
+
+HIV-1 có các đột biến kháng thuốc được xác định rõ ràng đối với NRTIs, NNRTIs và PIs, đòi hỏi xét nghiệm kháng thuốc cụ thể và điều chỉnh điều trị. HIV-2 thể hiện các mẫu kháng thuốc khác biệt, đặc biệt đối với NNRTIs và PIs, đòi hỏi xét nghiệm kháng thuốc và chiến lược điều trị thay thế. Điều trị HIV-1 tuân theo các hướng dẫn đã được thiết lập với các phác đồ ART cụ thể, bao gồm chất ức chế integrase, NRTIs và NNRTIs. Điều trị HIV-2 đòi hỏi các phác đồ khác nhau do các mẫu kháng thuốc độc đáo, thường bao gồm chất ức chế protease và NRTIs.
+
+SOURCE: MMWR Morbidity and Mortality Weekly Report 2020
+TOPIC: HIV Differential Diagnosis
+RISK: HIGH
+
+# Thuật Toán Xét Nghiệm Phân Biệt Chẩn Đoán HIV
+
+CDC khuyến nghị xét nghiệm phân biệt HIV-1/HIV-2 bổ sung để xác nhận loại nhiễm trùng dựa trên kháng thể đặc hiệu theo type. Một thuật toán thay thế sử dụng xét nghiệm NAT định tính HIV-1/HIV-2 của cobass làm xét nghiệm phân biệt đã được thử nghiệm, cho thấy sự hiệu quả cao thông qua các ca nhiễm HIV đã được phân biệt chủng loại. 
+
+SOURCE: JAMA Internal Medicine 2018
+TOPIC: HIV Clinical Monitoring and Management
+RISK: HIGH
+
+# Theo Dõi Lâm Sàng và Quản Lý HIV
+
+Theo dõi HIV-1 bao gồm tải lượng virus và định lượng CD4 thường xuyên. Tải lượng virus nên được đo lường sau 4-6 tuần tính từ khi bắt đầu điều trị ART, sau đó mỗi 3-6 tháng. CD4 count được kiểm tra mỗi 6 tháng cho đến khi ổn định trên 250 cells/µL và trong ít nhất một năm. HIV-2 có theo dõi tương tự nhưng xét nghiệm tải lượng virus kém nhạy cảm hơn, đòi hỏi các xét nghiệm chuyên biệt. Mặc dù tải lượng virus của người nhiễm HIV-2 thường thấp, nhưng vẫn nên định lượng CD4. HIV-1 có tỷ lệ đáp ứng cao với ART tiêu chuẩn, đạt được ức chế virus ở hầu hết bệnh nhân, trong khi HIV-2 có đáp ứng chậm hơn do kháng thuốc nội tại đối với một số loại thuốc ARV.

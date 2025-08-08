@@ -1,0 +1,79 @@
+SOURCE: Nature Structural & Molecular Biology 2023
+TOPIC: HIV Envelope Trimer Structure and Conformational Dynamics
+RISK: CRITICAL
+
+# Cấu Trúc Trimer Env HIV và Động Lực Cấu Dạng
+
+Trimer Env HIV-1 tồn tại ở trạng thái tiền dung hợp (prefusion) với cấu trúc không đối xứng, bao gồm ba đơn vị gp120/gp41 heterodimer. Cấu trúc cryo-EM độ phân giải cao cho thấy gp120 có cấu trúc core không đổi và các vòng biến đổi (V1/V2, V3, V4, V5) linh động cao. Domain gp41 chứa peptide dung hợp, vùng heptad repeat HR1/HR2 và domain transmembrane. Sự liên kết CD4 gây ra thay đổi cấu dạng lớn, mở ra binding site cho đồng thụ thể CCR5/CXCR4 và kích hoạt cơ chế dung hợp màng. Các nghiên cứu single-molecule FRET và hydrogen-deuterium exchange cho thấy trimer tồn tại trong trạng thái cân bằng động giữa các cấu dạng đóng, mở một phần và hoàn toàn mở.
+
+SOURCE: Cell 2022
+TOPIC: gp120 V-loop Flexibility and Neutralizing Antibody Recognition
+RISK: HIGH
+
+# Tính Linh Hoạt Vòng V của gp120 và Nhận Dạng Kháng Thể Trung Hòa
+
+Các vòng biến đổi V1/V2, V3, V4 và V5 của gp120 thể hiện tính linh hoạt cấu trúc cực cao với nhiều trạng thái cấu dạng đồng tồn tại. Vòng V1/V2 tạo thành cấu trúc β-hairpin có thể ở trạng thái mở hoặc đóng, ảnh hưởng đến khả năng tiếp cận CD4 binding site. Vòng V3 chứa crown region quan trọng cho nhận dạng đồng thụ thể và là mục tiêu của nhiều kháng thể trung hòa như PGT121, 10-1074. Tính linh hoạt này được duy trì bởi glycan shield che chắn khoảng 50% bề mặt protein, tạo ra các "khe glycan" cho kháng thể tiếp cận. Kháng thể trung hòa phổ rộng như PG9, CH01 nhận dạng các epitope conformational phụ thuộc vào trạng thái đóng của V1/V2, trong khi VRC01 class nhắm vào CD4bs được che chắn một phần bởi V5 loop.
+
+SOURCE: Science 2021
+TOPIC: HIV-1 Reverse Transcriptase Structure and Drug Resistance
+RISK: CRITICAL
+
+# Cấu Trúc HIV-1 Reverse Transcriptase và Kháng Thuốc
+
+HIV-1 RT là enzyme dị nhị phân 117 kDa gồm tiểu đơn vị p66 (560 aa) và p51 (440 aa) với cấu trúc tương tự "bàn tay phải". Tiểu đơn vị p66 chứa polymerase domain (finger, palm, thumb) và RNase H domain, trong khi p51 có cấu trúc tương tự nhưng không có hoạt tính enzyme. Active site polymerase chứa hai ion Mg2+ phối hợp với Asp110, Asp185, Asp186 cho hoạt tính tổng hợp DNA. NNRTI binding pocket nằm gần active site, tạo thành bởi các residue từ cả p66 và p51. Các đột biến kháng thuốc chính bao gồm K65R (kháng tenofovir), M184V (kháng lamivudine/emtricitabine), K103N và Y181C (kháng efavirenz/rilpivirine). Cơ chế kháng thuốc hoạt động thông qua giảm ái lực binding, tăng tốc độ dissociation hoặc thay đổi kinetics incorporation của substrate.
+
+SOURCE: Nature 2020
+TOPIC: HIV-1 Integrase Structure and INSTI Resistance Mechanisms
+RISK: HIGH
+
+# Cấu Trúc HIV-1 Integrase và Cơ Chế Kháng INSTI
+
+HIV-1 integrase (IN) là enzyme 288 amino acid hoạt động dưới dạng tetramer trong intasome complex với DNA virus và vật chủ. Cấu trúc gồm ba domain: N-terminal domain (NTD, 1-50) chứa HHCC zinc finger motif, catalytic core domain (CCD, 51-212) chứa active site DDE motif (Asp64, Asp116, Glu152), và C-terminal domain (CTD, 213-288) liên kết DNA không đặc hiệu. Intasome complex được hình thành khi IN tetramer liên kết với LTR DNA ends, tạo ra cấu trúc stable nucleoprotein complex (STC). Các chất ức chế INSTI như raltegravir, elvitegravir, dolutegravir và bictegravir liên kết với IN-DNA complex, ngăn cản strand transfer step. Kháng thuốc phát sinh qua các đột biến như Q148H/K + G140S (kháng raltegravir/elvitegravir), R263K (kháng dolutegravir) và các đột biến accessory tăng cường mức độ kháng thuốc.
+
+SOURCE: Journal of Molecular Biology 2023
+TOPIC: HIV-1 Protease Structure and Inhibitor Design
+RISK: CRITICAL
+
+# Cấu Trúc HIV-1 Protease và Thiết Kế Chất Ức Chế
+
+HIV-1 protease là aspartic acid protease hoạt động dưới dạng homodimer với hai tiểu đơn vị 99 amino acid. Active site chứa hai Asp25 residue từ mỗi monomer tạo thành dyad catalytic, được bao quanh bởi substrate binding cleft có thể chứa 7-8 amino acid residue. Cấu trúc flap region (residue 43-58) có tính linh hoạt cao, thay đổi từ trạng thái mở (apo form) sang đóng (substrate-bound) trong quá trình catalysis. Enzyme cắt polyprotein Gag và Gag-Pol tại 10 vị trí đặc hiệu với trình tự nhận dạng consensus chứa hydrophobic residue ở P1 và P1' position. Các chất ức chế protease như darunavir, atazanavir, lopinavir được thiết kế dựa trên cấu trúc substrate transition state analog với độ ái lực cao (Ki = 1-50 pM). Kháng thuốc phát sinh qua đột biến trong active site (D30N, I50V, V82A) hoặc flap region (I54V, V32I) làm giảm ái lực inhibitor nhưng vẫn duy trì hoạt tính enzyme.
+
+SOURCE: Cell Host & Microbe 2022
+TOPIC: HIV-1 Capsid Structure and Nuclear Import
+RISK: HIGH
+
+# Cấu Trúc HIV-1 Capsid và Quá Trình Nhập Nhân
+
+HIV-1 capsid protein (CA) tự lắp ráp thành fullerene-like cone chứa ribonucleoprotein complex trong virion trưởng thành. Mỗi CA monomer có hai domain: N-terminal domain (NTD, 1-145) và C-terminal domain (CTD, 146-231) nối bởi flexible linker. CA hexamer được hình thành qua tương tác NTD-NTD, trong khi CA pentamer tại đỉnh cone được ổn định bởi CTD-CTD interface. Capsid cone chứa khoảng 1000-1500 CA molecule sắp xếp thành ~250 hexamer và 12 pentamer. Trong quá trình infection, capsid tương tác với host factor CPSF6 qua CA binding motif, điều hướng pre-integration complex (PIC) đến nuclear pore. Cyclophilin A (CypA) liên kết với CA loop region, điều chỉnh stability và nuclear import. Sự uncoating của capsid được điều hòa bởi host factor như TRIM5α, MxB và Nup153. Capsid inhibitor mới như GS-6207 (lenacapavir) liên kết với CA interface, ngăn cản cả assembly và uncoating process.
+
+SOURCE: Nature Communications 2021
+TOPIC: Cryo-EM Structure of HIV-1 Mature Virion
+RISK: HIGH
+
+# Cấu Trúc Cryo-EM của Virion HIV-1 Trưởng Thành
+
+Cấu trúc cryo-EM của HIV-1 virion trưởng thành cho thấy particle có đường kính trung bình 110-130 nm với morphology không đều do tính không đồng nhất của membrane curvature. Viral envelope chứa khoảng 8-14 Env trimer spike phân bố ngẫu nhiên trên bề mặt, mỗi spike cao ~15 nm và rộng ~12 nm. Capsid core có hình nón với chiều dài ~120 nm và đường kính base ~50 nm, được bao quanh bởi matrix protein MA layer dày ~4 nm. Ribonucleoprotein complex bên trong capsid chứa hai genomic RNA copy, RT, IN và các protein khác được tổ chức thành compact nucleoid structure. MA protein tạo thành hexagonal lattice trên inner leaflet của viral membrane, với N-terminal myristoyl group gắn vào membrane lipid và basic region tương tác với PI(4,5)P2. Electron density map cho thấy sự tương tác giữa MA C-terminus và CA N-terminus, duy trì structural integrity của virion. Various host protein như actin, ubiquitin, cyclophilin A được detect trong virion, phản ánh quá trình budding từ infected cell.
+
+SOURCE: Structure 2020
+TOPIC: Allosteric Regulation in HIV Enzymes
+RISK: HIGH
+
+# Điều Hòa Allosteric trong Các Enzyme HIV
+
+Các enzyme HIV thể hiện extensive allosteric regulation ảnh hưởng đến hoạt tính catalytic và drug susceptibility. HIV-1 RT cho thấy negative cooperativity giữa hai active site của p66/p51 dimer, với binding của substrate tại một site ảnh hưởng đến conformation của site còn lại. NNRTI binding pocket hoạt động như allosteric site, binding của inhibitor gây ra conformational change lan truyền đến polymerase active site, khóa enzyme trong inactive conformation. HIV protease thể hiện allosteric coupling giữa flap region và active site, với flap dynamics điều hòa substrate access và product release. Binding của competitive inhibitor stabilizes closed flap conformation, while substrate binding triggers flap opening. HIV integrase functional form là multimer complex, với allosteric communication giữa các IN subunit ảnh hưởng đến DNA binding affinity và catalytic activity. LEDGF/p75 host cofactor hoạt động như allosteric effector, tăng cường IN-DNA interaction và specificity. Understanding allosteric network cung cấp opportunities cho drug design targeting cryptic allosteric site với potential reduced resistance development.
+
+SOURCE: Annual Review of Biophysics 2019
+TOPIC: Single-Molecule Studies of HIV Protein Dynamics
+RISK: HIGH
+
+# Nghiên Cứu Single-Molecule về Động Lực Protein HIV
+
+Các technique single-molecule như FRET, optical tweezers và atomic force microscopy cung cấp insight unique về dynamic behavior của HIV protein trong real-time. Single-molecule FRET study của Env trimer cho thấy spontaneous fluctuation giữa closed và open conformation với dwell time từ millisecond đến second scale. CD4 binding shift equilibrium toward open state, tăng probability của CCR5 binding site exposure. HIV RT processivity được measure bằng single-molecule assay cho thấy enzyme có thể synthesize DNA product length 100-1000 nucleotide trước khi dissociation. Template secondary structure và RNA-DNA hybrid stability ảnh hưởng đến RT pause site và termination probability. Single-molecule study của HIV integrase cho thấy protein search mechanism trên DNA thông qua combination của 1D sliding và 3D hopping. Target site selection được influenced bởi chromatin structure và transcriptional activity. HIV protease single-molecule kinetic analysis reveal multiple conformational state during catalytic cycle, với rate-limiting step tương ứng product release rather than chemical step. These dynamic study provide molecular basis cho understanding drug resistance mechanism và guide development của next-generation inhibitor.
+
+SOURCE: Advances in Virus Research 2023
+TOPIC: Machine Learning Applications in HIV Structural Biology
+RISK: HIGH
+
+# Ứng Dụng Machine Learning trong Sinh Học Cấu Trúc HIV
+
+Machine learning approach đã revolutionize HIV structural biology research với capability predict protein structure, dynamics và drug-target interaction. AlphaFold2 predicted structure của HIV protein với high accuracy, đặc biệt useful cho các protein khó crystallize như Nef, Vpu, Vpr. Deep learning model được train trên large dataset của HIV sequence có thể predict drug resistance mutation với accuracy >90%. Graph neural network được apply để analyze protein-protein interaction network, identify critical residue cho viral replication. Molecular dynamics simulation combined với machine learning enable prediction của allosteric pathway và cryptic binding site. Computer-aided drug design platform sử dụng AI algorithm để screen virtual compound library, identify potential inhibitor với novel mechanism of action. Machine learning model cũng được develop để predict epitope cho broadly neutralizing antibody development, analyze B-cell receptor sequence để guide vaccine design. Integration của experimental structural data với computational prediction tạo ra comprehensive model của HIV lifecycle, facilitate development của multi-target therapeutic strategy. Future direction include application của quantum computing cho accurate prediction của chemical reaction mechanism và development của AI-driven automated drug discovery pipeline.

@@ -1,0 +1,39 @@
+SOURCE: Nature Reviews Virology 2023
+TOPIC: HIV Alternative Splicing Patterns and Regulation
+RISK: CRITICAL
+
+# Các mô hình và Điều hòa Nối sợi Thay thế HIV-1
+
+HIV-1 biểu hiện proteome từ một bản phiên mã chính duy nhất 9.2 kb dựa vào nối sợi thay thế rộng rãi để tạo đa dạng mRNA. Quá trình được điều phối bởi yếu tố RNA virus, protein tế bào chủ và virus, thay đổi động môi trường tế bào. Các vị trí nối sợi chính gồm splice donors D1-D4 và splice acceptors A1, A2, A3, A4a-c, A5, A7. Chín biến thể nối sợi chính chiếm phần lớn sản xuất protein: không nối sợi mã hóa Gag/Gag-Pol, nối sợi một phần mã hóa Vif (D1→A1), Vpr (D1→A2), Vpu (D1→A3), Env (D1→A5), và nối sợi hoàn toàn mã hóa Tat, Rev, Nef. Điều hòa nối sợi bao gồm ESEs tuyển dụ protein SR thúc đẩy nối sợi, ESS/ISS gắn hnRNP ức chế nối sợi, và cấu trúc thứ cấp RNA che hoặc để lộ vị trí nối sợi. Điều hòa theo thời gian: giai đoạn sớm 0-6h có mRNA nối sợi hoàn toàn chiếm ưu thế sản xuất Tat, Rev, Nef; giai đoạn muộn 6-24h có mRNA không nối sợi/nối sợi một phần sản xuất protein cấu trúc khi Rev đạt ngưỡng.
+
+SOURCE: Cell 2022
+TOPIC: HIV RNA Secondary Structures and Functional Elements
+RISK: HIGH
+
+# Cấu trúc thứ cấp RNA HIV-1 và Yếu tố Chức năng
+
+RNA HIV-1 có cấu trúc cao với các yếu tố được bảo tồn điều hòa phiên mã, nối sợi, xuất khẩu, nhị phân hóa và đóng gói. TAR ở đầu 5' tất cả bản phiên mã gắn Tat, tuyển dụ P-TEFb, tăng cường kéo dài phiên mã và cần thiết cho hoạt hóa phiên mã qua trung gian Tat. RRE trong gen env gắn Rev, cho phép xuất khẩu RNA không nối sợi/nối sợi một phần khỏi nhân và là trung tâm chức năng Rev. DIS ở đầu 5' leader trung gian nhị phân hóa RNA, cần thiết đóng gói hai bộ gen vào mỗi virion và thúc đẩy tái tổ hợp. Các vị trí SD/SA khắp bộ gen điều hòa nối sợi thay thế tạo đa dạng mRNA. Tín hiệu đóng gói Ψ ở đầu 5' leader sau DIS gắn NC, chỉ đạo đóng gói chọn lọc RNA bộ gen và đảm bảo chỉ RNA không nối sợi nhị phân hóa được đóng gói.
+
+SOURCE: Science 2021
+TOPIC: HIV RNA-Protein Interactions and Regulation
+RISK: CRITICAL
+
+# Tương tác RNA-Protein trong HIV-1
+
+HIV-1 dựa vào mạng lưới tương tác RNA-protein cụ thể để kiểm soát biểu hiện gen, xử lý RNA và lắp ráp virion. Tat-TAR là tương tác chính với motif giàu arginine của Tat gắn phần phình TAR, tuyển dụ P-TEFb (Cyclin T1-CDK9) phosphoryl hóa RNA Pol II và yếu tố kéo dài tiêu cực, giải phóng polymerase bị tạm dừng. Rev-RRE gắn thân IIB của RRE, đa hợp hóa và tuyển dụ Crm1/Ran-GTP để xuất khẩu khỏi nhân, cần thiết cho biểu hiện Gag, Pol, Env và protein phụ trợ. NC-Ψ/DIS với ngón tay kẽm NC gắn Ψ và DIS làm chất hướng dẫn nhị phân hóa và đóng gói RNA, đảm bảo chỉ RNA toàn chiều dài nhị phân hóa được bọc. Các RBP tế bào chủ bao gồm hnRNPs và protein SR điều chỉnh lựa chọn vị trí nối sợi, Staufen1 và MATR3 ổn định RNA cho dịch mã/đóng gói, eEF1A tương tác với đầu 5' leader thúc đẩy dịch mã.
+
+SOURCE: Nature 2020
+TOPIC: MicroRNA Regulation of HIV Replication
+RISK: HIGH
+
+# Điều hòa Sao chép HIV bằng microRNA
+
+Các miRNA tế bào chủ trực tiếp gắn RNA HIV-1 ức chế dịch mã và góp phần tiềm ẩn trong tế bào T CD4+ nghỉ ngơi. miR-28, miR-125b, miR-150, miR-223, miR-382 nhắm 3' UTR mRNA HIV-1 duy trì tiềm ẩn bằng ức chế dịch mã. miR-196b, miR-1290 nhắm 3' UTR ức chế sản xuất HIV-1 thúc đẩy tiềm ẩn. miR-29a/b nhắm nef ức chế biểu hiện Nef giảm sao chép. miR-149 nhắm vpr, miR-378 nhắm env, miR-324-5p nhắm vif. HIV-1 mã hóa miRNA riêng điều biến biểu hiện gen virus và tế bào chủ để thúc đẩy sao chép và tồn tại dai dẳng. miR-H3 được mã hóa trong vùng reverse transcriptase nhắm hộp TATA trong 5' LTR tăng phiên mã virus và tăng cường sao chép. miRNA có nguồn gốc TAR (miR-TAR-5p/3p) được xử lý từ cấu trúc kẹp tóc TAR nhắm gen tế bào chủ liên quan apoptosis và sửa chữa DNA thúc đẩy sự sống sót tế bào.
+
+SOURCE: Journal of Virology 2019
+TOPIC: HIV Splicing Regulation and Temporal Control
+RISK: HIGH
+
+# Điều hòa Nối sợi HIV và Kiểm soát Thời gian
+
+Sự chuyển đổi từ biểu hiện gen sớm sang muộn được kiểm soát bởi sự tích lũy Rev khắc phục giữ lại trong nhân các RNA chứa intron. Protein SR như SRSF1, SC35 thúc đẩy bao gồm exon trong khi hnRNP như hnRNP A1, H ức chế nối sợi tại vị trí cụ thể. Cấu trúc kẹp tóc SD1 che hoặc để lộ vị trí nối sợi phụ thuộc điều kiện tế bào. Giai đoạn sớm chỉ RNA nối sợi hoàn toàn được xuất khẩu với Tat tăng cường phiên mã và Rev tích lũy. Giai đoạn muộn khi Rev đạt ngưỡng cho phép xuất khẩu RNA chứa intron để tổng hợp protein cấu trúc/phụ trợ và đóng gói bộ gen. Việc nhắm mục tiêu các quá trình này thông qua phân tử nhỏ, oligonucleotid chống nghĩa hoặc liệu pháp dựa miRNA mở ra con đường đầy hứa hẹn cho chiến lược kháng retrovirus mới.

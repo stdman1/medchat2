@@ -1,0 +1,79 @@
+SOURCE: Viruses Journal 2010
+TOPIC: HIV Viral Entry and Attachment
+RISK: CRITICAL
+
+# Giai Đoạn Xâm Nhập và Bám Dính của HIV
+
+Các gai Env dạng tam phân (gp120/gp41) trên vỏ virion HIV gắn vào receptor CD4 trên tế bào đích với ái lực cao (Kd ≈5–15 nM). Việc gắn kết với CD4 làm lộ ra vòng V3 và phiến cầu nối của gp120, cho phép liên kết với thụ thể đồng vận chemokine CCR5 (virus ái tính R5) hoặc CXCR4 (virus ái tính X4). Virus R5 thống trị trong giai đoạn đầu nhiễm bệnh và nhắm vào đại thực bào và tế bào T, trong khi virus X4 xuất hiện ở giai đoạn cuối và liên quan đến sự suy giảm CD4 nhanh chóng. Sau khi liên kết, gp41 chèn peptide dung hợp vào màng tế bào chủ và tạo thành cấu trúc bó sáu xoắn ổn định, kéo màng virus và tế bào lại gần nhau để thực hiện quá trình hòa màng.
+
+SOURCE: Nature Reviews Molecular Cell Biology 2018
+TOPIC: HIV Reverse Transcription
+RISK: CRITICAL
+
+# Quá Trình Sao Chép Ngược của HIV
+
+Enzyme sao chép ngược (RT) của HIV là một enzyme dị nhị phân gồm tiểu đơn vị p66 và p51 với tổng trọng lượng phân tử 117 kDa. RT không có khả năng sửa sai exonuclease, dẫn đến tỷ lệ lỗi cao khoảng 3×10^5 mỗi bp mỗi vòng. Quá trình bắt đầu khi tRNA-Lys3 của tế bào chủ bắt cặp với vùng liên kết mồi trên RNA virus. RT tổng hợp DNA chuỗi âm, sau đó thực hiện hai lần chuyển mạch khuôn để tạo ra DNA sợi kép với các vùng LTR ở cả hai đầu. Với 10^10 virion được sản xuất mỗi ngày, có khoảng 3×10^5 bộ gen đột biến được tạo ra hàng ngày ở một bệnh nhân, dẫn đến sự tiến hóa nhanh chóng và khả năng kháng thuốc của virus.
+
+SOURCE: Cell Host & Microbe 2019
+TOPIC: HIV Nuclear Entry and Integration
+RISK: HIGH
+
+# Xâm Nhập Nhân và Tích Hợp của HIV
+
+Phức hợp tiền tích hợp (PIC) chứa dsDNA virus, integrase, RT và các protein khác di chuyển đến nhân tế bào. Protein capsid (CA) tương tác với Nup153 và CPSF6 để dẫn đường cho việc nhập vào qua phức hợp lỗ nhân. HIV-1 có khả năng lây nhiễm các tế bào không phân chia nhờ vào các tương tác này. Enzyme integrase (IN) xử lý các đầu 3' của DNA virus và chèn vào DNA tế bào chủ cách nhau 5 bp, được neo giữ bởi LEDGF/p75. Virus ưu tiên tích hợp vào các đơn vị phiên mã hoạt động và các gen giàu H3K36me3, với khoảng 70% các sự kiện xảy ra trong các intron. Provirus sau đó sắp xếp vị trí nucleosome và có thể tồn tại ở trạng thái tiềm ẩn hoặc hoạt động.
+
+SOURCE: Journal of Virology 2020
+TOPIC: HIV Gene Expression and Regulation
+RISK: HIGH
+
+# Biểu Hiện và Điều Hòa Gen của HIV
+
+Vùng LTR 5' của HIV chứa các yếu tố điều hòa quan trọng bao gồm vùng tăng cường (NF-κB, Sp1), promoter lõi (TATA), và cấu trúc thân-vòng TAR. Protein Tat (14 kDa) liên kết với TAR RNA và chiêu mộ P-TEFb để phosphoryl hóa đuôi CTD của RNA polymerase II, làm tăng phiên mã lên đến 100 lần. Protein Rev (19 kDa) liên kết với RRE và chiêu mộ CRM1-RanGTP để xuất khẩu các RNA chưa cắt nối ra khỏi nhân. Trong giai đoạn sớm, chỉ có các RNA đã được cắt nối nhiều lần (tat, rev, nef) được xuất khẩu, trong khi giai đoạn muộn cho phép xuất khẩu các RNA mã hóa gag, pol, env. Sự chuyển đổi từ giai đoạn sớm sang muộn được điều khiển bởi nồng độ Rev tích lũy.
+
+SOURCE: Annual Review of Biochemistry 2021
+TOPIC: HIV Protein Synthesis and Processing
+RISK: HIGH
+
+# Tổng Hợp và Xử Lý Protein của HIV
+
+Polyprotein Gag (55 kDa) và Gag-Pol (160 kDa) là những sản phẩm chính được tổng hợp. Gag-Pol được tạo ra thông qua sự trượt khung đọc ribosome với hiệu suất 5-10%, duy trì tỷ lệ Gag:Gag-Pol khoảng 20:1 cần thiết cho lắp ráp virion đúng cách. Protease của HIV tự phân cắt khỏi Gag-Pol và sau đó phân cắt các polyprotein theo trình tự có trật tự: p2/NC → SP1/CA → SP2/p6. Protein Env (gp160) được tổng hợp trong mạng lưới nội chất, được N-glycosyl hóa nhiều và tạo thành tam phân. Furin trong bộ máy Golgi phân cắt gp160 thành gp120 và gp41. Các protein phụ trợ như Nef làm tăng khả năng lây nhiễm gấp 5-10 lần, Vif phân hủy APOBEC3G, Vpr gây ngừng chu kỳ tế bào ở G2/M, và Vpu đối kháng BST-2/tetherin.
+
+SOURCE: Nature Structural & Molecular Biology 2019
+TOPIC: HIV Assembly and Budding
+RISK: HIGH
+
+# Lắp Ráp và Nảy Chồi của HIV
+
+Mạng lưới Gag lắp ráp tại màng sinh chất, với domain MA neo vào PI(4,5)P2 và NC liên kết với RNA virus. Domain NC nhận diện tín hiệu đóng gói Ψ và chọn lọc RNA dạng dimer để tích hợp vào virion. Domain p6 của Gag chiêu mộ TSG101 (ESCRT-I) qua motif PTAP và ALIX qua motif LYPXnL để khởi động quá trình nảy chồi. ESCRT-III và VPS4 trung gian cho sự cắt màng, với quá trình nảy chồi hoàn thành trong khoảng 60 giây. Sau khi giải phóng, protease được hoạt hóa và phân cắt Gag và Gag-Pol, chuyển đổi các hạt chưa trưởng thành hình cầu (≈120 nm) thành các lõi trưởng thành hình nón (≈100 nm) có khả năng lây nhiễm. Ngón tay kẽm của NC trung gian cho sự dimer hóa và đóng gói RNA, cần thiết cho khả năng lây nhiễm của virus.
+
+SOURCE: Nature Reviews Immunology 2018
+TOPIC: HIV Host Cell Interactions
+RISK: CRITICAL
+
+# Tương Tác HIV với Tế Bào Chủ
+
+HIV gây ra tác động nghiêm trọng lên chức năng và sự sống còn của tế bào T CD4+ thông qua nhiều cơ chế bao gồm nhân bản virus trực tiếp, hình thành hợp bào và chết tế bào theo chương trình gây viêm (pyroptosis) phụ thuộc caspase-1. Sự suy giảm tế bào T CD4+ dẫn đến suy giảm miễn dịch, nhiễm trùng cơ hội và AIDS. HIV gây ra kích hoạt miễn dịch mạn tính với kích hoạt tế bào T dai dẳng, dẫn đến kiệt sức và rối loạn chức năng miễn dịch. Virus thiết lập các ổ chứa tiềm ẩn trong tế bào T nhớ trung tâm (thời gian bán hủy ≈44 tháng) và đại thực bào mô, tồn tại bất chấp liệu pháp ART. HIV có thể lây truyền hiệu quả từ tế bào sang tế bào thông qua synapse virus học, hiệu quả hơn 10-100 lần so với virus tự do. Virus sử dụng nhiều chiến lược né tránh miễn dịch như lá chắn glycan che khuất epitope trung hòa, giảm biểu hiện MHC-I và CD4 thông qua Nef/Vpu, và duy trì trạng thái tiềm ẩn để tránh phát hiện.
+
+SOURCE: Nature Medicine 2020
+TOPIC: HIV Therapeutic Targets
+RISK: CRITICAL
+
+# Các Mục Tiêu Phân Tử của HIV cho Can Thiệp Điều Trị
+
+Chu trình sống của HIV cung cấp nhiều mục tiêu có thể tác động bằng thuốc. Giai đoạn xâm nhập có thể được nhắm mục tiêu bằng các chất ức chế xâm nhập như fostemsavir (ngăn chặn CD4/gp120), maraviroc (đối kháng CCR5), và enfuvirtide (ngăn chặn hòa màng). Quá trình sao chép ngược bị ức chế bởi NRTI và NNRTI, trong khi tích hợp bị ngăn chặn bởi INSTI như raltegravir, dolutegravir và bictegravir. Giai đoạn trưởng thành virus là mục tiêu của các chất ức chế protease và chất ức chế trưởng thành mới. Kháng thuốc phát sinh thông qua các đột biến đặc hiệu: vòng V3 của gp120 cho chất ức chế xâm nhập, các đột biến như K65R và K103N trong RT cho NRTI/NNRTI, Q148H/K + G140S trong integrase cho INSTI, và D30N, I50V trong protease cho chất ức chế protease. Các phương pháp điều trị mới đang được phát triển bao gồm thuốc nhắm vào tế bào chủ, liệu pháp gen sử dụng CRISPR/Cas9 để cắt bỏ provirus, kháng thể trung hòa phổ rộng (bnAbs) nhắm vào epitope bảo tồn của Env, và các chất ức chế capsid mới.
+
+SOURCE: Cell 2019
+TOPIC: HIV Drug Resistance Mechanisms
+RISK: HIGH
+
+# Cơ Chế Kháng Thuốc của HIV và Đột Biến Kháng Thuốc
+
+HIV phát triển kháng thuốc thông qua tỷ lệ đột biến cao của enzyme sao chép ngược (≈3×10^5 mỗi bp mỗi vòng) và áp lực chọn lọc từ liệu pháp kháng retrovirus. Đối với chất ức chế RT, các đột biến quan trọng bao gồm K65R làm giảm nhạy cảm với tenofovir, K103N và Y181C gây kháng NNRTI, và M184V gây kháng lamivudine/emtricitabine. Kháng thuốc với chất ức chế integrase chủ yếu liên quan đến đột biến Q148H/K kết hợp với G140S tạo ra mức độ kháng thuốc cao với raltegravir và elvitegravir. Đối với chất ức chế protease, các đột biến như D30N với nelfinavir, I50V với atazanavir, và V82A với indinavir là những đột biến kháng thuốc chính. HIV-2 có mẫu kháng thuốc khác biệt với kháng thuốc nội tại đối với NNRTI và một số chất ức chế protease. Các chiến lược phòng chống kháng thuốc bao gồm sử dụng liệu pháp kết hợp (cART), thuốc có rào cản di truyền cao như dolutegravir, và theo dõi viral load thường xuyên để phát hiện sớm thất bại điều trị.
+
+SOURCE: Science Translational Medicine 2021
+TOPIC: HIV Latency and Reservoir Biology
+RISK: HIGH
+
+# Trạng Thái Tiềm Ẩn và Sinh Học Ổ Chứa HIV
+
+Ổ chứa HIV tiềm ẩn được thiết lập sớm trong quá trình nhiễm bệnh và bao gồm chủ yếu tế bào T CD4+ nhớ nghỉ ngơi (tế bào T nhớ trung tâm và tế bào T nhớ hiệu ứng) cũng như đại thực bào mô. Các tế bào này chứa provirus tích hợp có khả năng tái hoạt động nhưng duy trì ở trạng thái im lặng chất nhiễm sắc với các histone bị khử acetyl và mức NF-κB thấp. Thời gian bán hủy của ổ chứa là khoảng 44 tháng, khiến việc loại bỏ hoàn toàn HIV trở nên cực kỳ khó khăn. Tái hoạt động ổ chứa có thể được kích thích bởi các tín hiệu kích hoạt tế bào T, cytokine như TNF-α và IL-7, hoặc các tác nhân kích hoạt tiềm ẩn (LRA) như các chất ức chế HDAC. Các ổ chứa phân bố không đồng đều trong cơ thể với nồng độ cao trong hạch lympho, ruột, và hệ thần kinh trung ương. Hiểu rõ sinh học ổ chứa là chìa khóa cho các chiến lược "shock and kill" hoặc "block and lock" nhằm đạt được sự chữa khỏi chức năng hoặc sự loại bỏ hoàn toàn HIV.

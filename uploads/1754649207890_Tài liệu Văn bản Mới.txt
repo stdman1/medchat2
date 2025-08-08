@@ -1,0 +1,71 @@
+SOURCE: CDC/WHO Guidelines 2024, Clinical Laboratory Medicine 2023
+TOPIC: HIV Combination Antigen-Antibody (Ag/Ab) Testing Patient Education
+RISK: HIGH
+
+# Xét Nghiệm Kết Hợp Kháng Nguyên/Kháng Thể HIV (Ag/Ab) - Hướng Dẫn Bệnh Nhân
+
+Xét nghiệm kết hợp Ag/Ab HIV, còn gọi là xét nghiệm HIV thế hệ thứ 4, là xét nghiệm máu để kiểm tra nhiễm HIV. Xét nghiệm tìm hai yếu tố: kháng thể HIV là protein do cơ thể tạo ra để chống lại HIV nếu bạn đã bị nhiễm, và kháng nguyên p24 HIV là một phần của virus xuất hiện trong máu trước khi cơ thể tạo ra kháng thể. Có thể phát hiện nhiễm HIV sớm hơn so với các xét nghiệm cũ, thường trong vòng 2–4 tuần sau khi phơi nhiễm. Phát hiện sớm giúp bạn bắt đầu điều trị sớm hơn, giúp duy trì sức khỏe và giảm khả năng lây truyền HIV cho người khác. Đây là xét nghiệm sàng lọc đầu tiên được khuyến nghị ở hầu hết các quốc gia và bởi các tổ chức như CDC và WHO. Xét nghiệm diễn ra bằng cách lấy một lượng nhỏ máu từ tĩnh mạch ở cánh tay, phòng xét nghiệm trộn mẫu máu với các hóa chất đặc biệt sẽ phản ứng nếu có kháng thể HIV hoặc kháng nguyên p24, kết quả thường có trong vòng một ngày.
+
+SOURCE: Clinical Immunology & Virology 2023-2024
+TOPIC: HIV p24 Antigen Structure and Immune Response Kinetics
+RISK: CRITICAL
+
+# Nguyên Lý Miễn Dịch Học và Động Học Xuất Hiện Dấu Ấn HIV
+
+Kháng nguyên p24 là một protein lõi của vỏ capsid HIV, có khối lượng phân tử khoảng 24 kDa, là một trong những protein virus xuất hiện sớm nhất trong máu sau khi nhiễm và là dấu ấn quan trọng để phát hiện HIV sớm. Sau khi nhiễm, hệ miễn dịch sản xuất kháng thể IgM (chủ yếu chống gp41 và p24) khoảng 2–3 tuần sau phơi nhiễm, kháng thể IgG (chống gp120, gp41, p24) xuất hiện vài ngày sau đó và tồn tại suốt đời. Các xét nghiệm hiện đại sử dụng kháng nguyên tái tổ hợp hoặc tổng hợp để phát hiện cả kháng thể HIV-1 và HIV-2, bao phủ hầu hết các nhóm phụ. Động học xuất hiện dấu ấn theo thời gian: HIV RNA (NAT) xuất hiện ngày 7–10, kháng nguyên p24 ngày 10–18, kháng thể IgM HIV ngày 14–20, và kháng thể IgG HIV ngày 20–25 sau nhiễm. Giai đoạn cửa sổ là khoảng thời gian từ khi nhiễm đến khi xét nghiệm phát hiện được, xét nghiệm thế hệ 4 rút ngắn xuống còn khoảng 15–18 ngày.
+
+SOURCE: Laboratory Medicine & ELISA Technology 2024
+TOPIC: HIV 4th Generation Test Technical Principles and ELISA Design
+RISK: HIGH
+
+# Thiết Kế Xét Nghiệm và Nguyên Lý ELISA trong HIV Thế Hệ 4
+
+Hầu hết xét nghiệm thế hệ 4 dùng dạng miễn dịch kẹp "sandwich" ELISA hoặc CLIA. Pha rắn có giếng hoặc hạt được phủ kháng thể đơn dòng (cho p24) và kháng nguyên HIV tái tổ hợp (cho kháng thể). Khi thêm mẫu huyết thanh/huyết tương bệnh nhân, nếu có kháng nguyên p24 hoặc kháng thể HIV, chúng sẽ gắn vào pha rắn. Phát hiện bằng kháng thể thứ hai được đánh dấu enzyme hoặc nhãn phát quang hóa học sẽ gắn vào phức hợp đã bắt giữ. Tín hiệu từ lượng ánh sáng hoặc màu sinh ra được đo và so với giá trị ngưỡng (tỉ lệ S/CO). Kháng thể đơn dòng dùng để tăng độ đặc hiệu khi bắt giữ p24, kháng thể đa dòng hoặc kháng nguyên tái tổ hợp giúp phát hiện đa dạng đáp ứng kháng thể HIV, bao quát nhiều chủng khác nhau. Bắt giữ kháng nguyên bằng kháng thể đơn dòng chống p24 được cố định trên pha rắn, phát hiện kháng thể bằng kháng nguyên HIV-1/2 tái tổ hợp bắt giữ kháng thể của bệnh nhân và kháng thể chống IgG/IgM người được đánh dấu để phát hiện. Hệ thống phát hiện sử dụng enzyme (ELISA) hoặc nhãn phát quang hóa học (CLIA) tạo tín hiệu đo được.
+
+SOURCE: Clinical Laboratory Performance Studies 2022-2024
+TOPIC: HIV 4th Generation Test Performance and False Results Analysis
+RISK: CRITICAL
+
+# Độ Nhạy Độ Đặc Hiệu và Phân Tích Kết Quả Giả HIV Thế Hệ 4
+
+Xét nghiệm HIV thế hệ 4 có độ nhạy 99,88–100% và độ đặc hiệu 99,65–99,94% ở nhiễm đã xác định. Đối với nhiễm sớm, phát hiện sớm hơn 5–7 ngày so với ELISA thế hệ 3, nhưng muộn hơn 10–12 ngày so với NAT HIV-1. So sánh thế hệ 3 và 4: thế hệ 3 chỉ phát hiện IgM/IgG HIV với giai đoạn cửa sổ 22–35 ngày và bỏ lỡ giai đoạn chỉ có p24, trong khi thế hệ 4 phát hiện IgM/IgG HIV + p24 với giai đoạn cửa sổ 15–18 ngày và phát hiện được giai đoạn chỉ có p24. Yếu tố gây dương tính giả bao gồm nguyên nhân sinh học như mang thai, bệnh tự miễn, tiêm chủng gần đây, ung thư, tăng gammaglobulin máu, sốt rét, bệnh gan nặng; nguyên nhân kỹ thuật như huyết tán, cục fibrin, lỗi thiết bị, kháng thể dị loại; và yếu tố dịch tễ với tỷ lệ dương tính giả cao hơn ở vùng lưu hành thấp và ở bệnh nhân ung thư (tới 20–30%). Yếu tố gây âm tính giả chủ yếu là nhiễm rất sớm trong giai đoạn cửa sổ chưa hoàn tất đáp ứng miễn dịch.
+
+SOURCE: Point-of-Care Testing & Rapid Diagnostics 2023-2024
+TOPIC: Blood-Based HIV Rapid Testing Public Education and Procedures
+RISK: HIGH
+
+# Xét Nghiệm HIV Nhanh Dựa Trên Máu - Hướng Dẫn Công Chúng
+
+Xét nghiệm HIV nhanh là một thiết bị dùng một lần, kích thước nhỏ khoảng bằng một chiếc USB hoặc que thử thai, có thể phát hiện nhiễm HIV từ một giọt máu rất nhỏ, thường được lấy từ việc chích đầu ngón tay. Xét nghiệm cho kết quả trong 15–20 phút, không cần thiết bị phòng thí nghiệm, kết quả hiển thị dưới dạng các vạch màu trong một cửa sổ tương tự như que thử thai tại nhà. Cách lấy mẫu máu đầu ngón tay bao gồm dùng kim chích máu dùng một lần để tạo vết chích nhỏ ở cạnh bên của đầu ngón tay, lau bỏ giọt máu đầu tiên để giảm nguy cơ nhiễm bẩn, lấy giọt máu thứ hai (khoảng 10–20 microlit) bằng micropipette hoặc ống mao dẫn có trong bộ xét nghiệm, nhỏ máu vào ô lấy mẫu của thiết bị xét nghiệm, sau đó thêm vài giọt dung dịch đệm. Mọi người chọn xét nghiệm HIV nhanh vì nhanh chóng có kết quả ngay trong buổi khám, tiếp cận dễ dàng có thể thực hiện tại phòng khám, xe xét nghiệm lưu động, nhà thuốc hoặc thậm chí tại nhà, bảo mật không cần gửi mẫu máu đến phòng xét nghiệm kèm thông tin cá nhân, và kết nối điều trị ngay nếu kết quả phản ứng có thể bắt đầu tư vấn và chuyển tuyến điều trị ngay lập tức.
+
+SOURCE: HIV Immunology & Biomarker Detection 2023
+TOPIC: HIV Biomarker Detection Timeline and Immune Response Cascade
+RISK: CRITICAL
+
+# Chỉ Dấu Sinh Học và Chuỗi Đáp Ứng Miễn Dịch HIV
+
+Các xét nghiệm HIV nhanh dựa trên máu phát hiện các chỉ dấu sinh học xuất hiện trong máu ở những thời điểm khác nhau sau khi nhiễm. HIV RNA xuất hiện khoảng 10 ngày sau phơi nhiễm và là dấu hiệu phát hiện sớm nhất nhưng xét nghiệm nhanh không phát hiện được. Kháng nguyên p24 xuất hiện 15–20 ngày sau phơi nhiễm, là dấu hiệu sớm xuất hiện trước kháng thể. Kháng thể HIV xuất hiện 3–12 tuần sau phơi nhiễm, là chỉ điểm cho quá trình chuyển đổi huyết thanh và tồn tại suốt đời. Hầu hết các xét nghiệm nhanh thế hệ 3 phát hiện kháng thể HIV-1/2 (IgM và IgG), một số xét nghiệm nhanh mới hơn thế hệ 4 cũng phát hiện kháng nguyên p24, rút ngắn thời kỳ cửa sổ khoảng 5 ngày. Chuỗi đáp ứng miễn dịch theo thời gian: ngày 0 HIV xâm nhập cơ thể, ngày 7–10 HIV RNA xuất hiện trong huyết tương, ngày 10–20 kháng nguyên p24 đạt đỉnh trong máu, ngày 12–15 hệ miễn dịch bắt đầu sản xuất kháng thể IgM, ngày 20–28 kháng thể IgG chiếm ưu thế và tồn tại suốt đời, >3 tháng hầu hết người nhiễm đều có kháng thể IgG có thể phát hiện.
+
+SOURCE: Lateral Flow Assay Technology 2024
+TOPIC: HIV Rapid Test Technical Principles and Strip Components
+RISK: HIGH
+
+# Nguyên Lý Kỹ Thuật Thiết Bị Xét Nghiệm HIV Nhanh
+
+Miễn dịch sắc ký dòng chảy ngang (LFA) là phương pháp phổ biến nhất cho xét nghiệm HIV nhanh, dựa vào mao dẫn để đưa mẫu qua các lớp đệm và màng. Xét nghiệm vi lưu (Microfluidic assays) được dùng trong một số xét nghiệm nhanh thế hệ 4 tiên tiến, sử dụng các vi kênh và van để định lượng chính xác chất lỏng, cho phép phát hiện đồng thời kháng thể và kháng nguyên p24. Cấu tạo dải thử dòng chảy ngang gồm miếng đệm mẫu nhận máu có thể chứa chất tách huyết tương khỏi tế bào, miếng đệm liên hợp chứa các hạt nano khô (vàng keo) được phủ kháng nguyên hoặc kháng thể HIV khi được hòa tan bởi mẫu sẽ gắn với kháng thể HIV hoặc kháng nguyên p24 trong máu, màng nitrocellulose chứa các phân tử bắt giữ ở vạch thử và vạch kiểm soát. Vạch thử gắn kháng nguyên HIV hoặc kháng thể kháng p24 để bắt giữ phức hợp miễn dịch tạo vạch màu nếu mục tiêu có mặt, vạch kiểm soát chứa kháng thể kháng loài để bắt liên hợp dư thừa xác nhận quá trình chạy mẫu hợp lệ, miếng đệm thấm hút dịch để duy trì dòng chảy và ngăn dòng chảy ngược. Hiện tượng mao dẫn đẩy máu và dung dịch đệm từ miếng đệm mẫu, qua miếng đệm liên hợp, qua màng nitrocellulose, rồi đến miếng đệm thấm.
+
+SOURCE: Laboratory Quality Control & Regulatory Standards 2023-2024
+TOPIC: HIV Rapid Test Manufacturing Quality Control and Regulatory Requirements
+RISK: MEDIUM
+
+# Kiểm Soát Chất Lượng và Yêu Cầu Quản Lý Xét Nghiệm HIV Nhanh
+
+Yếu tố sản xuất quan trọng bao gồm độ ổn định của thuốc thử với liên hợp vàng–kháng nguyên được đông khô cùng chất bảo vệ như trehalose để bảo tồn cấu trúc protein. Hạn sử dụng thường 18–24 tháng ở 2–30°C, một số sản phẩm được xác nhận đến 40°C cho vùng nhiệt đới. Kiểm soát độ ẩm bằng gói hút ẩm giữ độ ẩm tương đối ≤30% trong bao bì. Đồng nhất lô được kiểm tra với mẫu dương/âm chuẩn và thử nghiệm lão hóa tăng tốc để mô phỏng bảo quản lâu dài. Biện pháp kiểm soát chất lượng gồm vạch kiểm soát nội bộ phải xuất hiện trên mọi xét nghiệm để xác nhận hoạt động, kiểm soát bên ngoài chạy mẫu dương và âm chuẩn với mỗi lô mới hoặc hàng tuần, và ghi chép lưu tất cả kết quả QC với mọi lỗi phải được điều tra. Phê duyệt quản lý bao gồm tiền thẩm định của WHO (PQDx) yêu cầu dữ liệu hiệu năng phân tích và lâm sàng, đánh giá tại chỗ, và hệ thống quản lý chất lượng sản xuất (ISO 13485). FDA (Hoa Kỳ) yêu cầu chứng nhận 510(k) hoặc PMA, trạng thái CLIA-waived cho lấy máu đầu ngón tay, và phê duyệt OTC cho tự xét nghiệm. CE-mark (EU) theo IVDR, được xếp vào nhóm nguy cơ cao (Class D) đối với thiết bị chẩn đoán in vitro.
+
+SOURCE: Clinical HIV Testing Guidelines 2023-2024
+TOPIC: HIV Rapid Test Clinical Applications Limitations and Error Sources
+RISK: CRITICAL
+
+# Ứng Dụng Lâm Sàng và Hạn Chế Xét Nghiệm HIV Nhanh
+
+Quy trình lâm sàng bao gồm giai đoạn trước xét nghiệm với lấy sự đồng ý, đánh giá yếu tố nguy cơ, giải thích thời kỳ cửa sổ; lấy mẫu máu đầu ngón tay, nhỏ vào thiết bị, thêm dung dịch đệm với lưu ý lượng mẫu không đủ hoặc nhiễm bẩn có thể ảnh hưởng kết quả; thực hiện xét nghiệm làm theo hướng dẫn nhà sản xuất, bấm giờ với nguy cơ lỗi người dùng, bộ kit hết hạn, hoặc bảo quản sai; đọc kết quả vào thời điểm quy định (15 phút) dễ nhầm với vạch mờ hoặc đọc ngoài khoảng thời gian cho phép; tư vấn sau xét nghiệm giải thích kết quả, nói về thời kỳ cửa sổ, sắp xếp xét nghiệm khẳng định nếu phản ứng; và theo dõi xét nghiệm khẳng định tại phòng thí nghiệm, kết nối điều trị nếu dương tính với nguy cơ mất liên lạc theo dõi. Độ nhạy và độ đặc hiệu của xét nghiệm HIV nhanh dựa trên máu là >95% và >99% tương ứng, hơi thấp hơn ở nhiễm cấp nhưng cao với nhiễm đã ổn định, so với ELISA/CLIA tại phòng thí nghiệm có >99.9% cho cả hai chỉ số và là tiêu chuẩn vàng phát hiện được nhiễm sớm và nhiễm cấp. Hạn chế và sai sót bao gồm thời kỳ cửa sổ có thể âm tính giả nếu xét nghiệm trước khi kháng thể hoặc p24 có thể phát hiện, dương tính giả có thể xảy ra ở bệnh tự miễn, sau tiêm vắc-xin gần đây, âm tính giả có thể gặp ở nhiễm sớm hoặc do lỗi người dùng, lỗi thao tác như lượng dung dịch đệm sai, đọc ngoài thời gian quy định, và biến thể sinh học với một số bộ kit nhạy kém với HIV-1 không thuộc nhóm B hoặc HIV-2.

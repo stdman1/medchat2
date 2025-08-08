@@ -1,0 +1,39 @@
+SOURCE: Nature Reviews Molecular Cell Biology 2023
+TOPIC: HIV Provirus Histone Modifications and Latency Control
+RISK: CRITICAL
+
+# Các biến đổi Histone tại vị trí Provirus HIV và Điều hòa Tiềm ẩn
+
+Provirus HIV-1 đã tích hợp nằm trong chromatin của tế bào chủ với bản đồ nucleosome được xác định rõ tại promoter LTR. Các nucleosome chính bao gồm Nuc-0 ở vùng tăng cường thượng nguồn, Nuc-1 ngay sau TSS và Nuc-2 xa hơn ở hạ nguồn. H3K4me3 là dấu hiệu của promoter hoạt động, được gắn vào TSS khi provirus đang biểu hiện và tạo điều kiện cho việc tuyển dụng bộ máy phiên mã. Việc mất H3K4me3 tại LTR là sự kiện sớm trong thiết lập tiềm ẩn. H3K27me3 được xúc tác bởi EZH2 trong PRC2, được làm giàu tại HIV LTR trong trạng thái tiềm ẩn và tuyển dụ PRC1 để nén chromatin. Trong tế bào T CD4+ nghỉ ngơi, HIV LTR thường thể hiện chromatin lưỡng tính với cả H3K4me3 và H3K27me3, giữ promoter sẵn sàng hoạt hóa nhưng bị ức chế trong điều kiện bình thường.
+
+SOURCE: Cell 2022
+TOPIC: HIV DNA Methylation Patterns and Latency Reversibility
+RISK: HIGH
+
+# Mô hình Methyl hóa DNA tại vị trí tích hợp HIV
+
+HIV LTR chứa hai đảo CpG trải dài vùng U3 và R với các CpG bổ sung trong 3′ LTR và vùng mã hóa. Trong dòng tế bào T bị nhiễm tiềm ẩn, sự methyl hóa CpG dày đặc >70% được quan sát trên 5′ LTR. Trong tế bào dự trữ từ cá nhân được điều trị ART, methyl hóa LTR không đồng nhất với thiểu số provirus bị methyl hóa cao (tiềm ẩn sâu) và đa số thể hiện methyl hóa thấp (tiềm ẩn nông). Methyl hóa cao tại LTR đặc biệt tại các vị trí gắn NF-κB ngăn chặn việc gắn yếu tố phiên mã và tắt provirus. Các CpG bị methyl hóa tuyển dụ MeCP2, MBD2, DNMT1 và các protein này tuyển dụ HDACs và H3K9 methyltransferases. LTR bị hypomethyl hóa phản ứng tốt với LRAs và hoạt hóa tế bào T, trong khi LTR bị hypermethyl hóa kháng lại tái hoạt hóa và cần tác nhân khử methyl hóa DNA.
+
+SOURCE: Nature 2021
+TOPIC: Chromatin Remodeling Complexes in HIV Transcription
+RISK: CRITICAL
+
+# Phức hợp Tu sửa Chromatin SWI/SNF và PBAF trong HIV
+
+Họ SWI/SNF bao gồm BAF và PBAF với vai trò trái ngược trong điều hòa HIV. BAF chứa ATPase BRG1/BRM, BAF155, BAF170, ARID1A/B được tuyển dụ bởi chất ức chế phiên mã YY1, LSF, COUP-TFII trong trạng thái tiềm ẩn. BAF định vị Nuc-1 trực tiếp trên TSS tạo rào cản vật lý cho RNA polymerase II và củng cố trạng thái tiềm ẩn. Việc làm suy yếu các thành phần BAF dẫn đến loại bỏ Nuc-1 và phiên mã provirus tự phát. PBAF chứa BRG1, BAF180 (PBRM1), BAF200 (ARID2), BRD7 được tuyển dụ đến LTR khi tế bào được kích thích và Tat bị acetyl hóa. PBAF tu sửa Nuc-1 và tạo điều kiện cho kéo dài phiên mã. Việc tuyển dụ PBAF phụ thuộc sự acetyl hóa Tat và hoạt động P-TEFb, liên kết tu sửa chromatin với vòng phản hồi tích cực phiên mã HIV.
+
+SOURCE: Science 2020
+TOPIC: 3D Chromatin Architecture and HIV Integration
+RISK: HIGH
+
+# Cấu trúc Chromatin 3D và Vòng lặp Enhancer-Promoter
+
+Bộ gen được tổ chức thành TADs đưa các yếu tố điều hòa xa lại gần nhau. HIV ưu tiên tích hợp vào vùng giàu super-enhancer hoạt động phiên mã gần ngoại vi hạt nhân nhưng cũng được tìm thấy trong heterochromatin hoặc LADs trong kho dự trữ lâu dài. Motif CTCF mạnh trong env HIV-1 tạo vòng lặp chromatin với vị trí CTCF tế bào chủ, cách ly LTR khỏi enhancer hoặc đặt gần yếu tố điều hòa hoạt động. Sự tích hợp HIV gần super-enhancer tế bào chủ cho phép provirus chia sẻ trung tâm enhancer-promoter, tăng sự bùng nổ phiên mã và góp phần biến đổi biểu hiện giữa dòng vô tính. Cohesin và Mediator ổn định vòng lặp enhancer-promoter, sự suy giảm làm giảm tần suất bùng nổ phiên mã HIV. Provirus hoạt động định vị tại vành hạt nhân và vùng giàu nhà máy phiên mã A, trong khi provirus tiềm ẩn nằm gần ngoại vi hạt nhân và vùng ức chế.
+
+SOURCE: Molecular Cell 2019
+TOPIC: Integrative Model of HIV Latency Establishment
+RISK: HIGH
+
+# Mô hình Tích hợp Thiết lập và Duy trì Tiềm ẩn HIV
+
+Thiết lập tiềm ẩn HIV là quá trình nhiều bước được điều hòa bởi các lớp epigenetic và cấu trúc. Tích hợp ban đầu provirus đi vào vùng H3K4me3 phong phú hoạt động phiên mã. Nếu Tat được sản xuất, việc tuyển dụ PBAF, acetyl hóa H3/H4 và vòng lặp enhancer duy trì biểu hiện cao. Trong tế bào mà Tat không đạt ngưỡng, việc tái định vị BAF, tuyển dụ HDAC và methyl hóa CpG định vị lại Nuc-1, thêm H3K27me3 và di chuyển locus về ngoại vi hạt nhân, khóa provirus trong trạng thái tiềm ẩn. LRAs nhắm mục tiêu các lớp này: chất chủ vận PKC cho NF-κB làm di dời BAF, chất ức chế HDAC/HMT khôi phục acetyl/H3K4me3, chất ức chế DNMT cho khử methyl hóa CpG và chất điều biến BET hoặc cohesin để tái tham gia tiếp xúc enhancer tầm xa.

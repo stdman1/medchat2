@@ -1,0 +1,47 @@
+SOURCE: New England Journal of Medicine 2020
+TOPIC: HIV and AIDS Definition and Differentiation
+RISK: CRITICAL
+
+# Sự Khác Biệt Giữa HIV và AIDS - Định Nghĩa và Phân Biệt
+
+HIV (Virus gây suy giảm miễn dịch ở người) là một loại retrovirus thuộc chi Lentivirus tấn công và phá hủy dần các tế bào CD4+ T lympho, dẫn đến suy giảm miễn dịch. Có hai loại chính: HIV-1 gây đại dịch toàn cầu và HIV-2 chủ yếu ở Tây Phi với tiến triển chậm hơn. AIDS (Hội chứng suy giảm miễn dịch mắc phải) là giai đoạn nặng nhất của nhiễm HIV, đặc trưng bởi tình trạng suy giảm miễn dịch nghiêm trọng. AIDS được xác định khi số lượng tế bào CD4+ T giảm xuống dưới 200 tế bào/μL ở người lớn hoặc khi xuất hiện các nhiễm trùng cơ hội hoặc bệnh ung thư xác định AIDS. HIV là nguyên nhân gây ra AIDS, trong khi AIDS là hậu quả nghiêm trọng nhất của nhiễm HIV không được điều trị.
+
+SOURCE: The Lancet HIV 2019
+TOPIC: HIV Clinical Stages and Disease Progression
+RISK: CRITICAL
+
+# Các Giai Đoạn Lâm Sàng của Nhiễm HIV
+
+Nhiễm HIV tiến triển qua ba giai đoạn chính. Nhiễm HIV cấp xảy ra 2-4 tuần sau phơi nhiễm với các triệu chứng giống cúm bao gồm sốt, viêm họng, phát ban và sưng hạch bạch huyết. Trong giai đoạn này, số lượng CD4+ giảm tạm thời sau đó phục hồi, tải lượng virus tăng cao trên 1.000.000 bản sao/mL và nguy cơ lây truyền cao nhất. Nhiễm HIV mạn tính là giai đoạn tiềm ẩn kéo dài 6-8 năm có thể lên đến 15 năm, thường không triệu chứng với CD4+ giảm chậm 50-90 tế bào/năm và tải lượng virus ổn định ở mức 10³-10⁵ bản sao/mL. AIDS là giai đoạn cuối với suy giảm miễn dịch nghiêm trọng, xảy ra khoảng 7-10 năm sau nhiễm HIV với CD4+ dưới 200 tế bào/μL, tải lượng virus tăng trở lại và thời gian sống trung bình không điều trị ART chỉ 12-24 tháng.
+
+SOURCE: Clinical Infectious Diseases 2021
+TOPIC: AIDS Diagnostic Criteria and Opportunistic Infections
+RISK: CRITICAL
+
+# Tiêu Chuẩn Chẩn Đoán AIDS và Bệnh Xác Định AIDS
+
+AIDS được chẩn đoán dựa trên ngưỡng tế bào CD4+ T hoặc sự xuất hiện của các bệnh xác định AIDS. Đối với người lớn và thanh thiếu niên, ngưỡng là số lượng CD4+ T dưới 200 tế bào/μL hoặc tỷ lệ CD4+/CD8+ dưới 14%. Trẻ em dưới 6 tuổi có ngưỡng khác nhau tùy tuổi, ví dụ dưới 750 tế bào/μL cho trẻ dưới 1 tuổi. Các bệnh xác định AIDS bao gồm nhiễm trùng cơ hội như viêm phổi do nấm PCP, viêm võng mạc do CMV, lao phổi hoặc ngoài phổi, toxoplasmosis não, và các bệnh ung thư cơ hội như sarcoma Kaposi, u lympho non-Hodgkin và ung thư biểu mô cổ tử cung xâm lấn. Các nhiễm trùng do vi nấm khác bao gồm candida thực quản và histoplasmosis lan tỏa, trong khi các bệnh do virus gồm herpes simplex mãn tính và leukoencephalopathy đa ổ tiến triển.
+
+SOURCE: Journal of Acquired Immune Deficiency Syndromes 2020
+TOPIC: Antiretroviral Therapy Impact on HIV AIDS
+RISK: HIGH
+
+# Tác Động của Liệu Pháp Kháng Virus ART lên Tiến Triển HIV AIDS
+
+Liệu pháp kháng retrovirus (ART) đã thay đổi căn bản diễn biến của HIV. Ở giai đoạn HIV sớm, ART rất hiệu quả với tuổi thọ gần như bình thường, phục hồi hoàn toàn miễn dịch và tỷ lệ không đáp ứng thấp. Không có ART, 100% ca nhiễm HIV sẽ tiến triển thành AIDS. Ở giai đoạn AIDS, ART vẫn hiệu quả nhưng phục hồi chậm hơn, không hoàn toàn ở một số người và 20-30% không đạt CD4 trên 200/μL. Hội chứng phục hồi miễn dịch (IRIS) có thể xảy ra ở 25% bệnh nhân AIDS khi bắt đầu ART. Trước ART, tỷ lệ sống sót sau 2 năm của bệnh nhân AIDS chỉ 15%, nhưng hiện tại tỷ lệ sống sót sau 5 năm đã tăng lên trên 80% nếu tải lượng virus được kiểm soát. Các biện pháp dự phòng nhiễm trùng cơ hội có thể ngừng nếu CD4+ T trên 200/μL trong ít nhất 3 tháng.
+
+SOURCE: Nature Reviews Disease Primers 2021
+TOPIC: Modern HIV Management and Community Impact
+RISK: HIGH
+
+# Bối Cảnh Hiện Đại và Ý Nghĩa Cộng Đồng của HIV AIDS
+
+Với việc mở rộng liệu pháp ART, HIV đã trở thành một bệnh mạn tính có thể kiểm soát được. Thời gian tiến triển thành AIDS ở những bệnh nhân tuân thủ điều trị gần như không xác định được. Người nhiễm HIV có tải lượng virus không thể phát hiện (Undetectable) sẽ không lây truyền virus qua đường tình dục (Untransmittable). Khái niệm "Không phát hiện = Không lây truyền" (U=U) đã thay đổi cách nhìn về HIV và giảm sự kỳ thị xã hội. Chiến lược điều trị ART sớm (Test-and-Treat) không chỉ giúp bệnh nhân mà còn làm giảm tải lượng virus trong cộng đồng, từ đó làm giảm tốc độ lây lan của dịch bệnh. HIV hiện được coi là một tình trạng y tế mạn tính có thể quản lý được như tiểu đường hoặc tăng huyết áp, với tiên lượng tốt nếu được phát hiện sớm và điều trị đúng cách.
+
+SOURCE: AIDS Patient Care and STDs 2020
+TOPIC: HIV AIDS Clinical Monitoring and Management
+RISK: HIGH
+
+# Theo Dõi Lâm Sàng và Quản Lý HIV AIDS
+
+Việc theo dõi bệnh nhân HIV AIDS đòi hỏi sự giám sát chặt chẽ các thông số miễn dịch và virus học. Số lượng tế bào CD4+ T là chỉ số quan trọng nhất để đánh giá tình trạng miễn dịch và nguy cơ nhiễm trùng cơ hội. Ngưỡng 200 tế bào/μL là ranh giới quan trọng phân biệt nhiễm HIV và AIDS, trong khi ngưỡng 350 tế bào/μL là chỉ định bắt đầu ART theo hướng dẫn cũ. Tải lượng virus HIV là thông số quan trọng để đánh giá hiệu quả điều trị, với mục tiêu đạt được và duy trì tải lượng virus không phát hiện được (dưới 50 bản sao/mL). Việc theo dõi cần bao gồm tầm soát định kỳ các nhiễm trùng cơ hội, đặc biệt là lao, viêm võng mạc CMV, và các bệnh ung thư liên quan AIDS. Quản lý toàn diện bao gồm dự phòng nhiễm trùng cơ hội, tiêm chủng, tư vấn sức khỏe tâm thần và hỗ trợ xã hội.

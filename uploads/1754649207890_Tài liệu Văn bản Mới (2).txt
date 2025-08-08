@@ -1,0 +1,63 @@
+SOURCE: Laboratory Medicine & Molecular Diagnostics 2023-2024
+TOPIC: HIV Nucleic Acid Testing (NAT) PCR Patient Education and Overview
+RISK: HIGH
+
+# Xét Nghiệm Nucleic Acid (NAT) HIV và Phát Hiện RNA Bằng PCR
+
+Xét nghiệm HIV PCR (NAT) là xét nghiệm trong phòng thí nghiệm tìm trực tiếp vật chất di truyền (RNA) của virus HIV trong máu. Khác với các xét nghiệm HIV tiêu chuẩn tìm kháng thể (phản ứng của cơ thể đối với nhiễm trùng), xét nghiệm PCR phát hiện chính virus. Có thể phát hiện HIV sớm hơn nhiều so với xét nghiệm kháng thể hoặc kháng nguyên thường trong vòng 10–14 ngày sau phơi nhiễm, trước khi cơ thể tạo ra kháng thể có thể phát hiện được. Dùng để xác nhận chẩn đoán khi các xét nghiệm khác không rõ ràng, theo dõi điều trị bằng cách đo lượng virus (tải lượng virus) ở người sống chung với HIV để kiểm tra hiệu quả điều trị, và trong tình huống đặc biệt cần thiết để xét nghiệm trẻ sơ sinh có kháng thể mẹ truyền và sàng lọc máu hiến nhằm đảm bảo an toàn. Khoảng cửa sổ của HIV RNA có thể được phát hiện sớm nhất từ 10–12 ngày sau phơi nhiễm, sớm hơn 1–3 tuần so với xét nghiệm kháng thể/kháng nguyên tốt nhất. Kết quả phát hiện/dương tính có HIV RNA cho thấy nhiễm HIV, không phát hiện/âm tính không tìm thấy HIV RNA nhưng nếu xét nghiệm quá sớm sau phơi nhiễm cần xét nghiệm lại, tải lượng virus định lượng là số bản sao virus/ml máu với "không phát hiện" nghĩa là <20–50 bản sao/ml với các xét nghiệm hiện đại và đây là mục tiêu điều trị.
+
+SOURCE: Molecular Biology & RT-PCR Technology 2024
+TOPIC: HIV NAT RT-PCR Technical Principles and Molecular Detection
+RISK: CRITICAL
+
+# Nguyên Lý Phân Tử RT-PCR Cho HIV RNA
+
+HIV là retrovirus với hệ gen RNA sợi đơn, NAT khai thác điều này bằng cách phát hiện RNA hoặc DNA của HIV trực tiếp không phụ thuộc vào phản ứng miễn dịch của cơ thể. RT-PCR (Reverse Transcription PCR) cho HIV RNA bao gồm phiên mã ngược (RT) chuyển RNA HIV thành DNA bổ sung (cDNA) nhờ enzyme reverse transcriptase, khuếch đại PCR nhân cDNA lên theo cấp số nhân qua 35–45 chu kỳ PCR với mỗi chu kỳ nhân đôi lượng DNA mục tiêu, và phát hiện DNA khuếch đại theo thời gian thực bằng các đầu dò huỳnh quang hoặc thuốc nhuộm cho phép định lượng RNA ban đầu. Thiết kế mồi và đầu dò sử dụng mồi là chuỗi DNA ngắn bám vào vùng bảo tồn của bộ gen HIV (như gag, pol, LTR) để phát hiện rộng trên nhiều chủng, đầu dò oligonucleotide gắn nhãn (TaqMan) phát huỳnh quang khi bị cắt trong quá trình khuếch đại giúp tăng tính đặc hiệu và độ nhạy. Lưu ý thiết kế bao gồm chiều dài đoạn khuếch đại (70–150 bp), nhiệt độ nóng chảy, tỷ lệ GC được tối ưu để tăng hiệu suất và giảm sai số. NAT định tính cho kết quả có/không (phát hiện/không phát hiện) dùng cho chẩn đoán, sàng lọc, chẩn đoán sớm trẻ sơ sinh với độ nhạy cao (20–1000 bản sao/ml), NAT định lượng (tải lượng virus) cho số lượng (bản sao/ml hoặc IU/ml) dùng theo dõi điều trị, tiên lượng với độ nhạy rất cao (20–50 bản sao/ml).
+
+SOURCE: Clinical Laboratory Standards & Quality Assurance 2023-2024
+TOPIC: HIV NAT Laboratory Implementation Quality Control and Sample Processing
+RISK: HIGH
+
+# Thực Hiện Trong Phòng Xét Nghiệm và Đảm Bảo Chất Lượng HIV NAT
+
+Loại mẫu và xử lý bao gồm huyết tương EDTA là chuẩn vàng với RNA nhiều nhưng cần ly tâm và bảo quản lạnh, máu toàn phần dễ lấy nhưng độ nhạy thấp hơn và nhiều chất ức chế, giọt máu khô ổn định dễ vận chuyển nhưng độ nhạy thấp hơn khoảng 0,3–0,5 log. Nên xử lý huyết tương trong 6 giờ, nếu chậm đông lạnh ở −70°C. Tách RNA sử dụng phương pháp cột màng silica, hạt từ, hoặc hệ thống tự động với kiểm soát RNA nội chuẩn (armored RNA) để phát hiện mất mẫu hoặc ức chế phản ứng. Ngăn ngừa nhiễm chéo bằng quy trình một chiều với khu vực tách biệt cho chuẩn bị thuốc thử, tách mẫu, và khuếch đại, dùng đầu típ chống khí dung, khử UV, hệ thống dUTP/UNG chống nhiễm, luôn có chứng âm trong mỗi lần chạy. Chu trình nhiệt và hóa chất phát hiện gồm RT ở 50°C (30 phút), hoạt hóa enzyme 95°C (2 phút), 40–45 chu kỳ 95°C (15 giây)/60°C (60 giây) với phát hiện TaqMan tín hiệu huỳnh quang khi đầu dò bị cắt, SYBR Green gắn vào DNA sợi kép ít đặc hiệu chủ yếu nghiên cứu, Molecular beacon/scorpion probes phương án thay thế tăng đặc hiệu. Đảm bảo chất lượng có chứng dương, chứng âm, nội chuẩn mỗi lần chạy, tham gia ngoại kiểm (WHO/CDC/EQAPOL), rà soát dữ liệu biểu đồ Levey-Jennings, quy tắc Westgard để loại bỏ lần chạy lỗi.
+
+SOURCE: HIV Clinical Applications & Early Infant Diagnosis 2023-2024
+TOPIC: HIV NAT Clinical Applications Window Period Detection and EID
+RISK: CRITICAL
+
+# Ứng Dụng Lâm Sàng HIV NAT và Chẩn Đoán Sớm Trẻ Sơ Sinh
+
+Phát hiện HIV cấp trước khi hình thành kháng thể với khoảng cửa sổ NAT phát hiện RNA 1–3 tuần sau phơi nhiễm trước kháng thể hoặc kháng nguyên p24, cơ chế khuếch đại RNA virus trực tiếp không phụ thuộc đáp ứng miễn dịch, có ý nghĩa chẩn đoán giai đoạn lây nhiễm cao cho phép can thiệp sớm và giảm lây truyền. Thuật toán chẩn đoán khẳng định theo quy trình sàng lọc Ag/Ab thế hệ 4 → phân biệt kháng thể → NAT nếu kết quả không xác định với vai trò phát hiện nhiễm cấp bỏ sót bởi huyết thanh học và giảm chẩn đoán sai. Chẩn đoán sớm ở trẻ sơ sinh (EID) gặp thách thức kháng thể mẹ truyền qua nhau thai làm xét nghiệm huyết thanh không đáng tin ở trẻ <18 tháng, giải pháp NAT lúc 4–6 tuần tuổi lặp lại nếu còn bú mẹ, mẫu giọt máu khô thuận tiện cho thu thập và vận chuyển vùng xa. Sàng lọc máu hiến có mục đích phát hiện HIV trong "khoảng cửa sổ" trước khi chuyển đổi huyết thanh giảm nguy cơ truyền qua truyền máu, cách thực hiện NAT gộp mẫu nhỏ hoặc từng đơn vị khuyến nghị dùng xét nghiệm hai mục tiêu để tránh bỏ sót biến thể. Theo dõi điều trị có mục tiêu tải lượng <50 bản sao/ml sau 6 tháng điều trị ART duy trì <200 bản sao/ml lâu dài, blip tăng tạm thời 50–200 bản sao/ml thường gặp cần xét nghiệm lại trước khi đổi phác đồ.
+
+SOURCE: Point-of-Care HIV Testing & Oral Fluid Diagnostics 2023-2024
+TOPIC: HIV Oral Rapid Testing Patient Education and Non-invasive Screening
+RISK: MEDIUM
+
+# Xét Nghiệm HIV Nhanh Bằng Dịch Miệng - Hướng Dẫn Người Dùng
+
+Xét nghiệm HIV nhanh bằng dịch miệng là một cách đơn giản không dùng kim tiêm để kiểm tra xem bạn có nhiễm HIV hay không. Thay vì lấy máu, bạn dùng một que gạc mềm quét nhẹ dọc theo lợi trên và lợi dưới, việc này thu được một lượng nhỏ dịch miệng (không phải nước bọt mà là dịch đặc biệt từ lợi) có chứa kháng thể mà cơ thể tạo ra nếu từng tiếp xúc với HIV. Cách lấy mẫu bao gồm lấy que thử có đầu dẹt quét một lần dọc lợi trên và một lần dọc lợi dưới, đặt que vào lọ dung dịch (dung dịch phát triển phản ứng), sau khoảng 20 phút ô kết quả hiển thị một vạch là âm tính hai vạch là dương tính sơ bộ. Phương pháp này tiện lợi vì không đau không xâm lấn không cần kim không lấy máu, riêng tư có thể làm tại nhà phòng khám hoặc sự kiện cộng đồng, nhanh có kết quả trong khoảng 20 phút, dễ tiếp cận phù hợp cho người sợ kim tiêm ở vùng xa hoặc muốn giữ bí mật. Xét nghiệm tìm kháng thể đặc hiệu với HIV (chủ yếu IgG) trong dịch tiết niêm mạc miệng (OMT) là loại dịch thấm ra từ các mạch máu ở lợi. OMT khác với nước bọt giàu kháng thể hơn nhưng vẫn ít hơn nhiều so với máu, nồng độ kháng thể HIV khoảng 1/300 đến 1/1000 so với máu nên bộ test phải được thiết kế rất nhạy, xét nghiệm không phát hiện trực tiếp virus HIV hay kháng nguyên p24 chỉ phát hiện kháng thể nên không nhận biết được các ca nhiễm rất sớm với thời kỳ cửa sổ dài hơn.
+
+SOURCE: Lateral Flow Immunoassay Technology 2024
+TOPIC: HIV Oral Test Technical Mechanism and Device Components
+RISK: HIGH
+
+# Cơ Chế Hoạt Động Thiết Bị Xét Nghiệm HIV Nhanh Bằng Dịch Miệng
+
+Bộ test sử dụng xét nghiệm miễn dịch sắc ký dòng chảy ngang (lateral flow immunoassay – LFIA) tương tự que thử thai nhưng được điều chỉnh để dùng với dịch miệng. Thành phần và quy trình chính gồm miếng lấy mẫu là que gạc thu OMT và được đặt vào dung dịch đệm giúp giải phóng kháng thể, miếng đệm liên hợp chứa các hạt vàng gắn với protein (protein A) liên kết với kháng thể IgG của người nếu có kháng thể HIV chúng sẽ bám vào hạt vàng này, hiện tượng mao dẫn làm dịch di chuyển dọc theo dải thử nhờ mao dẫn, vạch kiểm tra chứa kháng nguyên HIV bất động (gp41, gp36) nếu có kháng thể HIV phức hợp vàng–kháng thể sẽ bám vào đây tạo vạch màu, vạch chứng chứa kháng thể kháng IgG người hoặc kháng protein A để giữ phần vàng dư xác nhận test hoạt động đúng. Cách đọc kết quả một vạch (chỉ vạch chứng) âm tính, hai vạch (chứng + kiểm tra) dương tính sơ bộ, không có vạch chứng kết quả không hợp lệ. Điều chỉnh cho dịch miệng bao gồm miếng lấy mẫu lớn hơn để thu đủ dịch có ít kháng thể, liên hợp vàng và màng thử cực nhạy, dung dịch đệm chứa chất hoạt động bề mặt và chất bảo quản để ổn định mẫu. Độ nhạy test nhanh dịch miệng 98,0–98,8% so với test nhanh máu 99,7%, độ đặc hiệu 99,7–99,9% so với 99,9%, thời kỳ cửa sổ trung bình 28–35 ngày so với 18–25 ngày, dương tính giả hiếm (1/5.000) so với hiếm hơn, âm tính giả thường gặp hơn ở giai đoạn sớm so với ít gặp hơn.
+
+SOURCE: Clinical HIV Testing Protocols 2023-2024
+TOPIC: HIV Oral Testing Clinical Procedures and Confirmation Protocols
+RISK: CRITICAL
+
+# Quy Trình Lâm Sàng Xét Nghiệm HIV Nhanh Bằng Dịch Miệng
+
+Xử lý mẫu và lưu ý trước khi lấy bao gồm trước khi xét nghiệm không ăn, uống, hút thuốc, nhai kẹo cao su, hoặc dùng sản phẩm vệ sinh răng miệng ít nhất 15–30 phút, có thể súc miệng bằng nước nếu cần nhưng tránh dung dịch súc miệng có cồn, kiểm tra chảy máu lợi vì máu có thể ảnh hưởng kết quả. Thực hiện xét nghiệm bằng cách giải thích thời kỳ cửa sổ và rằng đây là xét nghiệm sàng lọc, thu mẫu bằng cách quét cả lợi trên và lợi dưới, đặt que vào dung dịch đệm và bắt đầu bấm giờ, đọc kết quả sau 20–40 phút (tùy hãng) với vạch mờ vẫn được coi là phản ứng dương tính. Tư vấn và bước tiếp theo đối với kết quả âm tính xem xét thời gian phơi nhiễm gần nhất và khuyên xét nghiệm lại nếu phơi nhiễm trong 3 tháng qua hoặc còn nguy cơ, đối với dương tính sơ bộ giải thích đây là "kết quả phản ứng sơ bộ" chưa phải chẩn đoán, chuyển làm xét nghiệm khẳng định là xét nghiệm HIV Ag/Ab thế hệ 4 tại phòng lab tiếp theo là phân biệt HIV-1/2 và xét nghiệm RNA nếu cần, hỗ trợ tâm lý và kết nối điều trị, tư vấn phòng tránh lây truyền. Quy trình khẳng định theo thứ tự test nhanh dịch miệng dương tính sơ bộ → xét nghiệm HIV Ag/Ab thế hệ 4 tại lab → nếu dương tính xét nghiệm phân biệt kháng thể HIV-1/2 → nếu không rõ hoặc âm tính xét nghiệm RNA HIV-1 → trả kết quả bởi nhân viên tư vấn được đào tạo. Vai trò y tế công cộng bao gồm tự xét nghiệm tại nhà tăng khả năng tiếp cận giữ bí mật và tần suất xét nghiệm nhất là ở nhóm nguy cơ cao, chương trình cộng đồng hữu ích trong các hoạt động ngoài cộng đồng phòng khám lưu động hoặc nhóm khó tiếp cận y tế, kết nối điều trị cần có quy trình rõ ràng để xác nhận và bắt đầu điều trị.
+
+SOURCE: HIV Testing Performance Analysis 2022-2024
+TOPIC: HIV Oral Test Limitations Performance Metrics and Quality Assurance
+RISK: HIGH
+
+# Hạn Chế và Chỉ Số Hiệu Năng Xét Nghiệm HIV Bằng Dịch Miệng
+
+Hạn chế chính bao gồm dương tính giả hiếm có thể xảy ra ở bệnh tự miễn, nhiễm virus gần đây, hoặc ô nhiễm mẫu; âm tính giả thường gặp hơn ở giai đoạn sớm, suy giảm miễn dịch nặng, hoặc lấy mẫu sai kỹ thuật; không áp dụng cho trẻ sơ sinh do kháng thể mẹ và khó lấy mẫu; thời kỳ cửa sổ dài hơn (lên đến 3 tháng) so với xét nghiệm máu; cần xét nghiệm khẳng định ở phòng thí nghiệm để chẩn đoán cuối cùng. Độ nhạy và độ đặc hiệu từ siêu phân tích >160.000 mẫu lâm sàng đã thử có độ nhạy gộp khoảng 98%, độ đặc hiệu khoảng 99,8%. Sản xuất và ổn định bao gồm bảo quản ở 2–30°C với hạn sử dụng 18–24 tháng, thuốc thử được làm khô đông, dải thử được ép màng chống ẩm, mỗi lô đều kiểm tra độ nhạy bằng mẫu có nồng độ kháng thể thấp. Ưu điểm so với xét nghiệm máu gồm không xâm lấn không đau không cần kim tiêm, tăng tỷ lệ chấp nhận đặc biệt ở nhóm sợ kim, phù hợp xét nghiệm tại nhà và cộng đồng, giảm rào cản tiếp cận nhóm nguy cơ cao. Nhược điểm bao gồm độ nhạy thấp hơn một chút so với máu, thời kỳ cửa sổ dài hơn, không phù hợp cho phát hiện nhiễm sớm cấp tính, cần đào tạo đúng kỹ thuật lấy mẫu để tránh kết quả sai.
