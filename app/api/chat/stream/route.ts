@@ -196,50 +196,36 @@ export async function POST(request: NextRequest) {
           let systemPrompt = '';
 
           if (!fallbackNeeded && ragContext.length > 0) {
-            // ✅ RAG MODE: Sử dụng RAG_SYSTEM_PROMPT từ biến môi trường
+            // Normal chat with RAG context
             const contextText = ragContext
               .map((context: ContextItem) => `- ${context.content}`)
               .join('\n');
 
-            // Lấy RAG prompt template từ env
-            const ragPromptTemplate = process.env.RAG_SYSTEM_PROMPT || 
-              `Bạn là MedChat AI chuyên nghiệp.
+            // ✅ FIX: Build prompt trực tiếp thay vì dùng template
+            systemPrompt = `Bạn là MedChat AI chuyên nghiệp.
 
-{USER_MEDICAL_CONTEXT}
+${userMedicalContext}
 
 Chỉ trả lời dựa trên thông tin sau từ cơ sở dữ liệu chính thức: 
 
-{RAG_CONTEXT}
+${contextText}
 
 Không thêm thông tin không có trong cơ sở dữ liệu. Nếu thông tin không đủ, hãy nói rõ. Luôn nhắc nhở tham khảo ý kiến bác sĩ khi cần thiết.
 
-{USER_CONTEXT_INSTRUCTION}`;
-
-            // Replace placeholders với dữ liệu thực tế
-            systemPrompt = ragPromptTemplate
-              .replace('{USER_MEDICAL_CONTEXT}', userMedicalContext)
-              .replace('{RAG_CONTEXT}', contextText)
-              .replace('{USER_CONTEXT_INSTRUCTION}', 
-                userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : '');
+${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}`;
               
           } else {
-            // ✅ FALLBACK MODE: Sử dụng FALLBACK_SYSTEM_PROMPT từ biến môi trường
-            const fallbackPromptTemplate = process.env.FALLBACK_SYSTEM_PROMPT || 
-              `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
+            // Fallback chat without RAG context
+            // ✅ FIX: Build prompt trực tiếp
+            systemPrompt = `Bạn là MedChat AI. Hiện cơ sở dữ liệu chưa có thông tin cho chủ đề này.
 
-{USER_MEDICAL_CONTEXT}
+${userMedicalContext}
 
 Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ biến. Nếu không chắc, hãy khuyến nghị người dùng gặp bác sĩ. 
 
-{USER_CONTEXT_INSTRUCTION}
+${userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : ''}
 
 **Ghi chú rõ: đây chỉ là thông tin tham khảo.**`;
-
-            // Replace placeholders với dữ liệu thực tế
-            systemPrompt = fallbackPromptTemplate
-              .replace('{USER_MEDICAL_CONTEXT}', userMedicalContext)
-              .replace('{USER_CONTEXT_INSTRUCTION}', 
-                userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : '');
           }
 
           // ✅ THÊM DEBUG LOG để kiểm tra
@@ -250,8 +236,9 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
           console.log('🎯 First 200 chars of prompt:', systemPrompt.substring(0, 200));
 
           // Step 3: Call OpenAI Chat API với streaming
+          // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL
           const chatResponse = await openai.chat.completions.create({
-            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini',
+            model: process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini', // ✅ Sửa model name
             messages: [
               {
                 role: 'system',
@@ -262,11 +249,11 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
                 content: trimmedMessage
               }
             ],
-            max_completion_tokens: parseInt(process.env.MAX_TOKENS || '600'),
-            // ✅ ĐÃ XÓA temperature vì gpt-4o-mini chỉ hỗ trợ default
+            max_tokens: parseInt(process.env.MAX_TOKENS || '600'), // ✅ Tăng lên 600
+            temperature: parseFloat(process.env.TEMPERATURE || '0.5'), // ✅ Biến môi trường cho temperature
             stream: true,
             stream_options: {
-              include_usage: true
+              include_usage: true // Quan trọng: bật usage tracking
             }
           });
 
