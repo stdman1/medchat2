@@ -55,25 +55,8 @@ async function getUserMedicalContext(userId: string): Promise<string> {
     });
 
     if (!user) {
-      console.log('❌ No user found for ID:', userId);
       return '';
     }
-
-    // ✅ DEBUG: Log user data
-    console.log('👤 User data from DB:', {
-      displayName: user.displayName,
-      gender: user.gender,
-      age: user.age,
-      height: user.height,
-      weight: user.weight,
-      hasConditions: {
-        hypertension: user.hasHypertension,
-        diabetes: user.hasDiabetes,
-        smoker: user.isSmoker
-      },
-      hasAllergies: !!user.allergies,
-      hasMedications: !!user.currentMedications
-    });
 
     // ✅ COMPACT FORMAT - tiết kiệm tokens
     let context = `\n[BỆNH NHÂN: ${user.displayName}`;
@@ -99,9 +82,6 @@ async function getUserMedicalContext(userId: string): Promise<string> {
     if (user.currentMedications) context += ` | Thuốc: ${user.currentMedications.substring(0, 50)}`;
     
     context += `]\n`;
-    
-    // ✅ DEBUG: Log final context
-    console.log('🏥 Generated medical context:', context);
     
     return context;
     
@@ -143,20 +123,12 @@ export async function POST(request: NextRequest) {
           // ✅ LẤY THÔNG TIN Y TẾ CÁ NHÂN (nếu có userId)
           let userMedicalContext = '';
           if (userId && userId !== 'anonymous') {
-            console.log('🏥 Fetching user medical context for:', userId);
             userMedicalContext = await getUserMedicalContext(userId);
-            console.log('📋 Medical context loaded:', userMedicalContext ? 'Yes' : 'No');
           }
 
           // ✅ DIRECT CALL: Không qua HTTP fetch
-          console.log('🔍 Direct Qdrant search...');
           const ragResult = await retrieveContext(trimmedMessage);
 
-          console.log('📊 Qdrant search result:', {
-            success: ragResult.success,
-            context_count: ragResult.context.length,
-            fallback_needed: ragResult.fallback_needed
-          });
 
           // ✅ Extract và filter results như retriever
           const searchResults: ContextItem[] = ragResult.context.map(item => ({
@@ -172,13 +144,6 @@ export async function POST(request: NextRequest) {
           const threshold = parseFloat(process.env.RAG_SIMILARITY_THRESHOLD || '0.5');
           const validResults = searchResults.filter(result => result.score >= threshold);
 
-          console.log('📈 Results after threshold filter:', {
-            total_results: searchResults.length,
-            valid_results: validResults.length,
-            threshold_used: threshold,
-            highest_score: searchResults.length > 0 ? searchResults[0].score : 0
-          });
-
           // ✅ Determine fallback properly
           const fallbackNeeded = ragResult.fallback_needed || validResults.length === 0;
           
@@ -191,8 +156,7 @@ export async function POST(request: NextRequest) {
             topic: result.topic,
             risk_level: result.risk_level
           }));
-console.log('🔧 RAG_SYSTEM_PROMPT exists:', !!process.env.RAG_SYSTEM_PROMPT);
-console.log('🔧 FALLBACK_SYSTEM_PROMPT exists:', !!process.env.FALLBACK_SYSTEM_PROMPT);
+
         // Step 2: Build prompt based on RAG results + USER MEDICAL CONTEXT
 let systemPrompt = '';
 
@@ -242,13 +206,6 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
     .replace('{userAdvice}', userMedicalContext ? 'HÃY THAM KHẢO THÔNG TIN Y TẾ CÁ NHÂN TRÊN ĐỂ TƯ VẤN CHÍNH XÁC HƠN.' : '');
 }
 
-          // ✅ THÊM DEBUG LOG để kiểm tra
-          console.log('🔍 Final system prompt preview:');
-          console.log('📋 User medical context:', userMedicalContext);
-          console.log('📝 System prompt length:', systemPrompt.length);
-          console.log('💡 Prompt contains user info:', systemPrompt.includes('BỆNH NHÂN:'));
-          console.log('🎯 First 200 chars of prompt:', systemPrompt.substring(0, 200));
-
           // Step 3: Call OpenAI Chat API với streaming
           // ✅ THÊM BIẾN MÔI TRƯỜNG CHO MODEL
           const chatResponse = await openai.chat.completions.create({
@@ -269,7 +226,6 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
               include_usage: true // Quan trọng: bật usage tracking
             }
           });
-            console.log('🤖 Using OpenAI model:', process.env.OPENAI_MODEL_CHAT || 'gpt-4o-mini');
           // Đọc từng chunk từ OpenAI
           for await (const chunk of chatResponse) {
             // Nếu có content, gửi cho client
@@ -353,7 +309,6 @@ Hãy cung cấp thông tin tổng quan dựa trên kiến thức y tế phổ bi
 
       cancel() {
         // Xử lý khi client hủy (nút pause)
-        console.log('Stream was cancelled by client');
       }
     });
 
