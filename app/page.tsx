@@ -1431,7 +1431,7 @@ const handleLogin = async (userData: User) => {
                       <h3>Xin chào{user ? ` ${user.displayName}` : ''}! Tôi là MedChat AI</h3>
                       <p>
                         Tôi được đào tạo để phân tích chi tiết về HIV và bệnh truyền nhiễm STDs 
-                        Hãy mô tả triệu chứng hoặc đặt câu hỏi để bắt đầu!
+                        Lưu ý: Các thông tin chúng tôi cung cấp chỉ mang tính tham khảo, không thay thế bác sĩ
                       </p>
                     </div>
                   ) : (

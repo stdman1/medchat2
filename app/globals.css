@@ -1626,3 +1626,21 @@ body::before {
     max-width: 300px;
   }
 }
+/* XÓA ĐOẠN CŨ VÀ THAY BẰNG ĐOẠN NÀY */
+
+/* Font cho text, KHÔNG ảnh hưởng icons */
+body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GIỮ NGUYÊN font cho icons */
+i[class*="fa-"], 
+.fas, .far, .fab, .fal {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro" !important;
+}
